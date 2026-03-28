@@ -1,0 +1,77 @@
+/* Large screens / 4K TVs */
+@media (min-width: 2000px) {
+  .board {
+    padding: 16px 20px 20px;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 900px) {
+  .board {
+    padding: 10px 8px 14px;
+  }
+
+  .accent-segment {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile — shared rules */
+@media (max-width: 600px) {
+  .keyboard-hint {
+    display: none;
+  }
+
+  /* Mobile accents positioned entirely by JS */
+  .accent-bar {
+    position: fixed;
+    z-index: 10;
+    gap: 4px;
+  }
+
+  .accent-segment {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 600px) and (orientation: portrait) {
+  .tap-hint {
+    display: none;
+  }
+
+  .accent-bar {
+    flex-direction: row;
+  }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) {
+  .board {
+    padding: 4px 8px 8px;
+  }
+
+  .accent-bar {
+    flex-direction: column;
+  }
+
+  .accent-segment {
+    width: 8px;
+    height: 8px;
+  }
+
+  .keyboard-hint {
+    display: none;
+  }
+
+  .board::after {
+    display: none;
+  }
+}
+
+/* Fullscreen mode */
+:fullscreen .board {
+  box-shadow: none;
+}

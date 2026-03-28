@@ -1,0 +1,60 @@
+```tsx
+export function GreenhouseIllustration() {
+  const P = {
+    sky: "#E8F4F8",
+    glass: "#B8E6F0",
+    glassFrame: "#6B8E99",
+    woodFrame: "#8B6F47",
+    soil: "#6B4423",
+    pot: "#A67C52",
+    leaf: "#2D7A3E",
+    leafAccent: "#4A9D5D",
+    stem: "#5A6B3A",
+    tomato: "#E74C3C",
+    tomatoAccent: "#C0392B",
+    metal: "#A9A9A9",
+    metalDark: "#757575",
+    waterDrop: "#6DD5ED",
+    ground: "#5A4A3A",
+  };
+
+  return (
+    <svg viewBox="0 0 400 500" className="w-full h-full">
+      <defs>
+        <filter id="shadowDeep" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="4" stdDeviation="3" floodOpacity="0.3" />
+        </filter>
+        <filter id="shadowSoft" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.2" />
+        </filter>
+      </defs>
+
+      {/* Sky background */}
+      <rect width="400" height="500" fill={P.sky} />
+
+      {/* Far ground */}
+      <ellipse cx="200" cy="480" rx="200" ry="40" fill={P.ground} opacity="0.5" />
+
+      {/* Greenhouse structure - back wall */}
+      <rect x="60" y="120" width="280" height="260" fill={P.glassFrame} opacity="0.3" rx="8" filter="url(#shadowDeep)" />
+
+      {/* Glass panes - left section */}
+      <rect x="70" y="130" width="70" height="100" fill={P.glass} stroke={P.glassFrame} strokeWidth="3" rx="2" />
+      <rect x="150" y="130" width="70" height="100" fill={P.glass} stroke={P.glassFrame} strokeWidth="3" rx="2" />
+      <rect x="230" y="130" width="70" height="100" fill={P.glass} stroke={P.glassFrame} strokeWidth="3" rx="2" />
+
+      {/* Glass panes - right section (lower) */}
+      <rect x="70" y="245" width="70" height="110" fill={P.glass} stroke={P.glassFrame} strokeWidth="3" rx="2" />
+      <rect x="150" y="245" width="70" height="110" fill={P.glass} stroke={P.glassFrame} strokeWidth="3" rx="2" />
+      <rect x="230" y="245" width="70" height="110" fill={P.glass} stroke={P.glassFrame} strokeWidth="3" rx="2" />
+
+      {/* Roof frame - central ridge */}
+      <polygon points="200,80 60,130 340,130" fill={P.woodFrame} stroke={P.glassFrame} strokeWidth="2" />
+
+      {/* Seed tray 1 - back left */}
+      <rect x="85" y="290" width="55" height="35" fill={P.pot} stroke={P.metalDark} strokeWidth="1.5" rx="2" />
+      <rect x="85" y="290" width="55" height="8" fill={P.potAccent} opacity="0.6" rx="1" />
+
+      {/* Seed tray 2 - back center */}
+      <rect x="165" y="290" width="55" height="35" fill={P.pot} stroke={P.metalDark} strokeWidth="1.5" rx="2" />
+      <rect x="165" y="290" width="

@@ -1,0 +1,74 @@
+[
+  {
+    "index": 0,
+    "input": "Create a SunriseIllustration for the morning home screen \u2014 fog lifting over hills, amber sky, rooster silhouette",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Update the GardenIllustration to add a trellis with climbing vines on the right side",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 2,
+    "input": "Update the CottageIllustration to add a wood pile stacked against the side wall",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 3,
+    "input": "Create a WeatherIllustration for a weather widget \u2014 rolling clouds, rain drops, and a partial rainbow",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses standard CSS color values (#A8D5E2, #FFFFFF, #F5F5F5, #4A90E2, #7CB342) rather than the defined P palette layer variables. The layered paper cut-out aesthetic requires distinct palette-defined depth planes \u2014 sky, mid, foreground \u2014 with flat shapes pulled from the design system palette, not arbitrary hex colors.",
+      "COLOR_VARIETY: The illustration lacks dark background palette values (layer1/layer2) and warm accent tones (amber/rust/cream). The sky is a light blue, the clouds are white/near-white, and the ground is a single green. There are no dark depth layers establishing the paper cut-out backdrop, and no warm foreground accent colors from the palette \u2014 the rainbow orange (#FFB347) is the only warm element but it's not drawn from a defined palette layer."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Add a FireplaceIllustration for the Household winter widget \u2014 stone hearth, glowing embers, log stack",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "depicts_subject: The fireplace lacks a recognizable arch or opening \u2014 the firebox interior (the dark void inside the fireplace where fire burns) is never drawn. The stone body is a plain filled rectangle with scattered circles that don't read as a fireplace. There is no mantel, no visible opening/arch, and the logs appear floating outside the firebox. A viewer could not identify this as a fireplace without labels.",
+      "paper_cutout_style: The illustration uses scattered circles for 'stone texture' rather than distinct flat layered shapes stacked at depth planes. There are no clear foreground/midground/background plane separations with contrasting flat color fills. The circles scattered over a single rectangle do not create the paper cut-out layered aesthetic \u2014 it resembles a textured blob, not stacked paper shapes.",
+      "complete_scene: The firebox opening (dark interior cavity) is never rendered, so the scene is incomplete \u2014 you cannot see where the fire lives. The log stack clips awkwardly and the tiny polygon 'flames' are barely visible at 6px scale. The hearth stone base is a single flat band with no visual layering. The viewBox has significant empty space and the primary subject (a lit fireplace) is not convincingly rendered."
+    ]
+  }
+]

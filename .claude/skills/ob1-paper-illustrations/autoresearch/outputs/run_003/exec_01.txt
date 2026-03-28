@@ -1,0 +1,74 @@
+# HarvestBasketIllustration
+
+I'll create a paper cutout illustration of an overflowing harvest basket with wicker texture, apples, squash, and carrots.
+
+```tsx
+export function HarvestBasketIllustration() {
+  const basketBrown = "#8B6F47";
+  const darkBrown = "#5C4033";
+  const appleRed = "#C41E3A";
+  const appleGreen = "#6B8E23";
+  const squashOrange = "#FF8C42";
+  const carrotOrange = "#FF9F43";
+  const carrotGreen = "#52B788";
+  const shadowColor = "#3D2817";
+  const highlightCream = "#F5DEB3";
+
+  return (
+    <svg
+      viewBox="0 0 800 600"
+      className="w-full h-full"
+      style={{ filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.1))" }}
+    >
+      {/* Sky background */}
+      <rect width="800" height="600" fill="#E8F4F8" />
+
+      {/* Ground */}
+      <ellipse cx="400" cy="550" rx="350" ry="60" fill="#D4AF9A" opacity="0.6" />
+
+      {/* Basket body - main wicker container */}
+      <g filter="drop-shadow(-3px 4px 8px rgba(93, 64, 51, 0.35))">
+        {/* Basket left side */}
+        <path
+          d="M 200 280 Q 190 350 210 450 L 280 470 Q 260 350 270 280 Z"
+          fill={basketBrown}
+        />
+
+        {/* Basket front center */}
+        <path
+          d="M 270 280 L 530 280 Q 550 350 540 450 L 260 470 Z"
+          fill={basketBrown}
+        />
+
+        {/* Basket right side */}
+        <path
+          d="M 530 280 Q 560 350 540 450 L 610 470 Q 630 350 620 280 Z"
+          fill={basketBrown}
+        />
+
+        {/* Basket rim */}
+        <ellipse cx="400" cy="280" rx="175" ry="45" fill={basketBrown} />
+        <ellipse cx="400" cy="275" rx="175" ry="40" fill="#A0826D" />
+      </g>
+
+      {/* Wicker weave pattern - vertical lines */}
+      <g stroke={darkBrown} strokeWidth="2" opacity="0.5">
+        <line x1="250" y1="280" x2="245" y2="450" />
+        <line x1="310" y1="280" x2="300" y2="460" />
+        <line x1="370" y1="280" x2="360" y2="465" />
+        <line x1="430" y1="280" x2="440" y2="465" />
+        <line x1="490" y1="280" x2="500" y2="460" />
+        <line x1="550" y1="280" x2="555" y2="450" />
+      </g>
+
+      {/* Wicker weave pattern - horizontal lines */}
+      <g stroke={darkBrown} strokeWidth="1.5" opacity="0.4">
+        <line x1="210" y1="330" x2="590" y2="330" />
+        <line x1="200" y1="380" x2="600" y2="380" />
+        <line x1="195" y1="430" x2="605" y2="430" />
+      </g>
+
+      {/* RED APPLES — back row, deep in basket */}
+      <g filter="drop-shadow(-2px 3px 5px rgba(93, 64, 51, 0.35))">
+        {/* Apple 1 - back left */}
+        <circle cx="280" cy="320" r="28" fill={appleR

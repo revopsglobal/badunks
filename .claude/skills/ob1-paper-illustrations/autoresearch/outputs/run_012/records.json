@@ -1,0 +1,75 @@
+[
+  {
+    "index": 0,
+    "input": "Create a FamilyDogIllustration showing Maple the golden doodle sitting in a meadow",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Add a WorkshopIllustration \u2014 workbench, tools on pegboard, sawdust pile",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The output is truncated mid-render \u2014 the screwdriver polygon points are cut off and the SVG/JSX is never closed. The component does not form valid, complete JSX, meaning the scene is incomplete and would not render."
+    ]
+  },
+  {
+    "index": 2,
+    "input": "Add a FencelineIllustration as a decorative section divider \u2014 split-rail fence with wildflowers",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The SVG JSX is missing the closing </svg> tag \u2014 the component's return block is left open, meaning the component would not render correctly. The grass foreground rect is the last element but the </svg> and closing parentheses/braces are absent from the output."
+    ]
+  },
+  {
+    "index": 3,
+    "input": "Add a PantryIllustration showing shelves of preserved jars, root vegetables, and hanging dried herbs",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses simple rectangles and basic shapes without the layered paper cut-out aesthetic. There are no distinct depth planes (sky/background, mid-hills, foreground ground) \u2014 the background is a single flat rect with objects placed on shelves, but no layered silhouette shapes stacked at distinct depth planes characteristic of the paper cut-out style. The jars are plain rectangles rather than stylized flat paper shapes, and there's no sense of overlapping cutout layers building up the scene."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Add a ChickenCoopIllustration \u2014 small wooden structure, nesting boxes visible through door, chickens on roost",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": [
+      "depicts_subject: The chickens are rendered as plain ellipses with no recognizable chicken features (no head, beak, tail feathers, legs, or comb). Two red ellipses floating above the coop roof do not read as chickens on a roost. The nesting boxes are also barely distinguishable from generic rectangles inside a dark opening \u2014 there is no egg, straw, or box divider detail to confirm them as nesting boxes. The roost itself (a horizontal bar or perch) is never drawn, so 'chickens on roost' is not conveyed."
+    ]
+  }
+]

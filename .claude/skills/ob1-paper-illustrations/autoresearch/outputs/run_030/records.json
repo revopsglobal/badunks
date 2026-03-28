@@ -1,0 +1,70 @@
+[
+  {
+    "index": 0,
+    "input": "Add a WinterIllustration for a seasonal home screen variant \u2014 snow on the barn roof, bare trees, frozen pond",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Update the CottageIllustration to add a wood pile stacked against the side wall",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 2,
+    "input": "Update the GardenIllustration to add a trellis with climbing vines on the right side",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 3,
+    "input": "Add a PantryIllustration showing shelves of preserved jars, root vegetables, and hanging dried herbs",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses basic rectangles and simple shapes but lacks the layered paper cut-out aesthetic with distinct depth planes. The shelves are flat horizontal bars without dimensional layering, and there are no background/mid-ground/foreground plane separations characteristic of paper cut-out style. The shapes feel more like a diagram than stacked paper layers.",
+      "COMPLETE_SCENE: The SVG code is truncated \u2014 the last element (shadow accent rect under shelf 1) is cut off mid-attribute, meaning the component does not render completely. Additionally, the second and third shelves lack jar/preserved item content, leaving large empty areas on the canvas unfilled."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Add a WorkshopIllustration \u2014 workbench, tools on pegboard, sawdust pile",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  }
+]

@@ -1,0 +1,54 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. cloud 1 (far back)
+// 3. cloud 2 (mid layer)
+// 4. cloud 3 (foreground)
+// 5. rain drop 1
+// 6. rain drop 2
+// 7. rain drop 3
+// 8. rainbow arc 1
+// 9. rainbow arc 2
+// 10. rainbow arc 3
+// TOTAL: 10 — WITHIN BUDGET
+
+export function WeatherIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      {/* Sky layer */}
+      <rect width="240" height="280" fill="#5B8DBE" />
+
+      {/* Far cloud (layer 1) */}
+      <ellipse cx="40" cy="50" rx="28" ry="18" fill="#C8D9E8" />
+      <ellipse cx="65" cy="52" rx="32" ry="20" fill="#C8D9E8" />
+      <ellipse cx="18" cy="55" rx="22" ry="16" fill="#D4E3F0" />
+
+      {/* Mid cloud (layer 2) */}
+      <ellipse cx="160" cy="85" rx="35" ry="22" fill="#FFFFFF" />
+      <ellipse cx="190" cy="88" rx="38" ry="24" fill="#FFFFFF" />
+      <ellipse cx="130" cy="90" rx="30" ry="20" fill="#F0F4F8" />
+
+      {/* Foreground cloud (layer 3) */}
+      <ellipse cx="80" cy="155" rx="42" ry="26" fill="#E8EEF5" />
+      <ellipse cx="120" cy="158" rx="45" ry="28" fill="#E8EEF5" />
+
+      {/* Rain drops */}
+      <circle cx="95" cy="200" r="3" fill="#4A90E2" />
+      <circle cx="130" cy="220" r="3" fill="#4A90E2" />
+      <circle cx="110" cy="240" r="3" fill="#4A90E2" />
+
+      {/* Rainbow arcs */}
+      <circle cx="180" cy="220" r="35" fill="none" stroke="#FF6B6B" strokeWidth="4" opacity="0.85" />
+      <circle cx="180" cy="220" r="50" fill="none" stroke="#FFC93C" strokeWidth="4" opacity="0.85" />
+      <circle cx="180" cy="220" r="65" fill="none" stroke="#6BCF7F" strokeWidth="4" opacity="0.85" />
+
+    </svg>
+  );
+}
+
+// ─── WIRING BLOCK ───
+// Usage: <WeatherIllustration />
+// Context: Weather widget displaying rainy conditions with rainbow
+// Depth layers: sky (blue) → far clouds (light gray) → mid clouds (white) → foreground (pale) → rain + rainbow
+// Animation: pair with @keyframes cloudDrift, rainFall, rainbowShimmer from globals.css
+```

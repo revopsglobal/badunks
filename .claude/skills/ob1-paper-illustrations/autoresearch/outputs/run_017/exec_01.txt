@@ -1,0 +1,80 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. background rect (sky)
+// 2. ground rect (floor)
+// 3. workbench top (rect)
+// 4. workbench front (rect)
+// 5. pegboard (rect)
+// 6. pegboard grid pattern (path)
+// 7. tools on pegboard (group with circles for tool heads)
+// 8. sawdust pile (polygon)
+// 9. bench leg/support (rect)
+// TOTAL: 9 — STOP HERE
+
+export function WorkshopIllustration() {
+  return (
+    <svg viewBox="0 0 224 280" className="workshop-illustration">
+      <defs>
+        <style>{`
+          .workshop-illustration { background: #faf8f3; }
+        `}</style>
+      </defs>
+
+      {/* background */}
+      <rect width="224" height="280" fill="#e8e4d9" />
+
+      {/* wall */}
+      <rect y="40" width="224" height="240" fill="#d4cfc0" />
+
+      {/* workbench top surface */}
+      <rect x="20" y="120" width="184" height="12" fill="#8b6f47" />
+
+      {/* workbench front panel */}
+      <rect x="20" y="132" width="184" height="88" fill="#a0845c" />
+
+      {/* pegboard */}
+      <rect x="30" y="50" width="164" height="60" fill="#6b5d4f" />
+
+      {/* pegboard grid pattern (holes) */}
+      <g stroke="#4a4038" strokeWidth="0.5" fill="none">
+        <line x1="50" y1="50" x2="50" y2="110" />
+        <line x1="70" y1="50" x2="70" y2="110" />
+        <line x1="90" y1="50" x2="90" y2="110" />
+        <line x1="110" y1="50" x2="110" y2="110" />
+        <line x1="130" y1="50" x2="130" y2="110" />
+        <line x1="150" y1="50" x2="150" y2="110" />
+        <line x1="170" y1="50" x2="170" y2="110" />
+        <line x1="30" y1="65" x2="194" y2="65" />
+        <line x1="30" y1="80" x2="194" y2="80" />
+        <line x1="30" y1="95" x2="194" y2="95" />
+      </g>
+
+      {/* tools on pegboard (hanging) */}
+      <g fill="#d4601f">
+        <circle cx="50" cy="70" r="5" />
+        <circle cx="90" cy="60" r="5" />
+        <circle cx="130" cy="75" r="5" />
+        <circle cx="170" cy="65" r="5" />
+        <circle cx="60" cy="90" r="4" />
+        <circle cx="120" cy="88" r="4" />
+        <circle cx="160" cy="95" r="4" />
+      </g>
+
+      {/* sawdust pile on floor */}
+      <polygon points="140,200 160,220 180,210 170,195" fill="#c4a574" />
+      <polygon points="140,210 165,230 185,220 165,205" fill="#b8954f" />
+
+      {/* workbench leg/support */}
+      <rect x="25" y="145" width="8" height="75" fill="#5c4a38" />
+      <rect x="191" y="145" width="8" height="75" fill="#5c4a38" />
+
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────
+// WIRING
+// ─────────────────────────────────────────────────────────
+
+/* 
+Usage

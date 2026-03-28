@@ -1,0 +1,66 @@
+# FamilyDogIllustration — Maple the Golden Doodle in Meadow
+
+I'll create a complete, paper cut-out style illustration of Maple sitting in a sunny meadow.
+
+## LAYERS PLAN:
+- Sky (light blue)
+- Far hills (soft greens)
+- Midground grass (layered greens)
+- **PRIMARY SUBJECT: Maple the dog (golden/cream, sitting pose)**
+- Foreground flowers & accent plants
+- **ELEMENT BUDGET: ~28 total**
+
+```tsx
+export function FamilyDogIllustration() {
+  const skyColor = "#E8F4F8";
+  const hillFarColor = "#A8D5BA";
+  const hillNearColor = "#7EC850";
+  const grassColor = "#6DB840";
+  const grassLightColor = "#9FD356";
+  const mapleGolden = "#D4A574";
+  const mapleDark = "#B8864A";
+  const mapleCream = "#F5E6D3";
+  const wildflowerPink = "#F0A8C8";
+  const wildflowerYellow = "#FFD700";
+  const wildflowerPurple = "#D4A5E0";
+  const grassAccent = "#5A9E2E";
+
+  return (
+    <svg viewBox="0 0 800 600" className="w-full h-full">
+      <defs>
+        <filter id="mapleshadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+          <feOffset dx="1" dy="2" result="offsetblur" />
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.3" />
+          </feComponentTransfer>
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* SKY */}
+      <rect width="800" height="360" fill={skyColor} />
+
+      {/* FAR HILLS */}
+      <ellipse cx="200" cy="300" rx="180" ry="100" fill={hillFarColor} opacity="0.7" />
+      <ellipse cx="600" cy="320" rx="200" ry="110" fill={hillFarColor} opacity="0.6" />
+
+      {/* NEAR HILLS */}
+      <path d="M 0 320 Q 200 240 400 300 T 800 280 L 800 360 L 0 360 Z" fill={hillNearColor} />
+
+      {/* MEADOW GRASS BASE */}
+      <rect y="360" width="800" height="240" fill={grassColor} />
+
+      {/* GRASS TEXTURE LAYERS */}
+      <path d="M 0 400 Q 100 380 200 400 Q 300 420 400 395 Q 500 370 600 400 Q 700 425 800 400 L 800 420 Q 650 410 500 425 Q 350 440 200 415 L 0 420 Z" fill={grassLightColor} opacity="0.5" />
+      <path d="M 0 450 Q 120 435 250 455 Q 400 475 550 440 Q 700 405 800 450 L 800 470 Q 600 455 400 470 Q 200 485 0 460 Z" fill={grassAccent} opacity="0.4" />
+
+      {/* ═══════════════════════════════════════════════════════════════ */
+      {/* PRIMARY SUBJECT: MAPLE THE GOLDEN DOODLE (SITTING) */
+      {/* ═══════════════════════════════════════════════════════════════ */}
+
+      {/* Maple's back left leg (sitting) */}
+      <ellipse cx="320" cy="480" rx="35" ry="50" fill={mapleGolden} filter="url

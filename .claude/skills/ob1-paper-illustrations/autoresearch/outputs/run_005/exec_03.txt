@@ -1,0 +1,73 @@
+# MealsIllustration — Cozy Kitchen Scene
+
+I'll create a warm kitchen illustration with a cast iron pot, cutting board, and fresh herbs.
+
+## PLAN:
+```
+// PLAN: Cozy kitchen scene with cast iron pot, cutting board, herbs
+// ELEMENTS: wall(1) | counter(1) | pot(3) | cutting board(2) | herbs(4) | accents(2) = 13 total
+// PRIMARY SUBJECT (pot + board) written at elements 3-8 — guaranteed present
+```
+
+---
+
+## Component Code
+
+```tsx
+export function MealsIllustration() {
+  return (
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      {/* Kitchen wall background */}
+      <rect x="0" y="0" width="400" height="200" fill="#F5E6D3" />
+      
+      {/* Counter/table surface */}
+      <rect x="0" y="200" width="400" height="100" fill="#C9A876" />
+      
+      {/* Cast iron pot — main subject */}
+      <ellipse cx="180" cy="200" rx="70" ry="15" fill="#3A3A3A" />
+      <path d="M 110 200 Q 110 160 180 150 Q 250 160 250 200" fill="#4A4A4A" />
+      <rect x="165" y="145" width="30" height="8" fill="#2A2A2A" rx="2" />
+      
+      {/* Wooden cutting board */}
+      <rect x="270" y="210" width="110" height="70" fill="#D4A574" rx="8" />
+      <line x1="275" y1="210" x2="375" y2="280" stroke="#B8956A" strokeWidth="1" opacity="0.6" />
+      <line x1="280" y1="210" x2="375" y2="275" stroke="#B8956A" strokeWidth="1" opacity="0.4" />
+      
+      {/* Fresh herbs — rosemary and basil on board */}
+      <g>
+        <line x1="285" y1="250" x2="285" y2="230" stroke="#5B8C3A" strokeWidth="3" />
+        <circle cx="282" cy="228" r="2" fill="#5B8C3A" />
+        <circle cx="288" cy="228" r="2" fill="#5B8C3A" />
+      </g>
+      
+      {/* Herb leaves — basil cluster */}
+      <ellipse cx="320" cy="240" rx="8" ry="12" fill="#7BA84F" transform="rotate(-20 320 240)" />
+      <ellipse cx="332" cy="238" rx="8" ry="12" fill="#7BA84F" transform="rotate(20 332 238)" />
+      <ellipse cx="326" cy="250" rx="7" ry="11" fill="#6B9840" />
+      
+      {/* Accent shadows for depth */}
+      <ellipse cx="200" cy="268" rx="80" ry="8" fill="#00000015" />
+      
+    </svg>
+  );
+}
+```
+
+---
+
+## Wiring
+
+**Add this export to `/Users/gregharned/work/ob1-app/app/Illustrations.tsx`:**
+
+```tsx
+export function MealsIllustration() {
+  return (
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      {/* Kitchen wall background */}
+      <rect x="0" y="0" width="400" height="200" fill="#F5E6D3" />
+      
+      {/* Counter/table surface */}
+      <rect x="0" y="200" width="400" height="100" fill="#C9A876" />
+      
+      {/* Cast iron pot — main subject */}
+      <ellipse cx="180" cy="200" rx="70" ry="15" fill="#3A3A3A" />

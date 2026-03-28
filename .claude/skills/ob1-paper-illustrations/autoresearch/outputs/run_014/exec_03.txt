@@ -1,0 +1,100 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. tray bottom rect
+// 3. tray edge left rect
+// 4. tray edge right rect
+// 5. pot 1 rect
+// 6. pot 2 rect
+// 7. pot 3 rect
+// 8. sprout 1 stem path
+// 9. sprout 1 leaf path
+// 10. sprout 2 stem path
+// TOTAL: 10 elements — COMPLETE
+
+export function SeedlingIllustration() {
+  return (
+    <svg
+      viewBox="0 0 240 280"
+      className="w-full h-full"
+      style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}
+    >
+      {/* Sky background */}
+      <rect width="240" height="140" fill="#E8F4F0" />
+      
+      {/* Tray (depth plane 1) */}
+      <rect x="30" y="160" width="180" height="12" fill="#8B6F47" rx="2" />
+      
+      {/* Tray depth sides */}
+      <rect x="28" y="155" width="8" height="25" fill="#7A5F3F" rx="1" />
+      <rect x="204" y="155" width="8" height="25" fill="#7A5F3F" rx="1" />
+      
+      {/* Pot 1 (left) */}
+      <rect x="45" y="145" width="28" height="32" fill="#D4A574" rx="2" />
+      
+      {/* Pot 2 (center) */}
+      <rect x="106" y="142" width="28" height="35" fill="#C99A6E" rx="2" />
+      
+      {/* Pot 3 (right) */}
+      <rect x="167" y="147" width="28" height="30" fill="#DEB89F" rx="2" />
+      
+      {/* Sprout 1 stem (left pot) */}
+      <path
+        d="M 59 145 Q 58 130 61 115"
+        stroke="#4A7C59"
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      
+      {/* Sprout 1 leaf (left pot) */}
+      <path
+        d="M 61 125 Q 68 120 72 115"
+        stroke="#5FA070"
+        strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+      />
+      
+      {/* Sprout 2 stem (center pot) */}
+      <path
+        d="M 120 142 Q 119 125 122 108"
+        stroke="#3D6A4F"
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      
+      {/* Sprout 2 leaves (center pot) */}
+      <path
+        d="M 122 120 Q 128 112 135 108"
+        stroke="#5FA070"
+        strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M 122 115 Q 115 108 110 102"
+        stroke="#52926B"
+        strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+      />
+      
+      {/* Sprout 3 stem (right pot) */}
+      <path
+        d="M 181 147 Q 182 132 179 118"
+        stroke="#4A7C59"
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────
+// WIRING: Add to app/page.tsx in spring widget
+// ─────────────────────────────────────────────
+// import

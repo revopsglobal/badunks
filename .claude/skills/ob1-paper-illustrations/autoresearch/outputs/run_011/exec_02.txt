@@ -1,0 +1,64 @@
+# FencelineIllustration — Split-Rail Fence with Wildflowers
+
+**PRE-WRITE PLAN:**
+```
+// LAYERS: sky | far-background | mid-ground fence | foreground flowers | accent details
+// ELEMENT BUDGET: sky=1, bg-hills=2, fence-rails=4, fence-posts=3, flowers=8, stems=4, accents=2 = 24 total
+// SUBJECT SHAPES: 2 horizontal rails, 3 vertical posts, 5 wildflower heads, 4 stems, 2 accent leaves
+// COLORS: sky=#C4E4F7 | far-hill=#2D4A3E | mid-grass=#5FA373 | foreground=#7BC67B | flowers=#E8956A, #D4568C, #F4D03F, #E8956A, #8B5CF6
+```
+
+---
+
+```tsx
+export function FencelineIllustration() {
+  return (
+    <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+      {/* SKY */}
+      <rect width="800" height="180" fill="#C4E4F7" />
+
+      {/* FAR BACKGROUND HILL */}
+      <path d="M 0 180 Q 200 120 400 140 T 800 180 L 800 220 L 0 220 Z" fill="#2D4A3E" />
+
+      {/* MID-GROUND GRASS PLANE */}
+      <rect y="180" width="800" height="120" fill="#5FA373" />
+
+      {/* FOREGROUND GRASS HIGHLIGHT */}
+      <ellipse cx="400" cy="240" rx="380" ry="65" fill="#7BC67B" opacity="0.6" />
+
+      {/* LEFT FENCE POST */}
+      <rect x="80" y="140" width="18" height="130" fill="#8B6F47" />
+
+      {/* CENTER FENCE POST */}
+      <rect x="390" y="140" width="18" height="130" fill="#8B6F47" />
+
+      {/* RIGHT FENCE POST */}
+      <rect x="700" y="140" width="18" height="130" fill="#8B6F47" />
+
+      {/* TOP LEFT RAIL */}
+      <rect x="98" y="165" width="312" height="12" fill="#A0826D" transform="rotate(-2 254 171)" />
+
+      {/* TOP RIGHT RAIL */}
+      <rect x="408" y="165" width="312" height="12" fill="#A0826D" transform="rotate(2 564 171)" />
+
+      {/* BOTTOM LEFT RAIL */}
+      <rect x="98" y="235" width="312" height="12" fill="#8B6F47" transform="rotate(-2 254 241)" />
+
+      {/* BOTTOM RIGHT RAIL */}
+      <rect x="408" y="235" width="312" height="12" fill="#8B6F47" transform="rotate(2 564 241)" />
+
+      {/* WILDFLOWER GROUP 1 — LEFT CLUSTER */}
+      <g id="flowers-left">
+        {/* Stem 1 */}
+        <path d="M 150 240 Q 148 210 150 180" stroke="#3D6B2E" strokeWidth="2" fill="none" />
+        
+        {/* Flower 1 — Orange daisy */}
+        <circle cx="150" cy="175" r="8" fill="#E8956A" />
+        <circle cx="145" cy="170" r="5" fill="#E8956A" />
+        <circle cx="155" cy="170" r="5" fill="#E8956A" />
+        <circle cx="145" cy="180" r="5" fill="#E8956A" />
+        <circle cx="155" cy="180" r="5" fill="#E8956A" />
+        <circle cx="150" cy="175" r="3" fill="#F4D03F" />
+
+        {/* Stem 2 */}
+        <path d="M 190 250

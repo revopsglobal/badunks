@@ -1,0 +1,78 @@
+[
+  {
+    "index": 0,
+    "input": "Add a WinterIllustration for a seasonal home screen variant \u2014 snow on the barn roof, bare trees, frozen pond",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "complete_scene: The output is truncated mid-render \u2014 the barn door rect element is cut off at 'y=' with no closing value, and subsequent elements (bare trees, foreground snow, closing SVG/JSX tags) are missing. The scene is incomplete as rendered."
+    ]
+  },
+  {
+    "index": 1,
+    "input": "Update the GardenIllustration to add a trellis with climbing vines on the right side",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "depicts_subject: The output is incomplete/truncated \u2014 the trellis with climbing vines requested in the task is never rendered. The SVG code cuts off mid-component before any trellis or vine shapes appear.",
+      "complete_scene: The code is truncated mid-string (ending with fill=\"#7BA8D1) with an unclosed quote and no closing tags or JSX), meaning the component would not compile or render a complete scene."
+    ]
+  },
+  {
+    "index": 2,
+    "input": "Create a GreenhouseIllustration \u2014 glass panes, seed trays, misting can, tomato plants",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": false,
+      "exports_correctly": false
+    },
+    "failures": [
+      "eval_error"
+    ]
+  },
+  {
+    "index": 3,
+    "input": "Update FarmIllustration to add a water trough near the fence line",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": false,
+      "exports_correctly": false
+    },
+    "failures": [
+      "eval_error"
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Create a NightSkyIllustration for a sleep/evening mode \u2014 full moon, Milky Way arc, silhouetted hills",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": false,
+      "exports_correctly": false
+    },
+    "failures": [
+      "eval_error"
+    ]
+  }
+]

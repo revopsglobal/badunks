@@ -1,0 +1,96 @@
+```tsx
+export function WinterIllustration() {
+  // ELEMENT BUDGET (MAX 12):
+  // 1. sky rect
+  // 2. far hill path
+  // 3. mid hill path
+  // 4. foreground ground rect
+  // 5. barn rect (body)
+  // 6. barn roof path
+  // 7. snow on roof rect
+  // 8. bare tree trunk
+  // 9. frozen pond rect
+  // 10. snowflake accent
+  // TOTAL: 10 — COMPLETE SCENE
+
+  return (
+    <svg
+      viewBox="0 0 280 360"
+      preserveAspectRatio="xMidYMid meet"
+      className="w-full h-full"
+    >
+      {/* Sky — winter pale blue */}
+      <rect width="280" height="160" fill="#E8F4F8" />
+
+      {/* Far snow hill */}
+      <path
+        d="M 0 160 Q 70 130 140 140 T 280 160 L 280 200 L 0 200 Z"
+        fill="#F5F5F5"
+      />
+
+      {/* Mid snow drift */}
+      <path
+        d="M 0 200 Q 50 180 100 185 Q 150 190 200 175 Q 240 165 280 180 L 280 240 L 0 240 Z"
+        fill="#EBEBEB"
+      />
+
+      {/* Foreground snow ground */}
+      <rect y="240" width="280" height="120" fill="#FFFFFF" />
+
+      {/* Barn body — dark red */}
+      <rect x="80" y="200" width="120" height="100" fill="#8B3A3A" />
+
+      {/* Barn pitched roof — dark brown */}
+      <path
+        d="M 80 200 L 140 140 L 200 200 Z"
+        fill="#5C2E2E"
+      />
+
+      {/* Snow on barn roof */}
+      <path
+        d="M 85 200 L 140 155 L 195 200 L 190 205 Q 140 165 85 205 Z"
+        fill="#F0F0F0"
+      />
+
+      {/* Bare tree trunk — left side */}
+      <rect x="35" y="220" width="6" height="80" fill="#4A4A4A" />
+
+      {/* Frozen pond — icy blue */}
+      <ellipse cx="220" cy="290" rx="35" ry="22" fill="#B8E0F0" />
+
+      {/* Snowflake accent — small sparkle */}
+      <circle cx="160" cy="80" r="2" fill="#FFFFFF" />
+
+      {/* Snowflake accent — small sparkle */}
+      <circle cx="110" cy="110" r="1.5" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────
+// WIRING — WinterIllustration
+// ─────────────────────────────────────────────────────
+
+/**
+ * WinterIllustration
+ * 
+ * Props: none
+ * 
+ * Renders: Seasonal variant with snow-covered barn, bare trees,
+ *          frozen pond, and minimalist winter palette
+ * 
+ * Style: Paper cut-out with flat fills, stacked depth planes
+ * 
+ * Depth layers:
+ *   1. Sky (pale winter blue)
+ *   2. Far snow hills (light gray)
+ *   3. Mid drifts
+ *   4. Barn + roof + snow (red/brown/white)
+ *   5. Trees (bare trunks)
+ *   6. Foreground ground (pure white)
+ *   7. Frozen pond (icy blue)
+ * 
+ * Colors used:
+ *   - Sky: #E8F4F8 (pale winter blue)
+ *   - Far hill: #F5F5F5 (near-white)
+ *   - Mid drift:

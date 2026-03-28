@@ -1,0 +1,72 @@
+```tsx
+export function SunriseIllustration() {
+  // ELEMENT BUDGET (MAX 12):
+  // 1. sky gradient rect
+  // 2. ground rect
+  // 3. far hill path
+  // 4. mid hill path
+  // 5. near hill path
+  // 6. rooster body circle
+  // 7. rooster head circle
+  // 8. rooster tail path
+  // 9. rooster comb polygon
+  // 10. rooster beak polygon
+  // TOTAL: 10 — STOP HERE
+
+  return (
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#2D1B4E" />
+          <stop offset="40%" stopColor="#8B5A3C" />
+          <stop offset="100%" stopColor="#D4A574" />
+        </linearGradient>
+        <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FFD700" />
+          <stop offset="100%" stopColor="#FFA500" />
+        </radialGradient>
+        <filter id="fogMist">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+          <feOpacity opacity="0.4" />
+        </filter>
+      </defs>
+
+      {/* Sky with sunrise gradient */}
+      <rect x="0" y="0" width="400" height="300" fill="url(#sunriseGradient)" />
+
+      {/* Sun disk */}
+      <circle cx="200" cy="80" r="35" fill="url(#sunGradient)" />
+
+      {/* Fog layer 1 — far back */}
+      <ellipse cx="100" cy="140" rx="120" ry="40" fill="#FFFFFF" filter="url(#fogMist)" opacity="0.35" />
+
+      {/* Fog layer 2 — mid */}
+      <ellipse cx="280" cy="160" rx="140" ry="45" fill="#FFFFFF" filter="url(#fogMist)" opacity="0.3" />
+
+      {/* Far hill — faded in fog */}
+      <path d="M 0 180 Q 100 140 200 165 T 400 180 L 400 300 L 0 300 Z" fill="#4A3728" opacity="0.6" />
+
+      {/* Mid hill — emerging from fog */}
+      <path d="M 0 220 Q 120 190 200 210 T 400 225 L 400 300 L 0 300 Z" fill="#6B5344" opacity="0.8" />
+
+      {/* Ground/near hill layer — clear */}
+      <rect x="0" y="240" width="400" height="60" fill="#7C6B52" />
+
+      {/* Rooster silhouette — center-right */}
+      <g transform="translate(280, 200)">
+        {/* Body */}
+        <circle cx="0" cy="0" r="16" fill="#1A1A1A" />
+
+        {/* Head */}
+        <circle cx="18" cy="-8" r="10" fill="#1A1A1A" />
+
+        {/* Comb */}
+        <polygon points="22,-16 26,-22 20,-18" fill="#1A1A1A" />
+
+        {/* Beak */}
+        <polygon points="28,-8 35,-6 28,-4" fill="#1A1A1A" />
+
+        {/* Tail feathers arc */}
+        <path d="M -12 -4 Q -28 -12 -32 -2 Q -28 0 -12 4" fill="none" stroke="#1A1A1A" strokeWidth="3" strokeLinecap="round" />
+
+        {/*

@@ -1,0 +1,66 @@
+# PLAN
+**Primary Subject:** Water trough (wooden structure near fence)
+**Layers:** sky | distant-hills | fence-line | **TROUGH** | foreground-grass
+**Element Budget:** ~18 total (hard cap 25)
+
+**Trough design:** Rectangular wooden tank with depth/shading, positioned left-of-center near the fence
+
+---
+
+```tsx
+export function FarmIllustration() {
+  // Color palette
+  const skyBlue = "#87CEEB";
+  const grassGreen = "#6BA644";
+  const fenceWood = "#8B6F47";
+  const troughWood = "#6B5344";
+  const troughMetal = "#A9A9A9";
+  const shadowDark = "#4A4A4A";
+  const hillGreen = "#5A9432";
+
+  return (
+    <svg viewBox="0 0 1200 800" className="w-full h-full">
+      <defs>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="3" stdDeviation="2" floodOpacity="0.4" />
+        </filter>
+      </defs>
+
+      {/* Sky */}
+      <rect width="1200" height="500" fill={skyBlue} />
+
+      {/* Distant hills */}
+      <ellipse cx="200" cy="480" rx="300" ry="120" fill={hillGreen} opacity="0.7" />
+      <ellipse cx="900" cy="500" rx="350" ry="140" fill={hillGreen} opacity="0.65" />
+
+      {/* Fence line (background) */}
+      <g id="fence-line">
+        <line x1="100" y1="520" x2="1100" y2="500" stroke={fenceWood} strokeWidth="3" opacity="0.5" />
+        <circle cx="250" cy="515" r="8" fill={fenceWood} opacity="0.6" />
+        <circle cx="450" cy="508" r="8" fill={fenceWood} opacity="0.6" />
+        <circle cx="650" cy="503" r="8" fill={fenceWood} opacity="0.6" />
+        <circle cx="850" cy="498" r="8" fill={fenceWood} opacity="0.6" />
+      </g>
+
+      {/* WATER TROUGH — PRIMARY SUBJECT */}
+      <g id="water-trough" filter="url(#shadow)">
+        {/* Trough body — main rectangular tank */}
+        <rect x="280" y="540" width="240" height="120" fill={troughWood} rx="4" />
+        
+        {/* Trough rim — top edge highlight */}
+        <rect x="280" y="540" width="240" height="8" fill="#9B8B7B" rx="2" />
+        
+        {/* Trough interior — water depth shadow */}
+        <rect x="290" y="555" width="220" height="95" fill="#4A6FA0" opacity="0.8" rx="2" />
+        
+        {/* Water surface ripple */}
+        <ellipse cx="400" cy="558" rx="90" ry="6" fill="#6B8FC7" opacity="0.6" />
+        
+        {/* Metal bands (reinforcement) */}
+        <rect x="280" y="600" width="240" height="4" fill={troughMetal} opacity="0.7" />
+        <rect x="280" y="630" width="240" height="4" fill={troughMetal} opacity="0.7" />
+        
+        {/* Wooden slats — texture detail */}
+        <line x1="305" y1="540" x2="305" y2="660" stroke={shadowDark} strokeWidth="2" opacity="0.3" />
+        <line x1="340" y1="540" x2="340" y2="660" stroke={shadowDark} strokeWidth="2" opacity="0.3" />
+        <line x

@@ -1,0 +1,74 @@
+[
+  {
+    "index": 0,
+    "input": "Create a SunriseIllustration for the morning home screen \u2014 fog lifting over hills, amber sky, rooster silhouette",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Create a FamilyDogIllustration showing Maple the golden doodle sitting in a meadow",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 2,
+    "input": "Add a ChickenCoopIllustration \u2014 small wooden structure, nesting boxes visible through door, chickens on roost",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 3,
+    "input": "Create a SeedlingIllustration for a spring-start widget \u2014 small pots in a tray, just sprouting",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses plain rectangles with minimal layering depth. The 'sky' rect only covers the top half (height 140 of 280), leaving the bottom half as a black void. There is no distinct ground/soil layer, no mid-ground fill, and the shapes don't create the characteristic stacked flat-color paper cutout aesthetic \u2014 it reads more like floating rectangles on a partial background.",
+      "COMPLETE_SCENE: The viewBox lower half (y=172 to y=280) is empty black void \u2014 no ground, soil, table surface, or background fill covers the full canvas. The scene is incomplete with a large unrendered region below the tray."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Create a WeatherIllustration for a weather widget \u2014 rolling clouds, rain drops, and a partial rainbow",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses near-white/grey ellipses for clouds and a plain sky rect, but lacks the distinct flat colored shape layers at multiple depth planes with varied palette colors typical of paper cut-out style. Cloud layers are nearly identical in color (#FFFFFF, #F0F4F8, #E8EEF4, #DFE6ED) making them visually indistinct as separate depth layers. No ground/terrain layer is present at all.",
+      "COLOR_VARIETY: The palette is almost entirely desaturated whites and light blues (#B8D4E8, #FFFFFF, #F0F4F8, #F5F9FC, #E8EEF4, #DFE6ED). Only two small rainbow arcs provide any warm color. There are no dark background values or rich foreground accent colors \u2014 the illustration lacks both the dark layer1/layer2 depth values and meaningful warm accent coverage.",
+      "COMPLETE_SCENE: The viewBox has no ground or terrain layer \u2014 the bottom half of the 240x320 canvas is mostly empty sky with only three small rain drops and partial rainbow arcs. A complete scene requires a ground or surface element filling the lower portion of the canvas."
+    ]
+  }
+]

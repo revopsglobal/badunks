@@ -1,0 +1,66 @@
+# MealsIllustration — Cozy Kitchen Scene
+
+I'll create a warm kitchen scene with a cast iron pot, cutting board, and fresh herbs. Using the subject-first strategy, the pot and board will be rendered immediately.
+
+**PLAN:**
+- Layers: warm background | wooden table | cutting board | cast iron pot | herbs | accent shadows
+- Element budget: ~22 total (4–5 per major layer)
+- Primary subject: pot + cutting board rendered first
+
+---
+
+## Component Code
+
+Add this to `/Users/gregharned/work/ob1-app/app/Illustrations.tsx`:
+
+```tsx
+export function MealsIllustration() {
+  const potMetalColor = "#4A4A4A";
+  const potHandleColor = "#3D3D3D";
+  const boardColor = "#8B7355";
+  const boardHighlight = "#A0826D";
+  const herbGreen = "#6B8E23";
+  const herbDark = "#556B2F";
+  const tableColor = "#C19A6B";
+  const shadowColor = "rgba(0,0,0,0.15)";
+
+  return (
+    <svg viewBox="0 0 400 400" className="w-full h-full">
+      <defs>
+        <filter id="warmShadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="3" stdDeviation="3" floodOpacity="0.3" />
+        </filter>
+        <linearGradient id="potGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#5A5A5A" />
+          <stop offset="100%" stopColor="#3A3A3A" />
+        </linearGradient>
+        <linearGradient id="boardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor={boardHighlight} />
+          <stop offset="100%" stopColor={boardColor} />
+        </linearGradient>
+      </defs>
+
+      {/* Warm background wall */}
+      <rect width="400" height="400" fill="#F5E6D3" />
+
+      {/* Soft window light wash */}
+      <rect width="400" height="200" fill="#FFF8F0" opacity="0.4" />
+
+      {/* Wooden table surface */}
+      <rect y="240" width="400" height="160" fill={tableColor} />
+      <line x1="0" y1="240" x2="400" y2="240" stroke="#A67C52" strokeWidth="2" opacity="0.5" />
+
+      {/* Table wood grain (subtle) */}
+      <line x1="0" y1="280" x2="400" y2="280" stroke="#9D7656" strokeWidth="1" opacity="0.2" />
+      <line x1="0" y1="320" x2="400" y2="320" stroke="#9D7656" strokeWidth="1" opacity="0.2" />
+
+      {/* Cutting board — tilted slightly for depth */}
+      <rect x="80" y="200" width="140" height="100" fill={boardColor} rx="8" filter="url(#warmShadow)" transform="rotate(-5 150 250)" />
+      <rect x="85" y="205" width="130" height="90" fill={boardHighlight} rx="6" opacity="0.6" transform="rotate(-5 150 250)" />
+
+      {/* Cutting board wood texture */}
+      <line x1="90" y1="220" x2="210" y2="220" stroke="#7A6245" strokeWidth="1" opacity="0.3" transform="rotate(-5 150 250)" />
+      <line x1="90" y1="250" x2="210" y2="250" stroke="#7A6245" strokeWidth="1" opacity="0.3" transform="rotate(-5 150 250)" />
+
+      {/* Cast iron pot — centered and prominent */}
+      <ellipse cx="

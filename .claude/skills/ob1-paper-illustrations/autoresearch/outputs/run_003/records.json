@@ -1,0 +1,79 @@
+[
+  {
+    "index": 0,
+    "input": "Add a new MealsIllustration for the Provisions page \u2014 a cozy kitchen scene with a cast iron pot, wooden cutting board, and fresh herbs",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The code is truncated mid-render \u2014 the herb bunch group is opened but never closed, and the rest of the scene (remaining herbs, closing SVG tags, closing function body) is cut off. The component is incomplete and would not compile or render a full scene."
+    ]
+  },
+  {
+    "index": 1,
+    "input": "Add a HarvestBasketIllustration \u2014 wicker basket overflowing with apples, squash, and carrots",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The code is truncated mid-render \u2014 the SVG is cut off partway through drawing the apples (the string ends abruptly with 'fill={appleR'). The basket contents (apples, squash, carrots) are never completed, and the scene is therefore incomplete."
+    ]
+  },
+  {
+    "index": 2,
+    "input": "Update the CottageIllustration to add a wood pile stacked against the side wall",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "depicts_subject: The wood pile was never rendered \u2014 the SVG output is truncated mid-code (ends at 'width=\"35\" height=\"30\" fill=\"#B0D4E3\" />') before the wood pile shapes were added. The requested feature (wood pile against the side wall) does not appear in the output.",
+      "complete_scene: The component code is incomplete/truncated \u2014 the right window, any remaining cottage details, and the wood pile are all cut off. The component would not compile or render a full scene."
+    ]
+  },
+  {
+    "index": 3,
+    "input": "Add a WinterIllustration for a seasonal home screen variant \u2014 snow on the barn roof, bare trees, frozen pond",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses individual line elements (SVG <line>) for bare trees rather than flat filled polygon/path shapes stacked in distinct depth planes. Paper cutout style requires flat filled shapes, not stroked line drawings. The trees are drawn with stroke lines, not layered flat color shapes.",
+      "COMPLETE_SCENE: The SVG code is truncated mid-element \u2014 the left barn window crosshair and all subsequent elements (right window, frozen pond, foreground ground plane, additional tree details) are cut off. The scene is incomplete and the code does not close properly, meaning the pond (a key requested element) is entirely absent from the render."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Add a WorkshopIllustration \u2014 workbench, tools on pegboard, sawdust pile",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": false,
+      "exports_correctly": false
+    },
+    "failures": [
+      "eval_error"
+    ]
+  }
+]

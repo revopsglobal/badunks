@@ -1,0 +1,62 @@
+# PantryIllustration Component
+
+```tsx
+export function PantryIllustration() {
+  const wallBeige = "#F5E6D3";
+  const shelfWood = "#8B6F47";
+  const jarGlass = "#E8F4F8";
+  const jarLid = "#D4A574";
+  const herbGreen = "#6B8E23";
+  const rootOrange = "#D2691E";
+  const rootBrown = "#8B4513";
+  const shadowDark = "#4A4A4A";
+  const accentGold = "#DAA520";
+
+  return (
+    <svg viewBox="0 0 400 500" className="w-full h-full">
+      <defs>
+        <filter id="pantryInset" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+        </filter>
+      </defs>
+
+      {/* BACKGROUND: Wall */}
+      <rect width="400" height="500" fill={wallBeige} />
+
+      {/* Wood paneling accent */}
+      <rect x="0" y="380" width="400" height="120" fill="#D4AF86" />
+
+      {/* SHELF SYSTEM - Three shelves */}
+      
+      {/* Top shelf (y=80) */}
+      <rect x="30" y="80" width="340" height="12" fill={shelfWood} rx="2" />
+      <rect x="30" y="82" width="340" height="3" fill="#6B5236" />
+
+      {/* Middle shelf (y=220) */}
+      <rect x="30" y="220" width="340" height="12" fill={shelfWood} rx="2" />
+      <rect x="30" y="222" width="340" height="3" fill="#6B5236" />
+
+      {/* Bottom shelf (y=360) */}
+      <rect x="30" y="360" width="340" height="12" fill={shelfWood} rx="2" />
+      <rect x="30" y="362" width="340" height="3" fill="#6B5236" />
+
+      {/* TOP SHELF: Preserved jars with contents */}
+      
+      {/* Jar 1 - left */}
+      <rect x="45" y="50" width="28" height="35" fill={jarGlass} stroke={shadowDark} strokeWidth="1" />
+      <rect x="45" y="50" width="28" height="8" fill={jarLid} stroke={shadowDark} strokeWidth="0.5" />
+      <rect x="50" y="58" width="18" height="22" fill="#F4A460" opacity="0.8" />
+      <circle cx="59" cy="65" r="2" fill={accentGold} />
+      <circle cx="56" cy="72" r="1.5" fill={accentGold} />
+
+      {/* Jar 2 - center-left */}
+      <rect x="85" y="48" width="30" height="37" fill={jarGlass} stroke={shadowDark} strokeWidth="1" />
+      <rect x="85" y="48" width="30" height="9" fill={jarLid} stroke={shadowDark} strokeWidth="0.5" />
+      <rect x="90" y="59" width="20" height="23" fill="#8B4513" opacity="0.75" />
+      <circle cx="100" cy="68" r="2.5" fill="#D2691E" />
+      <circle cx="98" cy="76" r="1.5" fill="#D2691E" />
+
+      {/* Jar 3 - center-right */}
+      <rect x="125" y="52" width="26" height="33" fill={jarGlass} stroke={shadowDark} strokeWidth="1" />
+      <rect x="125" y="52" width="26" height="7" fill={jarLid} stroke={shadowDark} strokeWidth="0.5" />
+      <rect x="129" y

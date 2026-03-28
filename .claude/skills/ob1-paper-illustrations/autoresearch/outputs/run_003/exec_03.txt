@@ -1,0 +1,61 @@
+# WinterIllustration — Barn in Snow
+
+I'll create a winter scene with a snow-covered barn, bare trees, and a frozen pond.
+
+```tsx
+export function WinterIllustration() {
+  return (
+    <svg viewBox="0 0 400 500" className="w-full h-full">
+      <defs>
+        <filter id="shadowWinter1">
+          <feDropShadow dx="2" dy="3" stdDeviation="2" floodOpacity="0.25" />
+        </filter>
+        <filter id="shadowWinter2">
+          <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodOpacity="0.20" />
+        </filter>
+        <filter id="shadowWinter3">
+          <feDropShadow dx="0" dy="1" stdDeviation="1" floodOpacity="0.15" />
+        </filter>
+      </defs>
+
+      {/* Sky - pale blue winter dawn */}
+      <rect width="400" height="280" fill="#E8F1F8" />
+
+      {/* Distant snow-covered hills */}
+      <path d="M 0 240 Q 100 180 200 220 T 400 240 L 400 280 L 0 280 Z" fill="#D9E8F5" filter="url(#shadowWinter2)" />
+
+      {/* Back-left bare tree (distant) */}
+      <g filter="url(#shadowWinter3)">
+        <line x1="60" y1="280" x2="55" y2="140" stroke="#6B5B4F" strokeWidth="3" />
+        <line x1="55" y1="160" x2="30" y2="110" stroke="#6B5B4F" strokeWidth="2" />
+        <line x1="55" y1="160" x2="80" y2="120" stroke="#6B5B4F" strokeWidth="2" />
+      </g>
+
+      {/* Back-right bare tree (distant) */}
+      <g filter="url(#shadowWinter3)">
+        <line x1="350" y1="280" x2="345" y2="150" stroke="#6B5B4F" strokeWidth="3" />
+        <line x1="345" y1="170" x2="320" y2="100" stroke="#6B5B4F" strokeWidth="2" />
+        <line x1="345" y1="170" x2="370" y2="110" stroke="#6B5B4F" strokeWidth="2" />
+      </g>
+
+      {/* BARN — primary subject */}
+      {/* Barn body */}
+      <rect x="130" y="220" width="140" height="100" fill="#8B4513" filter="url(#shadowWinter1)" />
+
+      {/* Barn roof with snow overhang */}
+      <polygon points="130,220 200,120 270,220" fill="#C0C0C0" filter="url(#shadowWinter1)" />
+
+      {/* Snow on barn roof - large central accent */}
+      <polygon points="145,220 200,145 255,220" fill="#FFFFFF" filter="url(#shadowWinter2)" />
+
+      {/* Barn door */}
+      <rect x="170" y="260" width="60" height="60" fill="#5C2E0F" />
+      <line x1="200" y1="260" x2="200" y2="320" stroke="#3D1F0A" strokeWidth="1" />
+
+      {/* Barn door handle */}
+      <circle cx="220" cy="290" r="3" fill="#DAA520" />
+
+      {/* Left barn window */}
+      <rect x="145" y="245" width="20" height="20" fill="#87CEEB" filter="url(#shadowWinter3)" />
+      <line x1="155" y1="245" x2="155" y2="265" stroke="#4682B4" strokeWidth="1" />
+      <line x1="145" y1="255" x2="165" y2="255" stroke="#4

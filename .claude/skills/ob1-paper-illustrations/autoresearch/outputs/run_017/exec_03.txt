@@ -1,0 +1,79 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. coop body (main rect)
+// 2. coop roof (polygon)
+// 3. door frame (rect)
+// 4. door wood (rect)
+// 5. nesting box dividers (path)
+// 6. nesting boxes interior (g with rects)
+// 7. roost pole (rect)
+// 8. chicken #1 body (ellipse)
+// 9. chicken #1 head (circle)
+// 10. chicken #2 body (ellipse)
+// 11. chicken #2 head (circle)
+// 12. small accent (door hinge circle)
+// TOTAL: 12 — AT LIMIT, STOP HERE
+
+export function ChickenCoopIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      {/* Coop body */}
+      <rect x="40" y="100" width="160" height="120" fill="#8B6F47" stroke="#654321" strokeWidth="2" />
+      
+      {/* Coop roof */}
+      <polygon points="40,100 120,40 200,100" fill="#A0826D" stroke="#654321" strokeWidth="2" />
+      
+      {/* Door frame */}
+      <rect x="55" y="125" width="70" height="80" fill="#6B5344" stroke="#3D2817" strokeWidth="2" />
+      
+      {/* Door wood planks (vertical lines implied by door color, adding subtle definition) */}
+      <rect x="55" y="125" width="70" height="80" fill="#7A5C47" opacity="0.8" />
+      
+      {/* Nesting box dividers inside door */}
+      <path d="M 75 145 L 75 200 M 95 145 L 95 200" stroke="#5A4433" strokeWidth="1.5" />
+      
+      {/* Nesting boxes — 3 compartments visible */}
+      <g>
+        <rect x="58" y="150" width="13" height="20" fill="#D2B48C" opacity="0.7" />
+        <rect x="78" y="150" width="13" height="20" fill="#D2B48C" opacity="0.7" />
+        <rect x="98" y="150" width="13" height="20" fill="#D2B48C" opacity="0.7" />
+      </g>
+      
+      {/* Roost pole */}
+      <rect x="115" y="165" width="50" height="4" fill="#5A4433" rx="2" />
+      
+      {/* Chicken #1 on roost — body */}
+      <ellipse cx="130" cy="162" rx="14" ry="12" fill="#C85A54" />
+      
+      {/* Chicken #1 — head */}
+      <circle cx="142" cy="155" r="6" fill="#C85A54" />
+      
+      {/* Chicken #2 on roost — body */}
+      <ellipse cx="155" cy="163" rx="12" ry="11" fill="#D97560" />
+      
+      {/* Chicken #2 — head */}
+      <circle cx="165" cy="157" r="5" fill="#D97560" />
+      
+      {/* Door hinge accent */}
+      <circle cx="58" cy="145" r="3" fill="#8B7355" />
+      
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// WIRING
+// ─────────────────────────────────────────────────────────────
+
+const chickenCoopWiring = {
+  slug: "chicken-coop",
+  title: "Chicken Coop",
+  category: "home" as const,
+};
+
+export default chickenCoopWiring;
+```
+
+**✅ COMPLETION VERIFICATION:**
+1. ✅ Every `<g>` tag closed: `</g>` present
+2

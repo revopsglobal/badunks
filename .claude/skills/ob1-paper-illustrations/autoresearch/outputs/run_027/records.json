@@ -1,0 +1,69 @@
+[
+  {
+    "index": 0,
+    "input": "Add a FireplaceIllustration for the Household winter widget \u2014 stone hearth, glowing embers, log stack",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Add a ChickenCoopIllustration \u2014 small wooden structure, nesting boxes visible through door, chickens on roost",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 2,
+    "input": "Create a FamilyDogIllustration showing Maple the golden doodle sitting in a meadow",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 3,
+    "input": "Create a NightSkyIllustration for a sleep/evening mode \u2014 full moon, Milky Way arc, silhouetted hills",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 4,
+    "input": "Add a PantryIllustration showing shelves of preserved jars, root vegetables, and hanging dried herbs",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The SVG output is truncated \u2014 the hanging herbs bundle path is cut off mid-attribute (`strokeWidth=\"`), meaning the component is incomplete and would not render correctly. The scene is not fully drawn."
+    ]
+  }
+]

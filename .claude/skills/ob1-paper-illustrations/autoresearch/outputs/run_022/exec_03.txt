@@ -1,0 +1,69 @@
+I'll update the GardenIllustration to add a trellis with climbing vines on the right side.
+
+**ELEMENT BUDGET (MAX 10):**
+1. sky rect
+2. grass rect
+3. garden bed rect
+4. sunflower
+5. sunflower stem
+6. trellis structure (vertical + horizontal lines = 1 group)
+7. vine 1 (path)
+8. vine 2 (path)
+9. vine leaves (polygon group)
+TOTAL: 9 — COMPLETE
+
+```tsx
+export function GardenIllustration() {
+  return (
+    <svg
+      viewBox="0 0 1200 800"
+      preserveAspectRatio="xMidYMid slice"
+      className="w-full h-full"
+      style={{ background: "transparent" }}
+    >
+      {/* Sky */}
+      <rect width="1200" height="500" fill="#E8F4F8" />
+
+      {/* Grass */}
+      <rect y="500" width="1200" height="300" fill="#9FBF7F" />
+
+      {/* Garden bed */}
+      <rect x="100" y="520" width="400" height="250" fill="#8B6F47" rx="8" />
+
+      {/* Sunflower stem */}
+      <line x1="300" y1="520" x2="300" y2="300" stroke="#6B8E23" strokeWidth="6" strokeLinecap="round" />
+
+      {/* Sunflower head */}
+      <circle cx="300" cy="260" r="50" fill="#FFD700" />
+      <circle cx="270" cy="240" r="6" fill="#8B6F47" />
+      <circle cx="280" cy="235" r="6" fill="#8B6F47" />
+      <circle cx="290" cy="232" r="6" fill="#8B6F47" />
+      <circle cx="300" cy="230" r="6" fill="#8B6F47" />
+      <circle cx="310" cy="232" r="6" fill="#8B6F47" />
+      <circle cx="320" cy="235" r="6" fill="#8B6F47" />
+      <circle cx="330" cy="240" r="6" fill="#8B6F47" />
+
+      {/* Trellis structure */}
+      <g stroke="#8B7355" strokeWidth="4" strokeLinecap="round">
+        {/* Vertical posts */}
+        <line x1="900" y1="350" x2="900" y2="700" />
+        <line x1="1050" y1="350" x2="1050" y2="700" />
+        {/* Horizontal support beams */}
+        <line x1="900" y1="450" x2="1050" y2="450" />
+        <line x1="900" y1="550" x2="1050" y2="550" />
+        <line x1="900" y1="650" x2="1050" y2="650" />
+        {/* Diagonal lattice - top left to bottom right */}
+        <line x1="900" y1="350" x2="1050" y2="500" />
+        <line x1="900" y1="450" x2="1050" y2="600" />
+        <line x1="900" y1="550" x2="1050" y2="700" />
+        {/* Diagonal lattice - top right to bottom left */}
+        <line x1="1050" y1="350" x2="900" y2="500" />
+        <line x1="1050" y1="450" x2="900" y2="600" />
+        <line x1="1050" y1="550" x2="900" y2="700" />
+      </g>
+
+      {/* Climbing vine 1 */}
+      <path
+        d="M 920 680 Q 930 620 940 560 Q 945 520 950 480 Q 955 440 960 400"
+        stroke="#6B8E23"
+        strokeWidth="3"

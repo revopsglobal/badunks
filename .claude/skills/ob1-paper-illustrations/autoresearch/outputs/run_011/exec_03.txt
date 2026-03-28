@@ -1,0 +1,73 @@
+I'll add a cozy kitchen scene illustration to the Illustrations.tsx file. Let me create a complete, production-ready component with proper layering and paper cut-out styling.
+
+```tsx
+export function MealsIllustration() {
+  // LAYERS: sky | wall | counter | [SUBJECT: pot, board, herbs] | foreground | accents
+  // ELEMENT BUDGET: wall=2, counter=3, pot=4, board=3, herbs=6, accents=2 = 23 total
+  // SUBJECT SHAPES: cast-iron-pot, pot-handle, cutting-board, herbs (basil, thyme, rosemary)
+
+  return (
+    <svg
+      viewBox="0 0 400 500"
+      className="w-full h-full"
+      style={{ animation: "float 6s ease-in-out infinite" }}
+    >
+      {/* Kitchen wall background */}
+      <rect width="400" height="500" fill="#E8DCC8" />
+
+      {/* Upper wall shelf edge */}
+      <rect x="0" y="80" width="400" height="12" fill="#9B8B7E" />
+
+      {/* Wall shadow/depth plane */}
+      <polygon points="0,80 400,80 400,200 0,180" fill="#D9CDB8" opacity="0.6" />
+
+      {/* Counter surface - mid tone */}
+      <rect x="0" y="240" width="400" height="260" fill="#A89968" />
+
+      {/* Counter front face - darker */}
+      <polygon points="0,240 400,240 400,250 0,245" fill="#8B7D5B" />
+
+      {/* Counter shadow/depth */}
+      <rect x="20" y="245" width="360" height="8" fill="#7A6D52" opacity="0.7" />
+
+      {/* Wooden cutting board - angled */}
+      <g id="cutting-board" style={{ animation: "tilt 4s ease-in-out infinite" }}>
+        <rect x="60" y="280" width="140" height="100" rx="8" fill="#8B6F47" />
+        <circle cx="75" cy="295" r="4" fill="#6B5436" opacity="0.5" />
+        <circle cx="120" cy="310" r="3" fill="#6B5436" opacity="0.4" />
+        <circle cx="95" cy="350" r="3.5" fill="#6B5436" opacity="0.5" />
+        <circle cx="160" cy="340" r="4" fill="#6B5436" opacity="0.4" />
+      </g>
+
+      {/* Cast iron pot - main body */}
+      <ellipse cx="250" cy="320" rx="70" ry="45" fill="#3A3A3A" />
+
+      {/* Pot rim - lighter cast iron */}
+      <ellipse cx="250" cy="305" rx="72" ry="12" fill="#4A4A4A" />
+
+      {/* Pot handle */}
+      <path
+        d="M 320 310 Q 360 280 360 340"
+        stroke="#3A3A3A"
+        strokeWidth="16"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Pot handle inner highlight */}
+      <path
+        d="M 320 310 Q 360 280 360 340"
+        stroke="#5A5A5A"
+        strokeWidth="8"
+        fill="none"
+        strokeLinecap="round"
+        opacity="0.6"
+      />
+
+      {/* Cast iron pot interior shadow */}
+      <ellipse cx="250" cy="325" rx="55" ry="28" fill="#1A1A1A" opacity="0.5" />
+
+      {/* Basil herb bunch - left side */}
+      <g id="basil">
+        <line x1="85" y1="230" x2="85" y2="270" stroke="#2D4A3E" strokeWidth="3" strokeLinecap="round" />
+        <ellipse cx="70" cy="245" rx="12

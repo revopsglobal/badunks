@@ -1,0 +1,74 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. back wall rect
+// 3. pegboard rect
+// 4. workbench top rect
+// 5. workbench leg left rect
+// 6. workbench leg right rect
+// 7. sawdust pile path
+// 8. tool peg 1 (circle)
+// 9. tool peg 2 (circle)
+// 10. wrench shape (path)
+// 11. hammer head (rect)
+// 12. hammer handle (rect)
+// TOTAL: 12 — AT LIMIT
+
+export function WorkshopIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      {/* Sky */}
+      <rect width="240" height="100" fill="#E8D5C4" />
+      
+      {/* Back wall */}
+      <rect y="100" width="240" height="180" fill="#8B7355" />
+      
+      {/* Pegboard */}
+      <rect x="30" y="110" width="180" height="140" fill="#D4A574" />
+      
+      {/* Workbench top */}
+      <rect x="20" y="220" width="200" height="12" fill="#654321" />
+      
+      {/* Workbench leg left */}
+      <rect x="25" y="232" width="8" height="48" fill="#5C3D2E" />
+      
+      {/* Workbench leg right */}
+      <rect x="207" y="232" width="8" height="48" fill="#5C3D2E" />
+      
+      {/* Sawdust pile */}
+      <path d="M 10 240 Q 20 225 35 235 Q 40 250 25 260 Z" fill="#C9A876" />
+      
+      {/* Pegboard peg hole 1 */}
+      <circle cx="60" cy="145" r="3" fill="#8B6F47" />
+      
+      {/* Pegboard peg hole 2 */}
+      <circle cx="120" cy="155" r="3" fill="#8B6F47" />
+      
+      {/* Wrench on pegboard */}
+      <path d="M 50 160 L 85 160 Q 88 162 85 165 L 50 165 Q 48 162 50 160" fill="#A9A9A9" />
+      
+      {/* Hammer head */}
+      <rect x="140" y="135" width="20" height="18" fill="#7A7A7A" rx="2" />
+      
+      {/* Hammer handle */}
+      <rect x="148" y="153" width="4" height="32" fill="#D2691E" />
+    </svg>
+  );
+}
+
+// ─── Wiring ───
+export const illustrations = {
+  workshop: WorkshopIllustration,
+};
+```
+
+**✅ VERIFICATION CHECKLIST:**
+- ✅ Export function syntax used (`export function WorkshopIllustration`)
+- ✅ 12 elements total (at limit, no truncation)
+- ✅ All tags fully closed: every `<rect />`, `<circle />`, `<path ... />` complete
+- ✅ All attributes fully written: no cut-off hex colors, no missing quotes
+- ✅ `</svg>` present
+- ✅ `);` closes return
+- ✅ `}` closes function
+- ✅ Paper cut-out style: flat fills only, no gradients
+- ✅ 4 depth layers: sky (back), wall (mid-back), pegboard/bench (mid), sawdust (foreground)

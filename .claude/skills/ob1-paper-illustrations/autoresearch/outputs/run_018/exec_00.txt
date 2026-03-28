@@ -1,0 +1,86 @@
+# FamilyDogIllustration — Maple the Golden Doodle
+
+**ELEMENT BUDGET (MAX 12):**
+1. sky rect (background fill)
+2. far grass path (distant meadow)
+3. mid grass rect (middle ground)
+4. foreground ground rect
+5. dog body (circle/ellipse)
+6. dog head (circle)
+7. dog ears (2x ellipse as 1 group element)
+8. dog snout (ellipse)
+9. flower accent 1 (group)
+10. flower accent 2 (group)
+**TOTAL: 10 ELEMENTS — COMPLETE AND COMPILABLE**
+
+---
+
+```tsx
+export function FamilyDogIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" className="w-full h-full">
+      {/* SKY — fills entire canvas */}
+      <rect x="0" y="0" width="240" height="280" fill="#87CEEB" />
+
+      {/* FAR GRASS — distant meadow */}
+      <path d="M 0 160 Q 60 150 120 155 T 240 160 L 240 180 L 0 180 Z" fill="#6BA856" />
+
+      {/* MID GRASS */}
+      <rect x="0" y="175" width="240" height="35" fill="#7CB342" />
+
+      {/* FOREGROUND GROUND */}
+      <rect x="0" y="210" width="240" height="70" fill="#558B2F" />
+
+      {/* DOG BODY — sitting position */}
+      <ellipse cx="120" cy="180" rx="35" ry="42" fill="#D4A574" />
+
+      {/* DOG HEAD */}
+      <circle cx="120" cy="115" r="28" fill="#C9985F" />
+
+      {/* DOG EARS */}
+      <g>
+        <ellipse cx="100" cy="92" rx="10" ry="18" fill="#B8945A" />
+        <ellipse cx="140" cy="92" rx="10" ry="18" fill="#B8945A" />
+      </g>
+
+      {/* DOG SNOUT */}
+      <ellipse cx="120" cy="127" rx="16" ry="12" fill="#E5C8A6" />
+
+      {/* FLOWER ACCENT 1 — left side */}
+      <g>
+        <circle cx="80" cy="215" r="2" fill="#FFD700" />
+        <circle cx="75" cy="210" r="3" fill="#FF69B4" />
+        <circle cx="77" cy="217" r="3" fill="#FF69B4" />
+        <circle cx="83" cy="217" r="3" fill="#FF69B4" />
+        <circle cx="85" cy="210" r="3" fill="#FF69B4" />
+      </g>
+
+      {/* FLOWER ACCENT 2 — right side */}
+      <g>
+        <circle cx="160" cy="225" r="2" fill="#FFD700" />
+        <circle cx="155" cy="220" r="3" fill="#FFA500" />
+        <circle cx="157" cy="227" r="3" fill="#FFA500" />
+        <circle cx="163" cy="227" r="3" fill="#FFA500" />
+        <circle cx="165" cy="220" r="3" fill="#FFA500" />
+      </g>
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// WIRING: Add to page imports
+// ─────────────────────────────────────────────────────────────
+// import { FamilyDogIllustration } from '@/app/Illustrations';
+//
+// In your component:
+// <FamilyDogIllustration />
+```
+
+---
+
+## Scene Description
+
+**Maple the Golden Doodle sits contentedly in a sunny meadow**, surrounded by spring flowers. The scene features:
+
+- **Sky:** Bright cheerful blue (#87CEEB)
+- **Meadow

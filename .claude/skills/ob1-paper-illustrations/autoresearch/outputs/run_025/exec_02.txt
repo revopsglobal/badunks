@@ -1,0 +1,95 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. far snow hill path
+// 3. mid snow hill path
+// 4. foreground ground rect
+// 5. barn rect (main structure)
+// 6. barn roof path (snow-covered)
+// 7. barn door rect
+// 8. left bare tree path
+// 9. right bare tree path
+// 10. frozen pond rect
+// TOTAL: 10 — COMPLETE
+
+export function WinterIllustration() {
+  return (
+    <svg
+      viewBox="0 0 224 280"
+      className="w-full h-full"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      {/* SKY LAYER */}
+      <rect x="0" y="0" width="224" height="140" fill="#E8F1F5" />
+
+      {/* FAR SNOW HILLS */}
+      <path
+        d="M 0 140 Q 56 110 112 140 T 224 140 L 224 170 L 0 170 Z"
+        fill="#D4E4ED"
+      />
+
+      {/* MID SNOW HILLS */}
+      <path
+        d="M 0 170 Q 56 145 112 170 T 224 170 L 224 200 L 0 200 Z"
+        fill="#C5D9E8"
+      />
+
+      {/* FROZEN POND */}
+      <rect x="140" y="185" width="70" height="35" rx="8" fill="#B8D4E8" />
+
+      {/* BARN MAIN STRUCTURE */}
+      <rect x="55" y="130" width="70" height="65" fill="#8B4513" />
+
+      {/* BARN ROOF WITH SNOW */}
+      <path
+        d="M 55 130 L 90 100 L 125 130 Z"
+        fill="#A0522D"
+      />
+      <path
+        d="M 60 128 L 90 105 L 120 128 Z"
+        fill="#F5F5F5"
+      />
+
+      {/* BARN DOOR */}
+      <rect x="78" y="150" width="20" height="35" fill="#654321" />
+
+      {/* LEFT BARE TREE */}
+      <path
+        d="M 25 200 L 25 150 M 20 160 L 30 160 M 18 170 L 32 170 M 15 180 L 35 180"
+        stroke="#5D4037"
+        strokeWidth="1.5"
+        fill="none"
+      />
+
+      {/* RIGHT BARE TREE */}
+      <path
+        d="M 190 205 L 190 155 M 185 165 L 195 165 M 183 175 L 197 175 M 180 185 L 200 185"
+        stroke="#5D4037"
+        strokeWidth="1.5"
+        fill="none"
+      />
+
+      {/* FOREGROUND SNOW GROUND */}
+      <rect x="0" y="200" width="224" height="80" fill="#F0F4F8" />
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// WIRING
+// ─────────────────────────────────────────────────────────────
+
+WinterIllustration.displayName = "WinterIllustration";
+```
+
+**Scene complete at 10 elements:**
+
+✅ Sky layer (pale winter blue)  
+✅ Distant/far snow hills (depth plane 1)  
+✅ Mid-ground snow hills (depth plane 2)  
+✅ Frozen pond (icy blue, right mid-ground)  
+✅ Barn structure (warm brown, main subject)  
+✅ Snow-covered barn roof (white snow peak detail)  
+✅ Barn door (dark accent)  
+✅ Left bare tree (branching strokes, no foliage)  
+✅ Right bare tree (branching

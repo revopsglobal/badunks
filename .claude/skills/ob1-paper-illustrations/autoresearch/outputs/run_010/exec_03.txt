@@ -1,0 +1,73 @@
+# WeatherIllustration Component
+
+I'll create a complete weather scene with rolling clouds, rain drops, and a rainbow arc.
+
+```tsx
+export function WeatherIllustration() {
+  // LAYERS: sky gradient | rolling clouds | rain drops | rainbow arc | foreground mist
+  // ELEMENT BUDGET: sky=2, clouds=6, rain=5, rainbow=4, mist=2 = 19 total
+  
+  return (
+    <svg
+      viewBox="0 0 400 300"
+      className="w-full h-full"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      {/* SKY BACKGROUND */}
+      <defs>
+        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#5B8DBE', stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: '#A8C9E0', stopOpacity: 1 }} />
+        </linearGradient>
+        <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style={{ stopColor: '#FF6B6B', stopOpacity: 0.8 }} />
+          <stop offset="25%" style={{ stopColor: '#FFA500', stopOpacity: 0.8 }} />
+          <stop offset="50%" style={{ stopColor: '#FFD93D', stopOpacity: 0.8 }} />
+          <stop offset="75%" style={{ stopColor: '#6BCB77', stopOpacity: 0.8 }} />
+          <stop offset="100%" style={{ stopColor: '#4D96FF', stopOpacity: 0.8 }} />
+        </linearGradient>
+      </defs>
+
+      {/* SKY */}
+      <rect width="400" height="300" fill="url(#skyGradient)" />
+
+      {/* ROLLING CLOUDS GROUP */}
+      <g id="clouds" className="animate-float">
+        {/* Cloud 1 - Left */}
+        <ellipse cx="60" cy="70" rx="35" ry="22" fill="white" opacity="0.9" />
+        <ellipse cx="95" cy="75" rx="40" ry="25" fill="white" opacity="0.85" />
+        <circle cx="30" cy="80" r="20" fill="white" opacity="0.9" />
+
+        {/* Cloud 2 - Center-Right */}
+        <ellipse cx="280" cy="50" rx="45" ry="28" fill="white" opacity="0.88" />
+        <ellipse cx="330" cy="55" rx="38" ry="24" fill="white" opacity="0.82" />
+        <circle cx="250" cy="65" r="25" fill="white" opacity="0.87" />
+      </g>
+
+      {/* RAINBOW ARC */}
+      <g id="rainbow" className="animate-fade-in">
+        {/* Outer rainbow arc */}
+        <path
+          d="M 80 280 Q 200 80 320 280"
+          stroke="url(#rainbowGradient)"
+          strokeWidth="12"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.7"
+        />
+        {/* Inner subtle arc */}
+        <path
+          d="M 100 270 Q 200 110 300 270"
+          stroke="url(#rainbowGradient)"
+          strokeWidth="8"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.4"
+        />
+      </g>
+
+      {/* RAIN DROPS */}
+      <g id="raindrops" className="animate-rain">
+        {/* Drop 1 */}
+        <line x1="120" y1="140" x2="120" y2="170" stroke="#4D96FF" strokeWidth="2" opacity="0.7" />
+        {/* Drop 2

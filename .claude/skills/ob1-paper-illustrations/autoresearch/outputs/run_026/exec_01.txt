@@ -1,0 +1,64 @@
+```tsx
+export function PantryIllustration() {
+  return (
+    <svg
+      viewBox="0 0 400 400"
+      className="w-full h-full"
+      style={{ animation: "float 3s ease-in-out infinite" }}
+    >
+      {/* ELEMENT BUDGET (MAX 12):
+          1. wall rect
+          2. ground rect
+          3. shelf 1 rect
+          4. shelf 2 rect
+          5. shelf 3 rect
+          6. jar group (path)
+          7. jar group (path)
+          8. hanging herbs (path)
+          9. root vegetables (path)
+          10. basket accent (rect)
+          TOTAL: 10 — STOP HERE */}
+
+      {/* Wall background */}
+      <rect x="0" y="0" width="400" height="280" fill="#F5E6D3" />
+
+      {/* Ground/floor */}
+      <rect x="0" y="280" width="400" height="120" fill="#8B7355" />
+
+      {/* Shelf 1 — top */}
+      <rect x="40" y="80" width="320" height="12" fill="#6B4423" />
+
+      {/* Shelf 2 — middle */}
+      <rect x="40" y="160" width="320" height="12" fill="#6B4423" />
+
+      {/* Shelf 3 — lower */}
+      <rect x="40" y="240" width="320" height="12" fill="#6B4423" />
+
+      {/* Preserved jars on Shelf 1 */}
+      <g>
+        {/* Jar 1 */}
+        <rect x="60" y="50" width="28" height="32" fill="#E8D5B7" stroke="#8B7355" strokeWidth="1" />
+        <rect x="62" y="48" width="24" height="4" fill="#D4AF37" />
+        <ellipse cx="74" cy="52" rx="12" ry="3" fill="#C4A02F" />
+        <circle cx="74" cy="65" r="8" fill="#D4A574" opacity="0.6" />
+
+        {/* Jar 2 */}
+        <rect x="100" y="45" width="30" height="38" fill="#F0E5D8" stroke="#8B7355" strokeWidth="1" />
+        <rect x="102" y="43" width="26" height="4" fill="#D4AF37" />
+        <ellipse cx="117" cy="47" rx="13" ry="3" fill="#C4A02F" />
+        <circle cx="117" cy="62" r="9" fill="#C97C3A" opacity="0.7" />
+
+        {/* Jar 3 */}
+        <rect x="142" y="55" width="26" height="28" fill="#E8D5B7" stroke="#8B7355" strokeWidth="1" />
+        <rect x="144" y="53" width="22" height="4" fill="#D4AF37" />
+        <ellipse cx="155" cy="57" rx="11" ry="3" fill="#C4A02F" />
+        <circle cx="155" cy="68" r="7" fill="#8B6F47" opacity="0.6" />
+
+        {/* Jar 4 */}
+        <rect x="180" y="48" width="32" height="36" fill="#F0E5D8" stroke="#8B7355" strokeWidth="1" />
+        <rect x="182" y="46" width="28" height="4" fill="#D4AF37" />
+        <ellipse cx="198" cy="50" rx="14" ry="3" fill="#C4A02F" />
+        <circle cx="198" cy="66" r="9" fill="#D4A574" opacity="0.7" />
+
+        {/* Jar 5 */}
+        <rect x="224" y="52" width="28" height="32" fill="#E8D5B7" stroke="#8B7355" strokeWidth="1" />

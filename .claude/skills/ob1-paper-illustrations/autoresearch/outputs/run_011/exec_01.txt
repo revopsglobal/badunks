@@ -1,0 +1,68 @@
+# RainBarrelIllustration — Complete Paper Cut-Out Scene
+
+**ELEMENT BUDGET PLAN:**
+```
+Sky = 1 rect
+Far background hill = 1 path
+Mid-ground terrain = 1 rect
+Overflow trough/gutter = 2 paths
+Downspout = 1 rect
+Barrel body = 2 paths (front curved, side flat)
+Barrel bands = 3 rects
+Barrel opening/lid = 1 ellipse
+Mint plant = 4 elements (stem, 3 leaf groups)
+Ground foreground = 1 rect
+Accent rocks/details = 2 circles
+TOTAL: 20 elements — COMPLETE AND SAFE
+```
+
+```tsx
+export function RainBarrelIllustration() {
+  return (
+    <svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+      {/* Sky background */}
+      <rect width="600" height="280" fill="#A8D5E8" />
+
+      {/* Far background dark hill silhouette */}
+      <path d="M 0 280 Q 150 200 300 240 T 600 280 L 600 320 L 0 320 Z" fill="#1A3A2E" />
+
+      {/* Mid-ground lighter hill */}
+      <rect y="320" width="600" height="180" fill="#3D6B4F" />
+
+      {/* Overflow trough - upper gutter */}
+      <path d="M 150 280 Q 200 270 280 275 L 290 290 Q 220 285 150 295 Z" fill="#8B7355" />
+
+      {/* Downspout - vertical pipe */}
+      <rect x="265" y="280" width="30" height="200" fill="#6B5344" />
+
+      {/* Barrel body - left curved side */}
+      <path d="M 280 420 Q 240 440 240 520 Q 240 580 280 600 L 280 420 Z" fill="#8B6F47" />
+
+      {/* Barrel body - right curved side */}
+      <path d="M 320 420 Q 360 440 360 520 Q 360 580 320 600 L 320 420 Z" fill="#A0845C" />
+
+      {/* Barrel front face - darker wood */}
+      <ellipse cx="300" cy="520" rx="60" ry="50" fill="#6B5344" />
+
+      {/* Barrel band - top */}
+      <rect x="270" y="440" width="60" height="8" fill="#3D2817" rx="2" />
+
+      {/* Barrel band - middle */}
+      <rect x="265" y="520" width="70" height="8" fill="#3D2817" rx="2" />
+
+      {/* Barrel band - bottom */}
+      <rect x="268" y="595" width="64" height="8" fill="#3D2817" rx="2" />
+
+      {/* Barrel opening/lid */}
+      <ellipse cx="300" cy="420" rx="45" ry="18" fill="#4A3728" />
+
+      {/* Mint plant - main stem */}
+      <path d="M 380 580 Q 385 540 380 500 Q 378 460 375 420" stroke="#2D5A3D" strokeWidth="4" fill="none" />
+
+      {/* Mint leaves - lower group */}
+      <ellipse cx="360" cy="560" rx="18" ry="12" fill="#4A8B5C" transform="rotate(-35 360 560)" />
+      <ellipse cx="405" cy="555" rx="18" ry="12" fill="#5BA06E" transform="rotate(35 405 555)" />
+
+      {/* Mint leaves - middle group */}
+      <ellipse cx="355" cy="490" rx="20" ry="14" fill="#3D7A4B" transform="rotate(-40 355 490)" />
+      <ellipse cx="410" cy="485" rx="20" ry="14" fill

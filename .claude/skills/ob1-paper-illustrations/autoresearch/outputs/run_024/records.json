@@ -1,0 +1,70 @@
+[
+  {
+    "index": 0,
+    "input": "Create a BeehiveIllustration for a future apiary section \u2014 hive boxes, flowers, bees",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Add a WinterIllustration for a seasonal home screen variant \u2014 snow on the barn roof, bare trees, frozen pond",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 2,
+    "input": "Create a SunriseIllustration for the morning home screen \u2014 fog lifting over hills, amber sky, rooster silhouette",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 3,
+    "input": "Create a FamilyDogIllustration showing Maple the golden doodle sitting in a meadow",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 4,
+    "input": "Create a WeatherIllustration for a weather widget \u2014 rolling clouds, rain drops, and a partial rainbow",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": false,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration uses soft blue gradients and overlapping ellipses but lacks the distinct flat layered depth planes of a paper cut-out aesthetic. There is no clear ground/terrain layer, and the color differences between layers are too subtle (all muted blues) to read as distinct stacked planes. No ground layer is present at all.",
+      "COLOR_VARIETY: The palette is almost entirely muted blue-grays (#87CEEB, #E8F4F8, #D4E8F0, #B8D9E8, #4DA6D6) with only token warm color in the rainbow strokes. There are no dark background anchor values (deep layer1/layer2 equivalents) and no warm, light, or contrasting foreground accents \u2014 the scene lacks the required contrast between dark background values and lighter/warmer foreground values."
+    ]
+  }
+]

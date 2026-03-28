@@ -1,0 +1,94 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. far hills path
+// 3. mid hills path
+// 4. foreground ground rect
+// 5. dog body (ellipse)
+// 6. dog head (circle)
+// 7. dog ear left (ellipse)
+// 8. dog ear right (ellipse)
+// 9. dog snout (ellipse)
+// 10. flowers group (counts as 1)
+// TOTAL: 10 — COMPLETE SCENE
+
+export function FamilyDogIllustration() {
+  return (
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      {/* SKY */}
+      <rect width="400" height="180" fill="#E8F4F8" />
+      
+      {/* FAR HILLS */}
+      <path d="M 0 140 Q 100 100 200 120 T 400 140 L 400 180 L 0 180 Z" fill="#A8D5BA" />
+      
+      {/* MID HILLS */}
+      <path d="M 0 160 Q 80 140 150 155 Q 250 170 400 150 L 400 180 L 0 180 Z" fill="#7FBF99" />
+      
+      {/* FOREGROUND MEADOW */}
+      <rect y="180" width="400" height="120" fill="#5FA878" />
+      
+      {/* DOG BODY */}
+      <ellipse cx="140" cy="220" rx="45" ry="50" fill="#D4A574" />
+      
+      {/* DOG HEAD */}
+      <circle cx="140" cy="140" r="32" fill="#C89968" />
+      
+      {/* DOG LEFT EAR */}
+      <ellipse cx="115" cy="115" rx="14" ry="28" fill="#B8885C" transform="rotate(-25 115 115)" />
+      
+      {/* DOG RIGHT EAR */}
+      <ellipse cx="165" cy="115" rx="14" ry="28" fill="#B8885C" transform="rotate(25 165 115)" />
+      
+      {/* DOG SNOUT */}
+      <ellipse cx="140" cy="155" rx="18" ry="14" fill="#E8C89C" />
+      
+      {/* WILDFLOWERS */}
+      <g>
+        <circle cx="80" cy="220" r="3" fill="#E74C3C" />
+        <circle cx="95" cy="235" r="3" fill="#F39C12" />
+        <circle cx="200" cy="225" r="3" fill="#9B59B6" />
+        <circle cx="215" cy="240" r="3" fill="#E74C3C" />
+        <circle cx="250" cy="215" r="3" fill="#F39C12" />
+      </g>
+    </svg>
+  );
+}
+```
+
+---
+
+## WIRING
+
+**Component name:** `FamilyDogIllustration`
+
+**Usage in page:**
+```tsx
+import { FamilyDogIllustration } from '@/app/Illustrations';
+
+export default function Page() {
+  return (
+    <div className="w-full h-screen flex items-center justify-center bg-gradient-to-b from-white to-blue-50">
+      <div className="w-80 h-80">
+        <FamilyDogIllustration />
+      </div>
+    </div>
+  );
+}
+```
+
+**Animation (optional — add to `globals.css` under `/* ─── Illustration motion ─── */`):**
+```css
+/* Maple tail wag effect */
+@keyframes tailWag {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(8deg); }
+}
+
+/* Add to illustration container */
+svg {
+  animation: tailWag 1.5s ease-in-out infinite;
+}
+```
+
+**Scene breakdown:**
+- ✅

@@ -1,0 +1,65 @@
+```tsx
+// ELEMENT BUDGET (MAX 10):
+// 1. sky rect
+// 2. far hill path
+// 3. mid hill path
+// 4. greenhouse frame rect (back)
+// 5. glass pane group (2x rects = still 1 group element)
+// 6. seed trays group (3x rects = still 1 group element)
+// 7. tomato plant group (stems + leaves + fruit = 1 group)
+// 8. misting can rect + spout
+// 9. foreground ground rect
+// TOTAL: 9 — COMPLETE SCENE GUARANTEED
+
+export function GreenhouseIllustration() {
+  return (
+    <svg viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+      {/* Sky background */}
+      <rect width="400" height="400" fill="#E8F4F8" />
+
+      {/* Far hill */}
+      <path d="M 0 280 Q 100 240 200 260 T 400 280 L 400 350 L 0 350 Z" fill="#A8D5A8" />
+
+      {/* Mid hill */}
+      <path d="M 0 320 Q 100 290 200 310 T 400 320 L 400 380 L 0 380 Z" fill="#7FB87F" />
+
+      {/* Greenhouse frame (wood back wall) */}
+      <rect x="80" y="140" width="240" height="180" fill="#6B4423" rx="2" />
+
+      {/* Glass panes group */}
+      <g>
+        {/* Left pane */}
+        <rect x="90" y="150" width="100" height="160" fill="#D0E8F2" opacity="0.8" stroke="#4A7C9E" strokeWidth="2" />
+        {/* Right pane */}
+        <rect x="210" y="150" width="100" height="160" fill="#D0E8F2" opacity="0.8" stroke="#4A7C9E" strokeWidth="2" />
+      </g>
+
+      {/* Seed trays group */}
+      <g>
+        {/* Tray 1 (left) */}
+        <rect x="95" y="280" width="45" height="35" fill="#8B6F47" />
+        {/* Tray 2 (center) */}
+        <rect x="165" y="285" width="45" height="35" fill="#A0825D" />
+        {/* Tray 3 (right) */}
+        <rect x="235" y="280" width="45" height="35" fill="#8B6F47" />
+      </g>
+
+      {/* Tomato plant group */}
+      <g>
+        {/* Main stem */}
+        <path d="M 180 260 Q 185 240 180 220" stroke="#4A7C59" strokeWidth="3" fill="none" strokeLinecap="round" />
+        {/* Left leaf */}
+        <ellipse cx="165" cy="235" rx="12" ry="8" fill="#5A9C3D" transform="rotate(-35 165 235)" />
+        {/* Right leaf */}
+        <ellipse cx="195" cy="230" rx="12" ry="8" fill="#6BB84F" transform="rotate(35 195 230)" />
+        {/* Tomato fruit (red) */}
+        <circle cx="180" cy="210" r="10" fill="#E74C3C" />
+      </g>
+
+      {/* Misting can */}
+      <g>
+        {/* Can body */}
+        <rect x="310" y="260" width="35" height="40" fill="#D4A574" rx="1" />
+        {/* Spout (angled line) */}
+        <line x1="335" y1="270" x2="360" y2="255" stroke="#8B6F47" strokeWidth="3" strokeLinecap="round" />
+        {/* Handle (curved) */}

@@ -1,0 +1,73 @@
+[
+  {
+    "index": 0,
+    "input": "Create a FamilyDogIllustration showing Maple the golden doodle sitting in a meadow",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 1,
+    "input": "Create a NightSkyIllustration for a sleep/evening mode \u2014 full moon, Milky Way arc, silhouetted hills",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": []
+  },
+  {
+    "index": 2,
+    "input": "Add a FencelineIllustration as a decorative section divider \u2014 split-rail fence with wildflowers",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The SVG output is truncated \u2014 the third wildflower bloom (purple) is cut off mid-attribute (`fill`), and the grass tufts element (element 8 in the budget) is never rendered. The scene is incomplete as the code was not fully generated."
+    ]
+  },
+  {
+    "index": 3,
+    "input": "Create a BeehiveIllustration for a future apiary section \u2014 hive boxes, flowers, bees",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration lacks distinct layered depth planes characteristic of paper cut-out style. The hive boxes sit directly on a two-tone background (sky + ground) with no mid-ground hills, meadow strips, or intermediate terrain layers creating depth. The shapes are flat colored rectangles but the scene reads as flat icon art rather than stacked paper layers at distinct depth planes. Only 2 clear background planes (sky, ground) are present rather than 4+ visible shape layers."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Add a PantryIllustration showing shelves of preserved jars, root vegetables, and hanging dried herbs",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": false,
+      "color_variety": true,
+      "complete_scene": true,
+      "exports_correctly": true
+    },
+    "failures": [
+      "PAPER_CUTOUT_STYLE: The illustration relies heavily on plain rectangles for shelves and background without distinct layered depth planes characteristic of paper cut-out style. The jars use nested circles which approximates layering, but the overall composition lacks the stacked flat-shape silhouette depth planes (e.g., distinct mid-plane and foreground terrain layers). The dried herbs are rendered as stroked paths rather than flat filled shapes, and there are fewer than 4 visually distinct color-differentiated depth layers stacked in the paper cut-out manner."
+    ]
+  }
+]

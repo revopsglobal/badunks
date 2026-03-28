@@ -1,0 +1,54 @@
+/* Board Container */
+.board {
+  --tile-size: 4.2vw;
+  --tile-gap: clamp(2px, 0.3vw, 5px);
+
+  position: relative;
+  background: #111;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+/* Tile Grid */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols, 22), var(--tile-size));
+  grid-template-rows: repeat(var(--grid-rows, 5), var(--tile-h, var(--tile-size)));
+  gap: var(--tile-gap);
+  justify-content: center;
+}
+
+/* Accent Squares */
+.accent-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accent-bar-left {
+  left: 18px;
+}
+
+.accent-bar-right {
+  right: 18px;
+}
+
+.accent-segment {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  transition: background-color 0.5s ease;
+}
+
+/* Keyboard hint and shortcuts overlay removed */
+
+/* Scroll indicator — hidden in stripped mode */
+.board::after {
+  display: none;
+}

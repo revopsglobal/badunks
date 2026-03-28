@@ -1,0 +1,56 @@
+```tsx
+export function MealsIllustration() {
+  const P = {
+    sky: "#F5E6D3",
+    wall: "#E8D4C0",
+    wood: "#8B6F47",
+    darkWood: "#5C4A33",
+    pot: "#3A3A3A",
+    potHi: "#6B5B4F",
+    board: "#A0845C",
+    boardEdge: "#7A5F3F",
+    herb1: "#4A7C59",
+    herb2: "#3D6B4F",
+    herb3: "#5A9B6F",
+    leafHi: "#6DB87D",
+    shadow: "rgba(0,0,0,0.25)",
+  };
+
+  return (
+    <svg viewBox="0 0 400 320" className="w-full h-full">
+      <defs>
+        <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="3" stdDeviation="3" floodOpacity="0.4" />
+        </filter>
+      </defs>
+
+      {/* Background wall */}
+      <rect width="400" height="320" fill={P.sky} />
+      <path d="M 0 140 Q 100 135 200 140 T 400 140 L 400 320 L 0 320 Z" fill={P.wall} />
+
+      {/* Counter surface */}
+      <ellipse cx="200" cy="250" rx="180" ry="40" fill={P.wood} opacity="0.9" />
+      <path d="M 40 250 Q 200 235 360 250 L 360 260 Q 200 270 40 260 Z" fill={P.darkWood} opacity="0.5" />
+
+      {/* Cast iron pot — body */}
+      <ellipse cx="120" cy="220" rx="55" ry="45" fill={P.pot} filter="url(#dropShadow)" />
+      <path d="M 70 210 Q 65 200 75 185 Q 120 170 165 185 Q 175 200 170 210" fill={P.potHi} opacity="0.6" />
+
+      {/* Pot rim and handle */}
+      <ellipse cx="120" cy="180" rx="58" ry="15" fill={P.potHi} opacity="0.4" />
+      <path d="M 155 200 Q 180 190 185 210 Q 180 225 160 220" fill={P.pot} stroke={P.potHi} strokeWidth="2" strokeLinecap="round" />
+
+      {/* Wooden cutting board */}
+      <rect x="220" y="195" width="130" height="85" rx="8" fill={P.board} filter="url(#dropShadow)" />
+      <rect x="225" y="200" width="120" height="75" rx="6" fill={P.boardEdge} opacity="0.3" />
+
+      {/* Board wood grain lines */}
+      <line x1="240" y1="200" x2="240" y2="270" stroke={P.darkWood} strokeWidth="1" opacity="0.4" />
+      <line x1="270" y1="200" x2="270" y2="270" stroke={P.darkWood} strokeWidth="1" opacity="0.3" />
+      <line x1="300" y1="200" x2="300" y2="270" stroke={P.darkWood} strokeWidth="1" opacity="0.4" />
+      <line x1="330" y1="200" x2="330" y2="270" stroke={P.darkWood} strokeWidth="1" opacity="0.3" />
+
+      {/* Fresh herbs bundle — Herb 1 (left) */}
+      <g style={{ animation: "leafSway 3s ease-in-out infinite", transformOrigin: "130px 200px" }}>
+        {/* Stem */}
+        <line

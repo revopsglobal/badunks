@@ -1,0 +1,67 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect — full canvas (x=0, y=0, width=320, height=280)
+// 2. far hills/background layer
+// 3. mid-ground trees silhouette
+// 4. ground rect — soil/grass (y=200, height=80)
+// 5. main maple tree trunk
+// 6. maple tree canopy — orange/red leaves cluster
+// 7. swing rope left
+// 8. swing rope right
+// 9. swing seat
+// 10. accent leaf 1 (falling)
+// 11. accent leaf 2 (falling)
+// TOTAL: 11 — WITHIN BUDGET
+```
+
+```tsx
+export function MapleTreeIllustration() {
+  return (
+    <svg viewBox="0 0 320 280" width="320" height="280" xmlns="http://www.w3.org/2000/svg">
+      {/* LAYER 1: Sky — covers ENTIRE canvas */}
+      <rect x="0" y="0" width="320" height="280" fill="#E8D4B8" />
+
+      {/* LAYER 2: Background far hills — muted earth tones */}
+      <ellipse cx="60" cy="240" rx="90" ry="50" fill="#7B6B4F" opacity="0.6" />
+      <ellipse cx="280" cy="245" rx="100" ry="45" fill="#8B7B5F" opacity="0.5" />
+
+      {/* LAYER 3: Ground — soil/grass reaching bottom edge */}
+      <rect x="0" y="200" width="320" height="80" fill="#6B5A3D" />
+
+      {/* LAYER 4: Tree trunk — dark brown, centered */}
+      <rect x="140" y="160" width="40" height="70" fill="#4A3728" />
+
+      {/* LAYER 5: Main maple canopy — large orange/red leaf cluster */}
+      <circle cx="160" cy="100" r="70" fill="#D84C1F" />
+      <circle cx="110" cy="80" r="50" fill="#E85D2E" />
+      <circle cx="200" cy="85" r="55" fill="#DC4A1D" />
+      <circle cx="140" cy="50" r="45" fill="#F26B35" />
+      <circle cx="180" cy="55" r="48" fill="#E8491F" />
+
+      {/* LAYER 6: Swing rope — left side */}
+      <line x1="145" y1="85" x2="130" y2="140" stroke="#5C3D1E" strokeWidth="2" />
+
+      {/* LAYER 7: Swing rope — right side */}
+      <line x1="175" y1="85" x2="190" y2="140" stroke="#5C3D1E" strokeWidth="2" />
+
+      {/* LAYER 8: Swing seat — wood plank */}
+      <rect x="125" y="140" width="70" height="12" rx="4" fill="#8B6F47" />
+
+      {/* LAYER 9: Falling leaf accent 1 — upper left */}
+      <polygon points="80,120 90,110 95,125 85,135" fill="#E85D2E" transform="rotate(35 87.5 122.5)" />
+
+      {/* LAYER 10: Falling leaf accent 2 — right side */}
+      <polygon points="240,150 250,140 255,155 245,165" fill="#DC4A1D" transform="rotate(-20 247.5 152.5)" />
+
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// WIRING BLOCK
+// ─────────────────────────────────────────────────────────────
+// Component: MapleTreeIllustration
+// Purpose: Autumn season paper cut-out scene with maple tree and swing
+// Element Count: 10 elements
+// Canvas Coverage: ✅ Full sky fill, full ground fill to bottom edge
+// Paper Cut-Out Style

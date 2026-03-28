@@ -1,0 +1,61 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. far hill path
+// 3. mid hill path
+// 4. barn body rect
+// 5. barn roof path
+// 6. snow on roof path
+// 7. bare tree 1 trunk + branches (g)
+// 8. bare tree 2 trunk + branches (g)
+// 9. frozen pond rect
+// 10. foreground snow rect
+// TOTAL: 10 — COMPLETE
+```
+
+```tsx
+export function WinterIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" className="w-full h-full">
+      <defs>
+        <linearGradient id="winterSky" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#a8c5dd" />
+          <stop offset="100%" stopColor="#d4e4f0" />
+        </linearGradient>
+        <linearGradient id="frozenPond" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#b8d9e8" />
+          <stop offset="100%" stopColor="#9ec8e0" />
+        </linearGradient>
+      </defs>
+
+      {/* Sky */}
+      <rect width="240" height="120" fill="url(#winterSky)" />
+
+      {/* Far snowy hills */}
+      <path d="M 0 120 Q 60 90 120 110 T 240 120 L 240 140 L 0 140 Z" fill="#e8f1f7" opacity="0.9" />
+
+      {/* Mid hills with slight color variation */}
+      <path d="M 0 140 Q 70 110 120 130 T 240 140 L 240 160 L 0 160 Z" fill="#dce9f2" opacity="0.85" />
+
+      {/* Barn body */}
+      <rect x="85" y="155" width="70" height="55" fill="#8b5a42" />
+
+      {/* Barn roof with snow */}
+      <path d="M 80 155 L 120 125 L 160 155 Z" fill="#6b4423" />
+      <path d="M 82 152 Q 120 128 158 152 L 155 155 Q 120 133 85 155 Z" fill="#f5f7fa" />
+
+      {/* Bare tree 1 */}
+      <g>
+        <line x1="45" y1="200" x2="45" y2="155" stroke="#5a4a3a" strokeWidth="2" />
+        <line x1="45" y1="165" x2="30" y2="150" stroke="#5a4a3a" strokeWidth="1.5" />
+        <line x1="45" y1="165" x2="60" y2="148" stroke="#5a4a3a" strokeWidth="1.5" />
+        <line x1="45" y1="175" x2="25" y2="162" stroke="#5a4a3a" strokeWidth="1.5" />
+        <line x1="45" y1="175" x2="65" y2="160" stroke="#5a4a3a" strokeWidth="1.5" />
+      </g>
+
+      {/* Bare tree 2 */}
+      <g>
+        <line x1="195" y1="205" x2="195" y2="160" stroke="#5a4a3a" strokeWidth="2" />
+        <line x1="195" y1="170" x2="175" y2="155" stroke="#5a4a3a" strokeWidth="1.5" />
+        <line x1="195" y1="170" x2="215" y2="152" stroke="#5a4a3a" strokeWidth="1.5" />
+        <line x1="195" y1="180" x2="170" y2="168" stroke="#5

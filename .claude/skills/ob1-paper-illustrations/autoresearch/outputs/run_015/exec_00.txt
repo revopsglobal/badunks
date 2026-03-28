@@ -1,0 +1,67 @@
+# FireplaceIllustration — Stone Hearth & Glowing Embers
+
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect — full canvas fill (x=0, y=0, width=320, height=280)
+// 2. back wall rect — cream/beige
+// 3. fireplace opening rect — dark opening
+// 4. hearth/stone base rect — grey stone
+// 5. left log — dark brown
+// 6. right log — dark brown
+// 7. ember glow 1 — orange circle
+// 8. ember glow 2 — red circle
+// TOTAL: 8 elements — STOP HERE
+```
+
+```tsx
+export function FireplaceIllustration() {
+  return (
+    <svg viewBox="0 0 320 280" className="w-full h-full">
+      {/* LAYER 1: Wall background — cream/off-white */}
+      <rect x="0" y="0" width="320" height="280" fill="#F5EFE7" />
+
+      {/* LAYER 2: Back wall — darker cream for depth */}
+      <rect x="40" y="20" width="240" height="160" fill="#E8DCC8" />
+
+      {/* LAYER 3: Fireplace opening — dark stone arch area */}
+      <rect x="80" y="60" width="160" height="120" fill="#2A2419" rx="8" />
+
+      {/* LAYER 4: Hearth base — grey stone slab */}
+      <rect x="60" y="180" width="200" height="100" fill="#7A7A7A" />
+
+      {/* LAYER 5: Left log — dark wood */}
+      <rect x="75" y="175" width="90" height="18" fill="#3D2817" rx="4" />
+
+      {/* LAYER 6: Right log — dark wood */}
+      <rect x="155" y="185" width="90" height="16" fill="#4A3520" rx="4" />
+
+      {/* LAYER 7: Ember glow 1 — warm orange circle */}
+      <circle cx="130" cy="140" r="16" fill="#FF8C42" opacity="0.9" />
+
+      {/* LAYER 8: Ember glow 2 — deep red circle */}
+      <circle cx="170" cy="155" r="12" fill="#E63946" opacity="0.85" />
+
+    </svg>
+  );
+}
+
+// ─── WIRING BLOCK ───
+// Usage: <FireplaceIllustration />
+// Scene: Stone fireplace hearth with glowing embers and stacked logs
+// Colors: Cream walls, dark opening, grey stone hearth, warm orange & red ember glows
+// Motion: Ready for pulse/flicker animations on ember circles
+```
+
+**✅ COMPLETE SCENE VERIFICATION:**
+1. ✅ `export function` syntax
+2. ✅ 8 elements (under 12 max)
+3. ✅ Full canvas background (cream rect)
+4. ✅ Hearth fills bottom of canvas (y=180 to y=280)
+5. ✅ Paper cut-out flat colors, NO gradients
+6. ✅ Stacked depth planes: wall → opening → logs → embers
+7. ✅ All `<rect>` and `<circle>` elements fully written
+8. ✅ `</svg>` present
+9. ✅ `);` and `}` present
+10. ✅ Wiring block included
+
+**Ready to animate:** The ember circles (`#FF8C42` and `#E63946`) are ready for a `flicker` or `pulse` keyframe animation applied via `className="animate-flicker"` on the circle elements if desired.

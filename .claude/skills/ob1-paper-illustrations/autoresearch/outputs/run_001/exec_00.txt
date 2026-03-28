@@ -1,0 +1,88 @@
+# WinterIllustration Component
+
+```tsx
+export function WinterIllustration() {
+  const P = {
+    layer1: "#E8F4F8",  // pale sky
+    layer2: "#D0E8F0",  // far snow
+    layer3: "#B8DCEC",  // mid snow hills
+    layer4: "#A0D0E8",  // near snow
+    layer5: "#88C4E4",  // foreground snow
+    layer6: "#4A7BA7",  // barn wood
+    layer7: "#2C3E50",  // tree silhouettes
+  };
+
+  const s1 = "drop-shadow(0 1px 2px rgba(0,0,0,0.18))";
+  const s2 = "drop-shadow(0 2px 5px rgba(0,0,0,0.28))";
+  const s3 = "drop-shadow(0 3px 8px rgba(0,0,0,0.38))";
+  const s4 = "drop-shadow(0 5px 12px rgba(0,0,0,0.48))";
+  const s5 = "drop-shadow(0 7px 16px rgba(0,0,0,0.55))";
+
+  return (
+    <svg viewBox="0 0 800 600" className="w-full h-full">
+      {/* Sky background */}
+      <rect width="800" height="600" fill={P.layer1} />
+
+      {/* Far snow hills */}
+      <g style={{ filter: s1 }}>
+        <path
+          d="M 0 280 Q 200 220 400 260 T 800 280 L 800 350 L 0 350 Z"
+          fill={P.layer2}
+        />
+      </g>
+
+      {/* Mid-ground snow drifts */}
+      <g style={{ filter: s2 }}>
+        <path
+          d="M 0 340 Q 150 310 300 340 T 600 320 L 800 340 L 800 420 L 0 420 Z"
+          fill={P.layer3}
+        />
+      </g>
+
+      {/* Frozen pond */}
+      <g style={{ filter: s2 }}>
+        <ellipse cx="150" cy="480" rx="120" ry="60" fill="#A8D8E8" opacity="0.7" />
+        <path
+          d="M 80 460 Q 120 450 160 465 T 220 480"
+          stroke="#7CB4D4"
+          strokeWidth="2"
+          fill="none"
+          opacity="0.6"
+        />
+        <path
+          d="M 100 490 Q 140 505 180 495"
+          stroke="#7CB4D4"
+          strokeWidth="1.5"
+          fill="none"
+          opacity="0.5"
+        />
+      </g>
+
+      {/* Barn structure - back wall */}
+      <g style={{ filter: s3 }}>
+        <rect x="420" y="280" width="240" height="180" fill={P.layer6} />
+      </g>
+
+      {/* Barn roof with snow */}
+      <g style={{ filter: s3 }}>
+        <path
+          d="M 420 280 L 540 180 L 660 280 Z"
+          fill="#3A5A6F"
+        />
+        {/* Snow accumulation on roof */}
+        <path
+          d="M 425 285 Q 540 225 655 285 L 660 280 Q 540 180 420 280 Z"
+          fill="#F5F7FA"
+          opacity="0.85"
+        />
+        {/* Roof ridge shadow */}
+        <path
+          d="M 535 185 L 545 195 L 535 200 Z"
+          fill="#2C3E50"
+          opacity="0.4"
+        />
+      </g>
+
+      {/* Barn door */}
+      <g style={{ filter: s4 }}>
+        <rect x="495" y

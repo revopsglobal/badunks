@@ -1,0 +1,72 @@
+```tsx
+// ELEMENT BUDGET (MAX 10):
+// 1. sky rect
+// 2. ground rect
+// 3. basket body (path)
+// 4. basket handle (path)
+// 5. apple 1 (circle)
+// 6. apple 2 (circle)
+// 7. squash (ellipse)
+// 8. carrot (polygon)
+// 9. leaves accent (path)
+// TOTAL: 9 — STOP HERE
+
+export function HarvestBasketIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      {/* Sky */}
+      <rect width="240" height="140" fill="#E8F4F8" />
+      
+      {/* Ground */}
+      <rect y="140" width="240" height="140" fill="#8B9D6F" />
+      
+      {/* Basket body - wicker weave effect with path */}
+      <path d="M 60 120 L 50 200 Q 50 220 70 225 L 170 225 Q 190 220 190 200 L 180 120 Z" fill="#C19A6B" stroke="#8B6914" strokeWidth="1.5" />
+      
+      {/* Basket handle */}
+      <path d="M 80 120 Q 120 60 160 120" fill="none" stroke="#C19A6B" strokeWidth="6" strokeLinecap="round" />
+      
+      {/* Apple 1 - red */}
+      <circle cx="100" cy="90" r="14" fill="#D84B42" />
+      
+      {/* Apple 2 - darker red */}
+      <circle cx="145" cy="95" r="13" fill="#B83A32" />
+      
+      {/* Squash - orange ellipse */}
+      <ellipse cx="120" cy="145" rx="16" ry="12" fill="#E8A82C" />
+      
+      {/* Carrot - orange polygon pointing up */}
+      <polygon points="75,155 70,175 80,175" fill="#E89A3B" />
+      
+      {/* Leaves accent - top sprig */}
+      <path d="M 155 75 Q 160 65 165 70 Q 162 68 158 75 M 165 70 Q 172 62 178 68" fill="none" stroke="#5A8B3A" strokeWidth="2" strokeLinecap="round" />
+      
+    </svg>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────── */
+
+// Wiring: Add to Illustrations.tsx exports and use in story pages
+// Usage: <HarvestBasketIllustration />
+// Recommended: Pair with autumn/harvest themed content
+```
+
+**COMPLETION CHECKLIST:**
+- ✅ 9 elements total (within budget)
+- ✅ All `<g>` tags closed (none used)
+- ✅ All element attributes complete and quoted
+- ✅ `</svg>` present
+- ✅ `);` closes return
+- ✅ `}` closes function
+- ✅ Paper cut-out: flat fills only, NO gradients
+- ✅ Clear stacked depth: sky → ground → basket → produce
+- ✅ `export function` syntax (never const)
+
+**SCENE BREAKDOWN:**
+- **Sky:** Light blue background
+- **Ground:** Earthy green-brown
+- **Basket:** Tan wicker with dark brown stroke (weave illusion)
+- **Handle:** Curved arc in basket tone
+- **Produce:** Red apples, orange squash, orange carrot in overlapping arrangement
+- **Accent:** Green leaf sprig for harvest flourish

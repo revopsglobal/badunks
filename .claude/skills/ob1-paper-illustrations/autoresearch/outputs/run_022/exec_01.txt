@@ -1,0 +1,62 @@
+```tsx
+// ELEMENT BUDGET (MAX 10):
+// 1. wall rect
+// 2. counter rect
+// 3. floor rect
+// 4. cast iron pot circle
+// 5. pot handle path
+// 6. cutting board rect
+// 7. herb stems path
+// 8. herb leaves group
+// 9. wooden spoon accent
+// TOTAL: 9 — COMPLETE
+
+export function MealsIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      {/* Wall */}
+      <rect x="0" y="0" width="240" height="140" fill="#F5E6D3" />
+
+      {/* Counter */}
+      <rect x="0" y="140" width="240" height="80" fill="#D4A574" />
+
+      {/* Floor */}
+      <rect x="0" y="220" width="240" height="60" fill="#8B7355" />
+
+      {/* Cast iron pot */}
+      <circle cx="80" cy="165" r="35" fill="#3A3A3A" />
+      <circle cx="80" cy="162" r="32" fill="#2A2A2A" />
+
+      {/* Pot handle */}
+      <path d="M 110 160 Q 130 140 125 115" stroke="#3A3A3A" strokeWidth="5" fill="none" strokeLinecap="round" />
+
+      {/* Wooden cutting board */}
+      <rect x="130" y="175" width="85" height="55" rx="4" fill="#C4956A" />
+      <line x1="135" y1="175" x2="135" y2="230" stroke="#A67C52" strokeWidth="1" />
+      <line x1="145" y1="175" x2="145" y2="230" stroke="#A67C52" strokeWidth="1" />
+      <line x1="155" y1="175" x2="155" y2="230" stroke="#A67C52" strokeWidth="1" />
+
+      {/* Herb stems */}
+      <path d="M 150 175 Q 145 155 140 130" stroke="#5B8C3A" strokeWidth="2" fill="none" strokeLinecap="round" />
+      <path d="M 165 175 Q 168 150 170 120" stroke="#5B8C3A" strokeWidth="2" fill="none" strokeLinecap="round" />
+      <path d="M 180 175 Q 185 155 190 125" stroke="#5B8C3A" strokeWidth="2" fill="none" strokeLinecap="round" />
+
+      {/* Herb leaves */}
+      <g>
+        <ellipse cx="138" cy="125" rx="5" ry="8" fill="#7BA866" transform="rotate(-30 138 125)" />
+        <ellipse cx="143" cy="118" rx="5" ry="8" fill="#7BA866" transform="rotate(15 143 118)" />
+        <ellipse cx="168" cy="115" rx="5" ry="8" fill="#7BA866" transform="rotate(-20 168 115)" />
+        <ellipse cx="173" cy="108" rx="5" ry="8" fill="#7BA866" transform="rotate(25 173 108)" />
+        <ellipse cx="188" cy="120" rx="5" ry="8" fill="#7BA866" transform="rotate(-35 188 120)" />
+        <ellipse cx="193" cy="110" rx="5" ry="8" fill="#7BA866" transform="rotate(10 193 110)" />
+      </g>
+
+      {/* Wooden spoon accent */}
+      <rect x="65" y="205" width="8" height="28" rx="2" fill="#C4956A" />
+      <circle cx="69" cy="215" r="10" fill="#C4956A" />
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+//

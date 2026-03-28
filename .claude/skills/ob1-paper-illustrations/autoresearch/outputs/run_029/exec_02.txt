@@ -1,0 +1,75 @@
+```tsx
+// ELEMENT BUDGET (MAX 10):
+// 1. sky rect
+// 2. far hill path
+// 3. mid hill path
+// 4. foreground ground rect
+// 5. hive box rect
+// 6. hive box rect
+// 7. flower group
+// 8. bee
+// 9. bee
+// TOTAL: 9 — STOP HERE
+
+export function BeehiveIllustration() {
+  return (
+    <svg
+      viewBox="0 0 400 300"
+      xmlns="http://www.w3.org/2000/svg"
+      className="illustration"
+    >
+      {/* Sky */}
+      <rect width="400" height="180" fill="#E8F4F8" />
+
+      {/* Far hill */}
+      <path
+        d="M 0 180 Q 100 140 200 160 T 400 180 L 400 200 L 0 200 Z"
+        fill="#B8D4A8"
+      />
+
+      {/* Mid hill */}
+      <path
+        d="M 0 200 Q 80 170 160 185 T 320 200 L 400 200 L 400 230 L 0 230 Z"
+        fill="#9DBE84"
+      />
+
+      {/* Foreground ground */}
+      <rect y="230" width="400" height="70" fill="#8BAF6F" />
+
+      {/* Hive box 1 */}
+      <rect x="80" y="150" width="60" height="80" fill="#D4A574" stroke="#8B6F47" strokeWidth="2" />
+
+      {/* Hive box 2 */}
+      <rect x="150" y="165" width="60" height="80" fill="#E8B88A" stroke="#8B6F47" strokeWidth="2" />
+
+      {/* Flower cluster */}
+      <g>
+        {/* Flower 1 petals */}
+        <circle cx="250" cy="200" r="6" fill="#F4A4C8" />
+        <circle cx="260" cy="200" r="6" fill="#F4A4C8" />
+        <circle cx="265" cy="210" r="6" fill="#F4A4C8" />
+        <circle cx="260" cy="220" r="6" fill="#F4A4C8" />
+        <circle cx="250" cy="220" r="6" fill="#F4A4C8" />
+        <circle cx="245" cy="210" r="6" fill="#F4A4C8" />
+        {/* Flower center */}
+        <circle cx="255" cy="210" r="4" fill="#FFD700" />
+        {/* Stem */}
+        <line x1="255" y1="220" x2="255" y2="240" stroke="#6B9D5C" strokeWidth="2" />
+      </g>
+
+      {/* Bee 1 */}
+      <g>
+        <ellipse cx="190" cy="100" rx="8" ry="6" fill="#FFD700" />
+        <circle cx="180" cy="100" r="5" fill="#000" />
+        <circle cx="200" cy="100" r="5" fill="#000" />
+        <line x1="175" y1="95" x2="165" y2="85" stroke="#000" strokeWidth="1" />
+        <line x1="205" y1="95" x2="215" y2="85" stroke="#000" strokeWidth="1" />
+      </g>
+
+      {/* Bee 2 */}
+      <g>
+        <ellipse cx="320" cy="140" rx="8" ry="6" fill="#FFD700" />
+        <circle cx="310" cy="140" r="5" fill="#000" />
+        <circle cx="330" cy="140" r="5" fill="#000" />
+        <line x1="305" y1="135" x2="295" y2="125" stroke="#000" strokeWidth="1" />
+        <line x1="335" y1="135

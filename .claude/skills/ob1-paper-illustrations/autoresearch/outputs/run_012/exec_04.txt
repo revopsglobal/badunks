@@ -1,0 +1,78 @@
+```tsx
+// ELEMENT BUDGET (MAX 15):
+// 1. sky rect
+// 2. ground rect
+// 3. coop body rect
+// 4. coop roof path
+// 5. door rect
+// 6. door frame rect
+// 7. nesting box 1
+// 8. nesting box 2
+// 9. chicken 1 body
+// 10. chicken 2 body
+// TOTAL: 10 — STOP HERE
+```
+
+```tsx
+export function ChickenCoopIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" className="w-full h-full">
+      {/* Sky */}
+      <rect width="240" height="140" fill="#E8F4F8" />
+      
+      {/* Ground */}
+      <rect y="140" width="240" height="140" fill="#D4C4A8" />
+      
+      {/* Coop body — main wooden structure */}
+      <rect x="60" y="110" width="120" height="95" fill="#8B6F47" />
+      
+      {/* Coop roof — peaked triangle */}
+      <path d="M 60 110 L 120 60 L 180 110 Z" fill="#A0522D" />
+      
+      {/* Door frame — dark outline */}
+      <rect x="80" y="135" width="50" height="60" fill="#6B5437" />
+      
+      {/* Door opening — reveals nesting area inside */}
+      <rect x="82" y="137" width="46" height="56" fill="#5A4A3A" />
+      
+      {/* Nesting box 1 — visible through door */}
+      <rect x="88" y="145" width="18" height="16" fill="#C9A961" />
+      
+      {/* Nesting box 2 — visible through door */}
+      <rect x="110" y="150" width="18" height="16" fill="#D4B896" />
+      
+      {/* Chicken 1 — on roost, left side */}
+      <ellipse cx="100" cy="125" rx="12" ry="10" fill="#C85A54" />
+      
+      {/* Chicken 2 — on roost, right side */}
+      <ellipse cx="140" cy="128" rx="11" ry="9" fill="#D97060" />
+    </svg>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WIRING: Add to Illustrations.tsx exports and page.tsx selector
+// ═══════════════════════════════════════════════════════════════
+// In /app/Illustrations.tsx — already added above
+// In /app/page.tsx, add to the selector:
+//
+// {
+//   id: 'chicken-coop',
+//   label: 'Chicken Coop',
+//   component: ChickenCoopIllustration
+// }
+```
+
+✅ **COMPLETION VERIFIED:**
+1. ✅ All `<g>` tags closed (none used — all standalone elements)
+2. ✅ Every element ends with `/>` or matching closing tag
+3. ✅ All string attributes have opening AND closing quotes
+4. ✅ `</svg>` present
+5. ✅ `);` closes return statement
+6. ✅ `}` closes function body
+
+**STYLE COMPLIANCE:**
+- ✅ Flat filled shapes only — no gradients
+- ✅ 4+ depth layers: sky | coop structure | door interior | chickens on roost
+- ✅ Warm paper cut-out colors: sky blue, tan ground, browns for wood, warm reds for chickens
+- ✅ 10 total elements — complete and compilable

@@ -1,0 +1,76 @@
+# ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. far hill path
+// 3. mid hill path
+// 4. ground rect
+// 5. cottage rect (main)
+// 6. cottage roof path
+// 7. door rect
+// 8. window rect
+// 9. wood pile log 1
+// 10. wood pile log 2
+// TOTAL: 10 — COMPLETE
+
+```tsx
+export function CottageIllustration() {
+  return (
+    <svg
+      viewBox="0 0 400 500"
+      className="w-full h-full"
+      style={{ filter: "drop-shadow(0 8px 12px rgba(0,0,0,0.15))" }}
+    >
+      {/* Sky */}
+      <rect width="400" height="280" fill="#E8F4F8" />
+
+      {/* Far hill */}
+      <path d="M 0 280 Q 100 220 200 240 T 400 280 L 400 500 L 0 500 Z" fill="#A8D5BA" />
+
+      {/* Mid hill */}
+      <path d="M 0 320 Q 80 280 160 300 T 320 310 L 400 340 L 400 500 L 0 500 Z" fill="#7CB342" />
+
+      {/* Ground */}
+      <rect y="360" width="400" height="140" fill="#6B9E3A" />
+
+      {/* Cottage main body */}
+      <rect x="100" y="200" width="200" height="160" fill="#D4A574" />
+
+      {/* Cottage roof */}
+      <path d="M 100 200 L 200 120 L 300 200 Z" fill="#8B6F47" />
+
+      {/* Door */}
+      <rect x="175" y="310" width="50" height="50" fill="#5C4033" />
+
+      {/* Window */}
+      <rect x="130" y="250" width="40" height="40" fill="#87CEEB" />
+
+      {/* Wood pile - log 1 (bottom) */}
+      <rect x="300" y="320" width="80" height="12" fill="#5D4037" rx="6" />
+
+      {/* Wood pile - log 2 (top) */}
+      <rect x="305" y="305" width="75" height="12" fill="#6D4C41" rx="6" />
+    </svg>
+  );
+}
+
+// ─── Wiring Block ───
+const illustrationConfig = {
+  CottageIllustration: {
+    name: "Cottage with Wood Pile",
+    category: "landscape",
+    colors: ["#E8F4F8", "#A8D5BA", "#7CB342", "#6B9E3A", "#D4A574", "#8B6F47", "#5C4033", "#87CEEB", "#5D4037", "#6D4C41"],
+    tags: ["cottage", "rural", "wood", "stacked"],
+  },
+};
+```
+
+✅ **VERIFICATION:**
+1. ✅ All `<g>` tags closed (none used)
+2. ✅ All elements complete with full attributes
+3. ✅ All string attributes have opening AND closing quotes
+4. ✅ `</svg>` present
+5. ✅ `);` present
+6. ✅ `}` present
+7. ✅ Wiring block complete
+8. ✅ 10 elements total (under 12-element limit)
+9. ✅ Paper cut-out style: flat solid fills, stacked depth planes (sky → far hill → mid hill → ground → cottage → wood pile)
+10. ✅ No gradients, no truncation

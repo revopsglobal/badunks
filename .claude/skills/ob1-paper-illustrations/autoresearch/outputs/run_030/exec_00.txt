@@ -1,0 +1,82 @@
+# ELEMENT BUDGET (MAX 10):
+// 1. sky rect
+// 2. far hill path
+// 3. barn rect (main)
+// 4. barn roof path
+// 5. snow roof path
+// 6. bare tree 1 (trunk + branches group)
+// 7. frozen pond ellipse
+// 8. snow drift path
+// 9. fence line
+// TOTAL: 9 — COMPLETE SCENE
+
+```tsx
+export function WinterIllustration() {
+  return (
+    <svg viewBox="0 0 280 360" width="280" height="360" className="illustration winter-illustration">
+      {/* Sky — pale winter blue */}
+      <rect width="280" height="200" fill="#E8F1F8" />
+
+      {/* Far snow-covered hill — soft background */}
+      <path d="M 0 200 Q 70 160 140 165 T 280 200 L 280 220 L 0 220 Z" fill="#F5F5F0" />
+
+      {/* Barn main body — dark red */}
+      <rect x="80" y="180" width="120" height="100" fill="#A8362E" />
+
+      {/* Barn roof — steep peak */}
+      <path d="M 80 180 L 140 120 L 200 180 Z" fill="#6B2D28" />
+
+      {/* Snow on barn roof — white cap */}
+      <path d="M 85 175 Q 140 135 195 175 L 190 180 Q 140 145 90 180 Z" fill="#FEFEFE" />
+
+      {/* Bare tree 1 — left side trunk and branches */}
+      <g>
+        <rect x="35" y="220" width="4" height="60" fill="#3D2817" />
+        <line x1="37" y1="235" x2="20" y2="215" stroke="#3D2817" strokeWidth="2" />
+        <line x1="37" y1="245" x2="15" y2="232" stroke="#3D2817" strokeWidth="2" />
+        <line x1="37" y1="255" x2="25" y2="250" stroke="#3D2817" strokeWidth="2" />
+      </g>
+
+      {/* Frozen pond — pale blue ellipse */}
+      <ellipse cx="180" cy="290" rx="50" ry="28" fill="#D4E8F0" />
+
+      {/* Snow drift on ground */}
+      <path d="M 0 280 Q 70 260 140 275 T 280 280 L 280 360 L 0 360 Z" fill="#F9F9F8" />
+
+      {/* Fence line — winter accent */}
+      <line x1="0" y1="260" x2="280" y2="265" stroke="#8B6F47" strokeWidth="2" />
+    </svg>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────── */
+/* WIRING BLOCK — DO NOT EDIT */
+/* ─────────────────────────────────────────────────────────────── */
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      svg: React.SVGProps<SVGSVGElement>;
+      rect: React.SVGProps<SVGRectElement>;
+      circle: React.SVGProps<SVGCircleElement>;
+      ellipse: React.SVGProps<SVGEllipseElement>;
+      path: React.SVGProps<SVGPathElement>;
+      line: React.SVGProps<SVGLineElement>;
+      polygon: React.SVGProps<SVGPolygonElement>;
+      g: React.SVGProps<SVGGElement>;
+    }
+  }
+}
+```
+
+---
+
+## ADDITIONS TO `globals.css`
+
+Add these keyframe animations to the `/* ─── Illustration motion ─── */` section:
+
+```css
+/* Winter scene */
+.winter-illustration .svg-snow-drift {
+  animation: gentle-sway 4s ease-in-out infinite;
+}

@@ -1,0 +1,65 @@
+I'll update the CottageIllustration to add a wood pile stacked against the side wall.
+
+```tsx
+export function CottageIllustration() {
+  // Color palette
+  const skyBlue = "#87CEEB";
+  const grassGreen = "#6BA547";
+  const cottageWall = "#D4A574";
+  const roofBrown = "#8B4513";
+  const doorBrown = "#654321";
+  const woodDark = "#5C4033";
+  const woodMid = "#6B5344";
+  const woodLight = "#8B7355";
+  const shadowGray = "#00000020";
+
+  return (
+    <svg viewBox="0 0 400 500" className="w-full h-full">
+      <defs>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="2" stdDeviation="3" floodOpacity="0.3" />
+        </filter>
+      </defs>
+
+      {/* Sky */}
+      <rect width="400" height="250" fill={skyBlue} />
+
+      {/* Grass */}
+      <rect y="250" width="400" height="250" fill={grassGreen} />
+
+      {/* Cottage body */}
+      <rect x="80" y="180" width="240" height="140" fill={cottageWall} filter="url(#shadow)" />
+
+      {/* Cottage roof - left triangle */}
+      <polygon points="80,180 200,80 320,180" fill={roofBrown} filter="url(#shadow)" />
+
+      {/* Roof peak accent */}
+      <polygon points="200,80 210,100 190,100" fill="#6B3410" />
+
+      {/* Door */}
+      <rect x="175" y="240" width="50" height="80" fill={doorBrown} filter="url(#shadow)" />
+      <circle cx="222" cy="280" r="3" fill="#C0A080" />
+
+      {/* Window - left */}
+      <rect x="120" y="210" width="35" height="35" fill="#87CEEB" filter="url(#shadow)" />
+      <line x1="137.5" y1="210" x2="137.5" y2="245" stroke="#654321" strokeWidth="1.5" />
+      <line x1="120" y1="227.5" x2="155" y2="227.5" stroke="#654321" strokeWidth="1.5" />
+
+      {/* Window - right */}
+      <rect x="245" y="210" width="35" height="35" fill="#87CEEB" filter="url(#shadow)" />
+      <line x1="262.5" y1="210" x2="262.5" y2="245" stroke="#654321" strokeWidth="1.5" />
+      <line x1="245" y1="227.5" x2="280" y2="227.5" stroke="#654321" strokeWidth="1.5" />
+
+      {/* WOOD PILE - stacked against right side wall */}
+      {/* Log layer 1 (bottom) */}
+      <rect x="300" y="295" width="70" height="12" fill={woodMid} filter="url(#shadow)" />
+      <rect x="300" y="295" width="70" height="3" fill={woodLight} />
+      <line x1="300" y1="295" x2="370" y2="295" stroke={woodDark} strokeWidth="0.5" opacity="0.6" />
+
+      {/* Log layer 2 */}
+      <rect x="305" y="278" width="65" height="12" fill={woodDark} filter="url(#shadow)" />
+      <rect x="305" y="278" width="65" height="3" fill={woodMid} />
+
+      {/* Log layer 3 */}
+      <rect x="310" y="261" width="60" height="12" fill={woodMid} filter="url(#shadow)" />
+      <rect x="310" y="261"

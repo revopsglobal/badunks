@@ -1,0 +1,62 @@
+# FencelineIllustration — Split-Rail Fence with Wildflowers
+
+```tsx
+export function FencelineIllustration() {
+  // ELEMENT BUDGET (MAX 12):
+  // 1. sky rect
+  // 2. ground rect
+  // 3. left fence post
+  // 4. right fence post
+  // 5. left rail
+  // 6. right rail
+  // 7. wildflower group (stems + blooms)
+  // 8. accent grass tufts
+  // TOTAL: 8 — COMPLETE
+  
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      {/* SKY — fills entire canvas */}
+      <rect x="0" y="0" width="240" height="280" fill="#E8F4F8" />
+      
+      {/* GROUND */}
+      <rect x="0" y="180" width="240" height="100" fill="#A8C97A" />
+      
+      {/* LEFT FENCE POST */}
+      <rect x="45" y="140" width="8" height="70" fill="#8B6F47" rx="1" />
+      
+      {/* RIGHT FENCE POST */}
+      <rect x="187" y="140" width="8" height="70" fill="#8B6F47" rx="1" />
+      
+      {/* LEFT HORIZONTAL RAIL */}
+      <rect x="53" y="165" width="140" height="6" fill="#9B7F57" rx="2" />
+      
+      {/* RIGHT HORIZONTAL RAIL */}
+      <rect x="53" y="185" width="140" height="6" fill="#9B7F57" rx="2" />
+      
+      {/* WILDFLOWER GROUP — stems and blooms */}
+      <g>
+        {/* Stem 1 */}
+        <line x1="80" y1="200" x2="80" y2="145" stroke="#6B8E3A" strokeWidth="1.5" />
+        {/* Bloom 1 — red flower */}
+        <circle cx="80" cy="140" r="4" fill="#E74C3C" />
+        <circle cx="76" cy="138" r="2.5" fill="#E74C3C" />
+        <circle cx="84" cy="138" r="2.5" fill="#E74C3C" />
+        <circle cx="78" cy="135" r="2.5" fill="#E74C3C" />
+        <circle cx="82" cy="135" r="2.5" fill="#E74C3C" />
+        
+        {/* Stem 2 */}
+        <line x1="120" y1="200" x2="120" y2="150" stroke="#6B8E3A" strokeWidth="1.5" />
+        {/* Bloom 2 — yellow flower */}
+        <circle cx="120" cy="145" r="4" fill="#F4D03F" />
+        <circle cx="116" cy="143" r="2.5" fill="#F4D03F" />
+        <circle cx="124" cy="143" r="2.5" fill="#F4D03F" />
+        <circle cx="118" cy="140" r="2.5" fill="#F4D03F" />
+        <circle cx="122" cy="140" r="2.5" fill="#F4D03F" />
+        
+        {/* Stem 3 */}
+        <line x1="160" y1="200" x2="160" y2="148" stroke="#6B8E3A" strokeWidth="1.5" />
+        {/* Bloom 3 — purple flower */}
+        <circle cx="160" cy="143" r="4" fill="#9B59B6" />
+        <circle cx="156" cy="141" r="2.5" fill="#9B59B6" />
+        <circle cx="164" cy="141" r="2.5" fill="#9B59B6" />
+        <circle cx="158" cy="138" r="2.5" fill

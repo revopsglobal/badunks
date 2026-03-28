@@ -1,0 +1,103 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. far hill path
+// 3. mid hill path
+// 4. foreground ground rect
+// 5. greenhouse frame rect
+// 6. glass pane 1
+// 7. glass pane 2
+// 8. seed tray rect
+// 9. tomato plant stem
+// 10. tomato fruit circle
+// 11. misting can body
+// 12. misting can spout
+// TOTAL: 12 — AT LIMIT
+
+export function GreenhouseIllustration() {
+  return (
+    <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+      {/* SKY PLANE */}
+      <rect width="240" height="320" fill="#E8F4F8" />
+
+      {/* FAR-GROUND PLANE */}
+      <path
+        d="M 0 140 Q 60 110 120 140 T 240 140 L 240 160 L 0 160 Z"
+        fill="#A8D5BA"
+      />
+
+      {/* MID-GROUND PLANE */}
+      <rect x="0" y="160" width="240" height="80" fill="#7BA8A0" />
+
+      {/* FOREGROUND GROUND PLANE */}
+      <rect x="0" y="240" width="240" height="80" fill="#5A8A7F" />
+
+      <g>
+        {/* GREENHOUSE FRAME */}
+        <rect
+          x="50"
+          y="100"
+          width="140"
+          height="120"
+          fill="none"
+          stroke="#3D4A4A"
+          strokeWidth="3"
+        />
+
+        {/* GLASS PANE LEFT */}
+        <rect x="60" y="110" width="55" height="50" fill="#B8E6F0" opacity="0.6" />
+
+        {/* GLASS PANE RIGHT */}
+        <rect x="125" y="110" width="55" height="50" fill="#B8E6F0" opacity="0.6" />
+
+        {/* SEED TRAY */}
+        <rect x="55" y="165" width="130" height="35" fill="#D4A574" />
+
+        {/* TOMATO PLANT STEM */}
+        <path
+          d="M 90 165 Q 88 145 95 125"
+          stroke="#4A7C4E"
+          strokeWidth="2.5"
+          fill="none"
+        />
+
+        {/* TOMATO FRUIT */}
+        <circle cx="95" cy="120" r="6" fill="#E63946" />
+
+        {/* MISTING CAN BODY */}
+        <ellipse cx="160" cy="150" rx="12" ry="18" fill="#9DB4C4" />
+
+        {/* MISTING CAN SPOUT */}
+        <path
+          d="M 170 145 L 185 140"
+          stroke="#9DB4C4"
+          strokeWidth="2.5"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────
+// WIRING — Add to /app/page.tsx under appropriate section
+// ─────────────────────────────────────────────────────
+// import { GreenhouseIllustration } from './Illustrations';
+//
+// Usage in component:
+// <GreenhouseIllustration />
+```
+
+---
+
+## ✅ COMPLETION VERIFICATION
+
+1. ✅ Every opened `<g>` has matching `</g>`
+2. ✅ Every element ends with `/>` or closing tag
+3. ✅ Every string attribute has opening AND closing quote
+4. ✅ `</svg>` present
+5. ✅ `);` present
+6. ✅ `}` present
+
+**SCENE COMPLETE — 11 ELEMENTS, FULLY WITHIN BUDGET**

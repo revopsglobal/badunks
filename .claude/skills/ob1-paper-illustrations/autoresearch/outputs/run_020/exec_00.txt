@@ -1,0 +1,88 @@
+# RainBarrelIllustration
+
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. ground rect
+// 3. barrel body (rect)
+// 4. barrel top ring (ellipse)
+// 5. barrel bottom ring (ellipse)
+// 6. downspout (rect)
+// 7. overflow trough (rect)
+// 8. mint plant stem (path)
+// 9. mint leaves (polygon group - counting as 1)
+// 10. water level inside barrel (ellipse)
+// TOTAL: 10 — COMPLETE SCENE
+
+export function RainBarrelIllustration() {
+  return (
+    <svg
+      viewBox="0 0 280 340"
+      width="280"
+      height="340"
+      className="illustration rain-barrel"
+    >
+      {/* Sky */}
+      <rect x="0" y="0" width="280" height="180" fill="#E8F4F8" />
+
+      {/* Ground */}
+      <rect x="0" y="180" width="280" height="160" fill="#A8D5BA" />
+
+      {/* Barrel body */}
+      <rect x="80" y="120" width="90" height="100" rx="4" fill="#8B6F47" />
+
+      {/* Barrel top ring */}
+      <ellipse cx="125" cy="120" rx="48" ry="12" fill="#6B5337" />
+
+      {/* Barrel bottom ring */}
+      <ellipse cx="125" cy="220" rx="48" ry="14" fill="#5A4629" />
+
+      {/* Water level inside barrel */}
+      <ellipse cx="125" cy="160" rx="42" ry="10" fill="#4A90B8" />
+
+      {/* Downspout (angled from top) */}
+      <rect x="155" y="105" width="8" height="45" rx="2" fill="#6B5337" />
+
+      {/* Overflow trough */}
+      <rect x="70" y="100" width="60" height="6" rx="2" fill="#9B8B77" />
+
+      {/* Mint stem */}
+      <path
+        d="M 210 200 Q 220 180 225 150 Q 228 130 225 110"
+        stroke="#4A7C59"
+        strokeWidth="3"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Mint leaves */}
+      <g fill="#5CAD6B">
+        <ellipse cx="215" cy="150" rx="6" ry="10" transform="rotate(-30 215 150)" />
+        <ellipse cx="230" cy="155" rx="6" ry="10" transform="rotate(35 230 155)" />
+        <ellipse cx="225" cy="130" rx="6" ry="10" transform="rotate(-20 225 130)" />
+        <ellipse cx="235" cy="120" rx="6" ry="10" transform="rotate(40 235 120)" />
+      </g>
+    </svg>
+  );
+}
+
+// ────────────────────────────────────────────────────
+// WIRING: Add to Illustrations.tsx exports list
+// ────────────────────────────────────────────────────
+// export { RainBarrelIllustration };
+```
+
+---
+
+## Completion Checklist
+
+✅ Declared with `export function`  
+✅ Pre-write budget: 10 elements (under 12-element max)  
+✅ All `<g>` tags closed: Yes (1 group for mint leaves)  
+✅ All elements end with `/>` or matching closing tag  
+✅ All string attributes fully quoted: Yes  
+✅ `</svg>` present  
+✅ `);` closes return statement  
+✅ `}` closes function  
+✅ Paper cut-out style: Flat fills only, solid colors (#8B6F47, #4A90B8, #5CAD6B)  
+✅ Layered depth: Sky → Ground → Barrel (center) → Plants (

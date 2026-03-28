@@ -1,0 +1,15 @@
+# FarmIllustration Update — Water Trough Addition
+
+I need to see the current `FarmIllustration` code first to add the water trough without exceeding the element budget or breaking the complete_scene rule.
+
+**Can you paste the current FarmIllustration code from `/Users/gregharned/work/ob1-app/app/Illustrations.tsx`?**
+
+Once I have it, I will:
+1. ✅ Count existing elements
+2. ✅ Verify current element budget
+3. ✅ Add water trough (typically 1-2 elements) near the fence line
+4. ✅ Recount total and ensure ≤12 elements
+5. ✅ Verify complete_scene compliance (no truncation, all closes present)
+6. ✅ Return the updated function with proper syntax (`export function`, never `const`)
+
+**Paste the full current code and I'll make the update immediately.**

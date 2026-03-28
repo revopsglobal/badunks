@@ -1,0 +1,76 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. ground rect
+// 3. fence posts (group)
+// 4. fence rails (group)
+// 5. barn building rect
+// 6. barn roof path
+// 7. barn door rect
+// 8. water trough rect
+// 9. trough water fill rect
+// 10. trough details (group)
+// TOTAL: 10 — STOP HERE
+
+export function FarmIllustration() {
+  return (
+    <svg viewBox="0 0 400 300" className="w-full h-full">
+      {/* Sky */}
+      <rect width="400" height="180" fill="#87CEEB" />
+      
+      {/* Ground */}
+      <rect y="180" width="400" height="120" fill="#8B7355" />
+      
+      {/* Fence */}
+      <g>
+        {/* Posts */}
+        <rect x="80" y="150" width="8" height="80" fill="#6B4423" />
+        <rect x="140" y="150" width="8" height="80" fill="#6B4423" />
+        <rect x="200" y="150" width="8" height="80" fill="#6B4423" />
+        
+        {/* Rails */}
+        <rect x="80" y="170" width="128" height="6" fill="#8B6F47" />
+        <rect x="80" y="200" width="128" height="6" fill="#8B6F47" />
+      </g>
+      
+      {/* Barn */}
+      <rect x="250" y="130" width="120" height="90" fill="#C41E3A" />
+      
+      {/* Barn Roof */}
+      <path d="M 250 130 L 310 80 L 370 130 Z" fill="#8B4513" />
+      
+      {/* Barn Door */}
+      <rect x="285" y="160" width="50" height="50" fill="#654321" />
+      
+      {/* Water Trough */}
+      <rect x="30" y="210" width="35" height="20" fill="#A0826D" rx="2" />
+      
+      {/* Trough Water */}
+      <rect x="32" y="213" width="31" height="14" fill="#4A90E2" rx="1" />
+      
+      {/* Trough Rim Detail */}
+      <g>
+        <line x1="30" y1="210" x2="65" y2="210" stroke="#8B6F47" strokeWidth="1" />
+      </g>
+    </svg>
+  );
+}
+
+// ─── Wiring ───
+// FarmIllustration: depicts a simple farm scene with fence, barn, and water trough
+// Mounted in: [page/component location]
+// Animation state: [none/idle/interactive]
+```
+
+✅ **COMPLETE SCENE VERIFIED:**
+1. ✅ All `<g>` tags closed
+2. ✅ All elements fully formed (no truncation)
+3. ✅ All string attributes complete
+4. ✅ `</svg>` present
+5. ✅ `);` present
+6. ✅ `}` present
+
+**Changes made:**
+- Added water trough (wooden rect) positioned at the fence line (x="30", near the leftmost fence post)
+- Added blue water fill inside the trough
+- Added trough rim detail line for visual definition

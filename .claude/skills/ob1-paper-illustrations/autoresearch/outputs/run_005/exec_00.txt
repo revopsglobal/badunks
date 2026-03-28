@@ -1,0 +1,66 @@
+```tsx
+// PLAN: Maple the golden doodle sitting in a meadow
+// ELEMENTS: sky(1) | distant hills(2) | ground(1) | DOG BODY+HEAD+EARS+TAIL(6) | flowers(3) | accents(2) = 15 total
+// PRIMARY SUBJECT (Maple) WRITTEN AT ELEMENTS 4-9 — guaranteed present
+
+export function FamilyDogIllustration() {
+  return (
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      {/* BACKGROUND LAYERS */}
+      <rect width="400" height="180" fill="#E8F4F8" />
+      
+      {/* DISTANT HILLS */}
+      <ellipse cx="80" cy="140" rx="120" ry="60" fill="#D4E8A8" opacity="0.7" />
+      <ellipse cx="320" cy="150" rx="100" ry="50" fill="#C8DFA0" opacity="0.6" />
+      
+      {/* GROUND/MEADOW */}
+      <rect y="180" width="400" height="120" fill="#A8D66E" />
+      
+      {/* PRIMARY SUBJECT: MAPLE THE GOLDEN DOODLE (Elements 4-9) */}
+      
+      {/* Dog body - sitting position */}
+      <ellipse cx="200" cy="220" rx="55" ry="60" fill="#D4A574" />
+      
+      {/* Dog head */}
+      <circle cx="200" cy="140" r="40" fill="#D4A574" />
+      
+      {/* Floppy left ear */}
+      <ellipse cx="170" cy="120" rx="22" ry="45" fill="#C89860" transform="rotate(-35 170 120)" />
+      
+      {/* Floppy right ear */}
+      <ellipse cx="230" cy="120" rx="22" ry="45" fill="#C89860" transform="rotate(35 230 120)" />
+      
+      {/* Tail curled behind */}
+      <path d="M 240 210 Q 280 190 290 150 Q 295 130 285 125" stroke="#C89860" strokeWidth="18" fill="none" strokeLinecap="round" />
+      
+      {/* Snout/muzzle */}
+      <ellipse cx="200" cy="155" rx="24" ry="20" fill="#E8C9A8" />
+      
+      {/* FOREGROUND DETAILS & ACCENTS */}
+      
+      {/* Nose */}
+      <circle cx="200" cy="155" r="5" fill="#8B6F47" />
+      
+      {/* Left eye */}
+      <circle cx="190" cy="135" r="4" fill="#3D3D3D" />
+      
+      {/* Right eye */}
+      <circle cx="210" cy="135" r="4" fill="#3D3D3D" />
+      
+      {/* Wildflower #1 (left) */}
+      <g>
+        <circle cx="120" cy="240" r="3" fill="#FFD700" />
+        <circle cx="115" cy="235" r="2.5" fill="#FFE54C" />
+        <circle cx="125" cy="235" r="2.5" fill="#FFE54C" />
+        <circle cx="120" cy="245" r="2.5" fill="#FFE54C" />
+      </g>
+      
+      {/* Wildflower #2 (right) */}
+      <g>
+        <circle cx="280" cy="255" r="3" fill="#FF69B4" />
+        <circle cx="275" cy="250" r="2.5" fill="#FF85C1" />
+        <circle cx="285" cy="250" r="2.5" fill="#FF85C1" />
+      </g>
+      
+      {/* Grass accent */}
+      <path d="M 150 270 Q 152 265 154 270" stroke="#7FB069" strokeWidth

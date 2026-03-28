@@ -1,0 +1,84 @@
+# Updating CottageIllustration: Add Wood Pile
+
+I'll add a stacked wood pile against the cottage's side wall. Here's the complete updated component:
+
+```tsx
+export function CottageIllustration() {
+  const P = {
+    sky: "#E8F4F8",
+    cloud: "#FFFFFF",
+    roofDark: "#8B4513",
+    roofMid: "#A0522D",
+    wallLight: "#F5DEB3",
+    wallMid: "#E8D4B8",
+    doorDark: "#654321",
+    doorFrame: "#8B6F47",
+    grass: "#7BA8D1",
+    grassDark: "#5A8BA8",
+    woodDark: "#704C2C",
+    woodMid: "#8B6239",
+    woodLight: "#A0734D",
+    trim: "#D4A574",
+  };
+
+  return (
+    <svg viewBox="0 0 400 500" className="w-full h-full">
+      <defs>
+        <filter id="shadowS1">
+          <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodOpacity="0.25" />
+        </filter>
+        <filter id="shadowS2">
+          <feDropShadow dx="2" dy="3" stdDeviation="2" floodOpacity="0.30" />
+        </filter>
+        <filter id="shadowS3">
+          <feDropShadow dx="2" dy="4" stdDeviation="2.5" floodOpacity="0.35" />
+        </filter>
+      </defs>
+
+      {/* Sky */}
+      <rect width="400" height="280" fill={P.sky} />
+
+      {/* Distant cloud */}
+      <ellipse cx="320" cy="60" rx="50" ry="25" fill={P.cloud} opacity="0.6" />
+
+      {/* Grass ground */}
+      <rect y="280" width="400" height="220" fill={P.grass} />
+
+      {/* Grass highlight strip */}
+      <rect y="280" width="400" height="8" fill={P.grassDark} opacity="0.3" />
+
+      {/* Cottage back wall */}
+      <rect x="80" y="160" width="240" height="180" fill={P.wallLight} filter="url(#shadowS2)" />
+
+      {/* Cottage roof */}
+      <polygon
+        points="80,160 200,80 320,160"
+        fill={P.roofDark}
+        filter="url(#shadowS2)"
+      />
+
+      {/* Roof highlight */}
+      <polygon
+        points="80,160 200,85 210,160"
+        fill={P.roofMid}
+        opacity="0.4"
+      />
+
+      {/* Door frame */}
+      <rect x="165" y="260" width="70" height="80" fill={P.doorFrame} filter="url(#shadowS1)" />
+
+      {/* Door */}
+      <rect x="170" y="265" width="60" height="70" fill={P.doorDark} />
+
+      {/* Door handle */}
+      <circle cx="225" cy="300" r="3" fill={P.trim} />
+
+      {/* Window left */}
+      <rect x="110" y="190" width="45" height="40" fill={P.doorFrame} filter="url(#shadowS1)" />
+      <rect x="115" y="195" width="35" height="30" fill="#B0D4E3" />
+      <line x1="132" y1="195" x2="132" y2="225" stroke={P.doorFrame} strokeWidth="1" />
+      <line x1="115" y1="210" x2="150" y2="210" stroke={P.doorFrame} strokeWidth="1" />
+
+      {/* Window right */}
+      <rect x="245" y="190" width="45" height="40" fill={P.doorFrame} filter="url(#shadowS1)" />
+      <rect x="250" y="195" width

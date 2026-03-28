@@ -1,0 +1,59 @@
+```tsx
+export function MapleTreeIllustration() {
+  const P = {
+    sky: "#E8D4B8",
+    trunk: "#6B4423",
+    leafRed: "#D32F2F",
+    leafOrange: "#FF8C42",
+    leafGold: "#FFB81C",
+    branch: "#5A3A1F",
+    rope: "#8B7355",
+    seat: "#A0826D",
+    grass: "#4A7C3C",
+    shadow: "rgba(0,0,0,0.15)",
+  };
+
+  return (
+    <svg viewBox="0 0 400 500" className="w-full h-full">
+      <defs>
+        <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="4" stdDeviation="3" floodOpacity="0.3" />
+        </filter>
+      </defs>
+
+      {/* Sky background */}
+      <rect width="400" height="500" fill={P.sky} />
+
+      {/* Distant grass */}
+      <ellipse cx="200" cy="450" rx="200" ry="60" fill={P.grass} opacity="0.7" />
+
+      {/* Tree trunk */}
+      <rect x="170" y="280" width="60" height="180" rx="8" fill={P.trunk} filter="url(#dropShadow)" />
+
+      {/* Main branch (horizontal, from which swing hangs) */}
+      <path
+        d="M 140 240 Q 200 200 280 220"
+        stroke={P.branch}
+        strokeWidth="16"
+        fill="none"
+        strokeLinecap="round"
+        filter="url(#dropShadow)"
+      />
+
+      {/* Secondary branches for foliage support */}
+      <path d="M 160 250 L 100 180" stroke={P.branch} strokeWidth="12" strokeLinecap="round" fill="none" />
+      <path d="M 240 210 L 300 140" stroke={P.branch} strokeWidth="12" strokeLinecap="round" fill="none" />
+      <path d="M 200 200 L 180 100" stroke={P.branch} strokeWidth="11" strokeLinecap="round" fill="none" />
+
+      {/* Left canopy cluster — red leaves */}
+      <circle cx="120" cy="180" r="65" fill={P.leafRed} opacity="0.85" style={{ animation: "leafSway 3s ease-in-out infinite" }} />
+      <circle cx="80" cy="150" r="50" fill={P.leafOrange} opacity="0.9" style={{ animation: "leafSway 3.5s ease-in-out infinite", animationDelay: "0.2s" }} />
+      <circle cx="110" cy="120" r="55" fill={P.leafGold} opacity="0.85" style={{ animation: "leafSway 3.2s ease-in-out infinite", animationDelay: "0.1s" }} />
+
+      {/* Center canopy — mixed autumn colors */}
+      <circle cx="200" cy="140" r="70" fill={P.leafRed} opacity="0.9" style={{ animation: "leafSway 3.3s ease-in-out infinite" }} />
+      <circle cx="220" cy="100" r="60" fill={P.leafOrange} opacity="0.85" style={{ animation: "leafSway 3.6s ease-in-out infinite", animationDelay: "0.15s" }} />
+      <circle cx="190" cy="90" r="50" fill={P.leafGold} opacity="0.9" style={{ animation: "leafSway 3.1s ease-in-out infinite", animationDelay: "0.05s" }} />
+
+      {/* Right canopy — orange and gold */}
+      <circle cx="280" cy="160" r="68" fill={P.leafOrange} opacity="0.88" style={{ animation: "leafSway

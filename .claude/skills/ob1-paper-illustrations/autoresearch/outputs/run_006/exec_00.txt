@@ -1,0 +1,68 @@
+# FencelineIllustration — Split-Rail Fence with Wildflowers
+
+I'll create a charming split-rail fence with wildflowers as a decorative divider using the paper cut-out style.
+
+## Implementation
+
+```tsx
+export function FencelineIllustration() {
+  const fencePostBrown = "#8B6F47";
+  const railBrown = "#A0825D";
+  const grassGreen = "#6B9E5C";
+  const skyBlue = "#E8F1F8";
+  const wildflowerRed = "#D85C5C";
+  const wildflowerYellow = "#F4D35E";
+  const wildflowerPurple = "#9B7BA3";
+  const wildflowerPink = "#E89BAC";
+  const stemGreen = "#5A8C4A";
+  const accentOrange = "#E8956F";
+
+  return (
+    <svg viewBox="0 0 500 200" className="w-full h-auto">
+      {/* Sky background */}
+      <rect width="500" height="200" fill={skyBlue} />
+
+      {/* Distant hill line */}
+      <path d="M 0 120 Q 125 100 250 110 T 500 120 L 500 200 L 0 200 Z" fill="#C8DCA8" />
+
+      {/* Grass foreground */}
+      <rect y="140" width="500" height="60" fill={grassGreen} />
+
+      {/* Left fence post */}
+      <rect x="40" y="100" width="12" height="80" fill={fencePostBrown} />
+
+      {/* Center fence post */}
+      <rect x="250" y="100" width="12" height="80" fill={fencePostBrown} />
+
+      {/* Right fence post */}
+      <rect x="460" y="100" width="12" height="80" fill={fencePostBrown} />
+
+      {/* Left top rail */}
+      <rect x="52" y="115" width="210" height="8" fill={railBrown} rx="2" />
+
+      {/* Center top rail */}
+      <rect x="262" y="115" width="210" height="8" fill={railBrown} rx="2" />
+
+      {/* Left bottom rail */}
+      <rect x="52" y="155" width="210" height="8" fill={railBrown} rx="2" />
+
+      {/* Center bottom rail */}
+      <rect x="262" y="155" width="210" height="8" fill={railBrown} rx="2" />
+
+      {/* Wildflower group 1 — red cluster */}
+      <line x1="80" y1="140" x2="80" y2="110" stroke={stemGreen} strokeWidth="2" />
+      <circle cx="80" cy="108" r="5" fill={wildflowerRed} />
+      <circle cx="75" cy="106" r="4" fill={wildflowerRed} />
+      <circle cx="85" cy="106" r="4" fill={wildflowerRed} />
+
+      {/* Wildflower group 2 — yellow */}
+      <line x1="150" y1="140" x2="150" y2="105" stroke={stemGreen} strokeWidth="2" />
+      <circle cx="150" cy="102" r="6" fill={wildflowerYellow} />
+      <circle cx="144" cy="104" r="4" fill={wildflowerYellow} />
+      <circle cx="156" cy="104" r="4" fill={wildflowerYellow} />
+
+      {/* Wildflower group 3 — purple */}
+      <line x1="220" y1="140" x2="220" y2="108" stroke={stemGreen} strokeWidth="2" />
+      <circle cx="220" cy="105" r="5" fill={wildflowerPurple} />
+      <circle cx="215" cy="103" r="3.5" fill={wildflowerPurple} />
+      <circle cx="225" cy="103" r="3.5" fill={wildfl

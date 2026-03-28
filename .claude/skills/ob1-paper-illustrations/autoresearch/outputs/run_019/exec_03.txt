@@ -1,0 +1,75 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. far snow hill path
+// 3. mid snow hill path
+// 4. foreground snow rect
+// 5. barn base rect
+// 6. barn roof path
+// 7. barn door rect
+// 8. bare tree 1 (trunk + branches group)
+// 9. bare tree 2 (trunk + branches group)
+// 10. frozen pond ellipse
+// TOTAL: 10 — SAFE
+```
+
+Add this to `/app/Illustrations.tsx`:
+
+```tsx
+export function WinterIllustration() {
+  return (
+    <svg
+      viewBox="0 0 224 280"
+      width="224"
+      height="280"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="illustration winter"
+    >
+      {/* SKY PLANE */}
+      <rect width="224" height="140" fill="#E8F2F9" />
+
+      {/* FAR-GROUND SNOW HILL */}
+      <path
+        d="M 0 140 Q 56 110 112 125 T 224 140 L 224 170 L 0 170 Z"
+        fill="#D4E6F1"
+      />
+
+      {/* MID-GROUND SNOW HILL */}
+      <path
+        d="M 0 165 Q 40 145 80 155 Q 112 162 160 148 Q 200 135 224 165 L 224 210 L 0 210 Z"
+        fill="#B8D4E8"
+      />
+
+      {/* BARN BASE */}
+      <rect x="92" y="165" width="40" height="35" fill="#8B4513" />
+
+      {/* BARN ROOF (snow-capped) */}
+      <path
+        d="M 92 165 L 112 145 L 132 165 Z"
+        fill="#6B3410"
+      />
+      <path
+        d="M 95 162 L 112 148 L 129 162 Z"
+        fill="#F0F8FF"
+      />
+
+      {/* BARN DOOR */}
+      <rect x="104" y="175" width="16" height="20" fill="#5A2D0C" />
+
+      {/* BARE TREE 1 — left side */}
+      <g>
+        <line x1="50" y1="210" x2="50" y2="175" stroke="#4A4A4A" strokeWidth="2" />
+        <line x1="50" y1="180" x2="35" y2="165" stroke="#4A4A4A" strokeWidth="1.5" />
+        <line x1="50" y1="180" x2="65" y2="165" stroke="#4A4A4A" strokeWidth="1.5" />
+        <line x1="50" y1="185" x2="30" y2="175" stroke="#4A4A4A" strokeWidth="1" />
+        <line x1="50" y1="185" x2="70" y2="175" stroke="#4A4A4A" strokeWidth="1" />
+      </g>
+
+      {/* BARE TREE 2 — right side */}
+      <g>
+        <line x1="174" y1="210" x2="174" y2="175" stroke="#4A4A4A" strokeWidth="2" />
+        <line x1="174" y1="180" x2="159" y2="165" stroke="#4A4A4A" strokeWidth="1.5" />
+        <line x1="174" y1="180" x2="189" y2="165" stroke="#4A4A4A" strokeWidth="1.5" />
+        <line x1="174" y1="185" x2="154" y2="175" stroke="#4A4A4A" strokeWidth="1" />
+        <line x1="174" y1="185" x2="194" y2="175" stroke="#4A4A4A" stroke

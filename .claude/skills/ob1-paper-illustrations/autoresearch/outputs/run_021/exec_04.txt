@@ -1,0 +1,72 @@
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. sky rect
+// 2. ground rect
+// 3. greenhouse frame (path)
+// 4. greenhouse roof glass (path)
+// 5. seed tray 1 (rect)
+// 6. seed tray 2 (rect)
+// 7. tomato plant 1 (group with stem + leaves)
+// 8. tomato plant 2 (group with stem + leaves)
+// 9. misting can (group with body + spout)
+// TOTAL: 9 elements — SAFE
+
+export function GreenhouseIllustration() {
+  return (
+    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#e8f4f8" />
+          <stop offset="100%" stopColor="#d0e8f2" />
+        </linearGradient>
+        <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#c8e6f0" stopOpacity="0.7" />
+          <stop offset="100%" stopColor="#a8d5e8" stopOpacity="0.5" />
+        </linearGradient>
+      </defs>
+
+      {/* Sky background */}
+      <rect width="240" height="180" fill="url(#skyGrad)" />
+
+      {/* Ground */}
+      <rect y="180" width="240" height="100" fill="#8b9d6f" />
+
+      {/* Greenhouse frame outline */}
+      <path
+        d="M 40 180 L 40 80 L 120 40 L 200 80 L 200 180 Z"
+        fill="none"
+        stroke="#4a5d3a"
+        strokeWidth="2"
+      />
+
+      {/* Greenhouse roof glass panels */}
+      <path
+        d="M 42 78 L 118 42 L 118 78 Z"
+        fill="url(#glassGrad)"
+        stroke="#6a8fa0"
+        strokeWidth="1.5"
+      />
+      <path
+        d="M 122 42 L 198 78 L 198 78 L 122 78 Z"
+        fill="url(#glassGrad)"
+        stroke="#6a8fa0"
+        strokeWidth="1.5"
+      />
+
+      {/* Glass pane dividers */}
+      <line x1="120" y1="40" x2="120" y2="180" stroke="#6a8fa0" strokeWidth="1" />
+      <line x1="60" y1="80" x2="60" y2="180" stroke="#6a8fa0" strokeWidth="1" />
+      <line x1="180" y1="80" x2="180" y2="180" stroke="#6a8fa0" strokeWidth="1" />
+
+      {/* Left seed tray */}
+      <rect x="50" y="145" width="45" height="28" fill="#a3704d" stroke="#7a5439" strokeWidth="1.5" rx="2" />
+      <rect x="52" y="147" width="41" height="24" fill="#c9a881" opacity="0.6" />
+
+      {/* Right seed tray */}
+      <rect x="145" y="145" width="45" height="28" fill="#a3704d" stroke="#7a5439" strokeWidth="1.5" rx="2" />
+      <rect x="147" y="147" width="41" height="24" fill="#c9a881" opacity="0.6" />
+
+      {/* Left tomato plant */}
+      <g>
+        <line x1="72" y1="145" x2="72" y2="100" stroke="#5a7a3a" strokeWidth="2" />
+        <circle cx="64

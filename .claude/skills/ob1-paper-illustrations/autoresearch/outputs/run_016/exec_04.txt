@@ -1,0 +1,71 @@
+# FireplaceIllustration
+
+```tsx
+// ELEMENT BUDGET (MAX 12):
+// 1. background rect (warm cream)
+// 2. hearth stone rect
+// 3. inner fireplace opening rect
+// 4. left log (back)
+// 5. right log (back)
+// 6. center log (front)
+// 7. ember circle 1
+// 8. ember circle 2
+// 9. ember circle 3
+// TOTAL: 9 — COMPLETE
+
+export function FireplaceIllustration() {
+  return (
+    <svg
+      viewBox="0 0 240 280"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+    >
+      {/* Warm background */}
+      <rect width="240" height="280" fill="#F5E6D3" />
+
+      {/* Stone hearth base */}
+      <rect x="20" y="160" width="200" height="100" fill="#8B7355" />
+
+      {/* Hearth stone texture (darker recessed area) */}
+      <rect x="30" y="100" width="180" height="70" fill="#3D3D3D" />
+
+      {/* Fireplace opening (inner dark) */}
+      <rect x="40" y="110" width="160" height="50" fill="#1A1A1A" />
+
+      {/* Back left log */}
+      <rect x="50" y="125" width="50" height="18" rx="9" fill="#5C3D2E" />
+
+      {/* Back right log */}
+      <rect x="140" y="130" width="50" height="16" rx="8" fill="#6B4423" />
+
+      {/* Front center log */}
+      <rect x="60" y="155" width="120" height="22" rx="11" fill="#4A2C1A" />
+
+      {/* Ember glow 1 - warm amber */}
+      <circle cx="95" cy="150" r="8" fill="#FF9D3D" opacity="0.9" />
+
+      {/* Ember glow 2 - deep orange */}
+      <circle cx="140" cy="160" r="6" fill="#E85D04" opacity="0.85" />
+
+      {/* Ember glow 3 - yellow accent */}
+      <circle cx="120" cy="145" r="5" fill="#FFD60A" opacity="0.8" />
+    </svg>
+  );
+}
+
+// ─── WIRING ───
+// Place in: app/Illustrations.tsx — export function list
+// Use in: app/widgets/household/HouseholdWinter.tsx
+// className: "animate-pulse"
+// Purpose: Winter household warmth — cozy fireplace scene
+```
+
+**Scene Breakdown (Stacked Depth Planes):**
+1. **Background** — warm cream fill (`#F5E6D3`)
+2. **Hearth stone** — thick brown base (`#8B7355`) 
+3. **Fireplace interior** — dark recessed opening (`#3D3D3D` → `#1A1A1A`)
+4. **Logs** — three stacked wood pieces in dark browns, front log largest
+5. **Embers** — three glowing circles (amber, orange, yellow) with opacity for depth
+
+**Animation Ready:** Apply `animate-pulse` class for gentle glow effect on embers.

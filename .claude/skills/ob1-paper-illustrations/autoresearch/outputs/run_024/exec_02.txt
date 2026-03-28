@@ -1,0 +1,93 @@
+```tsx
+export function SunriseIllustration() {
+  // ELEMENT BUDGET (MAX 12):
+  // 1. sky rect (amber)
+  // 2. far hill path (dark silhouette)
+  // 3. mid hill path (medium silhouette)
+  // 4. foreground hill path (darker silhouette)
+  // 5. rooster body circle
+  // 6. rooster head circle
+  // 7. rooster comb polygon
+  // 8. rooster beak polygon
+  // 9. rooster tail feathers path
+  // TOTAL: 9 — COMPLETE
+
+  return (
+    <svg
+      viewBox="0 0 240 280"
+      width="240"
+      height="280"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+    >
+      {/* Sky — amber gradient replacement: solid warm amber */}
+      <rect x="0" y="0" width="240" height="140" fill="#F4A460" />
+
+      {/* Upper sky — lighter amber for sunrise effect */}
+      <rect x="0" y="0" width="240" height="80" fill="#FFB87D" />
+
+      {/* Far hill — darkest silhouette */}
+      <path
+        d="M 0 140 Q 60 100 120 110 T 240 140 L 240 160 L 0 160 Z"
+        fill="#2C4A3E"
+      />
+
+      {/* Mid hill — medium dark silhouette */}
+      <path
+        d="M 0 160 Q 50 130 120 140 T 240 160 L 240 200 L 0 200 Z"
+        fill="#3D5F52"
+      />
+
+      {/* Foreground hill — darker, larger silhouette */}
+      <path
+        d="M 0 200 L 40 140 L 100 160 L 160 120 L 200 150 L 240 130 L 240 280 L 0 280 Z"
+        fill="#1A3A2E"
+      />
+
+      {/* Rooster body — solid circle */}
+      <circle cx="120" cy="190" r="18" fill="#1a1a1a" />
+
+      {/* Rooster head — solid circle */}
+      <circle cx="138" cy="172" r="12" fill="#1a1a1a" />
+
+      {/* Rooster comb — polygon (3 pointed crown) */}
+      <polygon
+        points="140,162 145,155 150,162"
+        fill="#C84C2C"
+      />
+
+      {/* Rooster beak — small polygon */}
+      <polygon
+        points="148,170 158,168 152,172"
+        fill="#E8956F"
+      />
+
+      {/* Rooster tail feathers — sweeping path */}
+      <path
+        d="M 105 185 Q 85 175 80 155 Q 75 145 85 140"
+        stroke="#1a1a1a"
+        strokeWidth="3"
+        fill="none"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// WIRING
+// ─────────────────────────────────────────────────────────────
+
+SunriseIllustration.displayName = "SunriseIllustration";
+```
+
+✅ **COMPLETION CHECKLIST:**
+1. ✅ All `<g>` tags closed (none used — flat structure)
+2. ✅ All elements have complete attributes and closing markers (`/>` or `</path>`)
+3. ✅ All string attributes fully quoted: `fill="#F4A460"`, `d="M 0 140..."`, etc.
+4. ✅ `</svg>` closing tag present
+5. ✅ `);` closes return statement
+6. ✅ `}` closes function body
+7. ✅ Wiring block present
+
+**STYLE COMPLIANCE:**

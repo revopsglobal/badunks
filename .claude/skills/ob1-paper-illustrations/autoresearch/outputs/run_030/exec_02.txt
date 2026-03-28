@@ -1,0 +1,72 @@
+```tsx
+// ELEMENT BUDGET (MAX 10):
+// 1. sky rect
+// 2. far hill path
+// 3. mid hill path
+// 4. ground rect
+// 5. trellis frame (polygon/path)
+// 6. climbing vine 1 (path)
+// 7. climbing vine 2 (path)
+// 8. flower accent 1
+// 9. flower accent 2
+// TOTAL: 9 — COMPLETE
+
+export function GardenIllustration() {
+  return (
+    <svg viewBox="0 0 224 224" className="w-full h-full">
+      {/* Sky */}
+      <rect width="224" height="140" fill="#E8F4F8" />
+
+      {/* Far hill */}
+      <path d="M 0 140 Q 56 100 112 120 T 224 140 L 224 140 L 0 140" fill="#B8D4C8" />
+
+      {/* Mid hill */}
+      <path d="M 0 160 Q 56 140 112 150 T 224 160 L 224 160 L 0 160" fill="#9AC8B8" />
+
+      {/* Ground */}
+      <rect y="160" width="224" height="64" fill="#7BAF9F" />
+
+      {/* Trellis frame - wooden lattice */}
+      <g>
+        {/* Left vertical post */}
+        <rect x="168" y="120" width="4" height="72" fill="#8B6F47" />
+        {/* Right vertical post */}
+        <rect x="208" y="120" width="4" height="72" fill="#8B6F47" />
+        {/* Top horizontal */}
+        <rect x="168" y="120" width="44" height="3" fill="#8B6F47" />
+        {/* Middle horizontal */}
+        <rect x="168" y="150" width="44" height="2" fill="#8B6F47" />
+        {/* Bottom horizontal */}
+        <rect x="168" y="180" width="44" height="2" fill="#8B6F47" />
+      </g>
+
+      {/* Climbing vine 1 - curling path */}
+      <path d="M 172 130 Q 175 135 172 140 Q 170 145 175 150 Q 178 155 174 160 Q 171 165 176 170 Q 180 175 176 180" 
+            stroke="#6B8E3B" strokeWidth="2" fill="none" strokeLinecap="round" />
+
+      {/* Climbing vine 2 - second vine */}
+      <path d="M 200 125 Q 202 132 200 138 Q 198 144 202 150 Q 205 156 202 162 Q 200 168 204 174 Q 207 180 204 186" 
+            stroke="#5A7A2E" strokeWidth="2" fill="none" strokeLinecap="round" />
+
+      {/* Flower cluster 1 - small red flowers on vine 1 */}
+      <g>
+        <circle cx="172" cy="140" r="3" fill="#D32F2F" />
+        <circle cx="175" cy="145" r="2.5" fill="#E53935" />
+        <circle cx="174" cy="160" r="2.5" fill="#D32F2F" />
+      </g>
+
+      {/* Flower cluster 2 - purple flowers on vine 2 */}
+      <g>
+        <circle cx="200" cy="138" r="3" fill="#7B1FA2" />
+        <circle cx="202" cy="150" r="2.5" fill="#8E24AA" />
+        <circle cx="204" cy="174" r="2.5" fill="#7B1FA2" />
+      </g>
+    </svg>
+  );
+}
+
+// ──────────────────────────────────────────
+// WIRING
+// ──────────────────────────────────────────
+// 
+// ANIMATION SEQUENCE (add to

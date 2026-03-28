@@ -1,0 +1,67 @@
+# ELEMENT BUDGET (MAX 15):
+// 1. background wall rect
+// 2. shelf board 1 (top)
+// 3. shelf board 2 (middle)
+// 4. shelf board 3 (bottom)
+// 5. jar 1 (glass cylinder)
+// 6. jar 2 (glass cylinder)
+// 7. jar 3 (glass cylinder)
+// 8. root vegetable (carrot shape)
+// 9. root vegetable (beet shape)
+// 10. dried herbs hanging (path bundle)
+// TOTAL: 10 — STOP HERE
+
+```tsx
+export function PantryIllustration() {
+  return (
+    <svg viewBox="0 0 280 360" className="w-full h-full">
+      {/* Wall background */}
+      <rect width="280" height="360" fill="#F5E6D3" />
+      
+      {/* Top shelf */}
+      <rect x="20" y="80" width="240" height="12" fill="#8B6F47" />
+      
+      {/* Middle shelf */}
+      <rect x="20" y="160" width="240" height="12" fill="#8B6F47" />
+      
+      {/* Bottom shelf */}
+      <rect x="20" y="240" width="240" height="12" fill="#8B6F47" />
+      
+      {/* Jar 1 - top shelf left */}
+      <rect x="35" y="50" width="32" height="40" fill="#D4AF8F" stroke="#A0826D" strokeWidth="1.5" />
+      <ellipse cx="51" cy="50" rx="16" ry="6" fill="#E8C9B0" />
+      
+      {/* Jar 2 - top shelf center */}
+      <rect x="100" y="55" width="28" height="35" fill="#C8B8A0" stroke="#9B8B7E" strokeWidth="1.5" />
+      <ellipse cx="114" cy="55" rx="14" ry="5" fill="#E0D0C0" />
+      
+      {/* Jar 3 - top shelf right */}
+      <rect x="160" y="52" width="35" height="38" fill="#E5D4B8" stroke="#B89968" strokeWidth="1.5" />
+      <ellipse cx="177.5" cy="52" rx="17.5" ry="6" fill="#F0E5D8" />
+      
+      {/* Carrot - middle shelf */}
+      <path d="M 60 130 Q 50 160 55 190 L 65 190 Q 60 160 70 130 Z" fill="#D97E3A" />
+      <path d="M 65 130 L 62 125 L 68 126 Z" fill="#6BA043" />
+      
+      {/* Beet - middle shelf right */}
+      <circle cx="180" cy="155" r="18" fill="#6B3D2E" />
+      <path d="M 180 137 L 175 125 L 185 125 Z" fill="#7CB342" />
+      
+      {/* Hanging dried herbs - above */}
+      <path d="M 100 35 L 100 20 M 105 35 L 105 18 M 110 35 L 110 20" stroke="#6B8E23" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="100" cy="35" r="3" fill="#6B8E23" />
+      <circle cx="105" cy="35" r="3" fill="#6B8E23" />
+      <circle cx="110" cy="35" r="3" fill="#6B8E23" />
+      
+    </svg>
+  );
+}
+
+// ─────────────────────────────────────────
+// WIRING
+// ─────────────────────────────────────────
+
+export const illustrationMap = {
+  pantry: {
+    component: PantryIllustration,
+    label: 'Pantry',

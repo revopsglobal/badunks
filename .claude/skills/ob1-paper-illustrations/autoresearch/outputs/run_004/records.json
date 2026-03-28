@@ -1,0 +1,78 @@
+[
+  {
+    "index": 0,
+    "input": "Add a new MealsIllustration for the Provisions page \u2014 a cozy kitchen scene with a cast iron pot, wooden cutting board, and fresh herbs",
+    "output_file": "exec_00.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The SVG output is truncated mid-render \u2014 the herbs on the cutting board are incomplete (the ellipse element is cut off mid-attribute), meaning the scene is not fully drawn and the component would not compile or render correctly."
+    ]
+  },
+  {
+    "index": 1,
+    "input": "Create a MapleTreeIllustration for autumn season \u2014 orange and red leaves, swing hanging from branch",
+    "output_file": "exec_01.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The SVG code is truncated \u2014 the swing seat rect element is incomplete and the component is never closed (no closing </svg> or return statement end). The swing is not fully rendered, leaving the scene incomplete."
+    ]
+  },
+  {
+    "index": 2,
+    "input": "Add a HarvestBasketIllustration \u2014 wicker basket overflowing with apples, squash, and carrots",
+    "output_file": "exec_02.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The output is truncated mid-code \u2014 the SVG is incomplete, cutting off in the middle of the carrot leaves path definition. The scene is not fully rendered, with apples, squash, and remaining elements missing from the output."
+    ]
+  },
+  {
+    "index": 3,
+    "input": "Create a SeedlingIllustration for a spring-start widget \u2014 small pots in a tray, just sprouting",
+    "output_file": "exec_03.txt",
+    "criteria": {
+      "depicts_subject": true,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "COMPLETE_SCENE: The SVG output is truncated mid-code \u2014 seedling 1's leaf polygon is cut off mid-attribute ('50,') and seedlings 2 and 3 are never rendered. There is also no background fill covering the canvas, leaving the upper portion as a void. The scene is incomplete."
+    ]
+  },
+  {
+    "index": 4,
+    "input": "Create a FamilyDogIllustration showing Maple the golden doodle sitting in a meadow",
+    "output_file": "exec_04.txt",
+    "criteria": {
+      "depicts_subject": false,
+      "paper_cutout_style": true,
+      "color_variety": true,
+      "complete_scene": false,
+      "exports_correctly": true
+    },
+    "failures": [
+      "depicts_subject: The illustration is incomplete \u2014 Maple the golden doodle is only partially drawn. The code cuts off mid-sentence after beginning to render just one back leg ellipse. No recognizable dog shape (body, head, face, legs) is fully present, so the subject is not identifiable.",
+      "complete_scene: The scene is truncated. While sky, hills, and meadow ground layers are present, the primary subject (Maple) is not fully rendered \u2014 the code ends abruptly after one leg ellipse, leaving the dog unfinished and the viewBox not fully populated with intended content."
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+# NightSkyIllustration Component
+
+```tsx
+export function NightSkyIllustration() {
+  const P = {
+    layer1: "#0a1428",   // deep navy sky
+    layer2: "#1a2a4a",   // darker blue
+    layer3: "#2a3a5a",   // mid blue
+    layer4: "#3a4a6a",   // lighter blue
+    layer5: "#8b7355",   // hill silhouette
+    layer6: "#f5f5dc",   // cream/moon
+    layer7: "#fffacd",   // pale yellow highlights
+  };
+
+  const s1 = "drop-shadow(0 1px 2px rgba(0,0,0,0.18))";
+  const s2 = "drop-shadow(0 2px 5px rgba(0,0,0,0.28))";
+  const s3 = "drop-shadow(0 3px 8px rgba(0,0,0,0.38))";
+  const s4 = "drop-shadow(0 5px 12px rgba(0,0,0,0.48))";
+  const s5 = "drop-shadow(0 7px 16px rgba(0,0,0,0.55))";
+
+  return (
+    <svg viewBox="0 0 800 600" className="w-full h-full">
+      {/* Layer 1: Deep night sky background */}
+      <defs>
+        <radialGradient id="nightSkyGradient" cx="50%" cy="30%">
+          <stop offset="0%" stopColor={P.layer2} />
+          <stop offset="100%" stopColor={P.layer1} />
+        </radialGradient>
+      </defs>
+
+      <rect width="800" height="600" fill="url(#nightSkyGradient)" />
+
+      {/* Layer 2: Distant stars (tiny scattered points) */}
+      <g style={{ filter: s1 }}>
+        <circle cx="120" cy="80" r="1.2" fill={P.layer7} opacity="0.8" />
+        <circle cx="180" cy="110" r="0.8" fill={P.layer7} opacity="0.6" />
+        <circle cx="280" cy="60" r="1" fill={P.layer7} opacity="0.7" />
+        <circle cx="380" cy="95" r="1.3" fill={P.layer7} opacity="0.85" />
+        <circle cx="480" cy="75" r="0.9" fill={P.layer7} opacity="0.65" />
+        <circle cx="580" cy="120" r="1.1" fill={P.layer7} opacity="0.75" />
+        <circle cx="680" cy="85" r="1" fill={P.layer7} opacity="0.7" />
+        <circle cx="740" cy="140" r="0.8" fill={P.layer7} opacity="0.6" />
+        <circle cx="150" cy="200" r="1" fill={P.layer7} opacity="0.7" />
+        <circle cx="320" cy="180" r="0.9" fill={P.layer7} opacity="0.65" />
+        <circle cx="520" cy="210" r="1.1" fill={P.layer7} opacity="0.75" />
+        <circle cx="700" cy="250" r="1" fill={P.layer7} opacity="0.7" />
+      </g>
+
+      {/* Layer 3: Milky Way arc (ethereal glow) */}
+      <g style={{ filter: s1, opacity: 0.4 }}>
+        <ellipse
+          cx="400"
+          cy="200"
+          rx="320"
+          ry="180"
+          fill="none"
+          stroke={P.layer7}
+          strokeWidth="80"
+          opacity="0.25"
+        />
+        <ellipse
+          cx="400"
+          cy="200"
+          rx="300"
+          ry="160"
+          fill="none"
+          stroke={P.layer6}
+          stroke
