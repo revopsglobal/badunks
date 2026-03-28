@@ -42,9 +42,7 @@ export const THEMES = {
       ['', 'THE REASON I', 'TALK TO MYSELF', 'IS BECAUSE IM', 'THE ONLY ONE', 'WHOSE ANSWERS', 'I ACCEPT', '- GEORGE CARLIN'],
       ['', 'I WANT TO', 'HANG A MAP ON', 'THE WALL AND', 'PUT PINS IN', 'ALL THE PLACES', 'I BEEN TO', '- MITCH HEDBERG'],
       ['', 'BEFORE YOU', 'CRITICIZE', 'SOMEONE WALK', 'A MILE IN', 'THEIR SHOES', '', '- JACK HANDEY'],
-      ['', 'THEN YOURE', 'A MILE AWAY', 'AND YOU HAVE', 'THEIR SHOES', '', '- JACK HANDEY', ''],
       ['', 'I FAILED THE', 'RORSCHACH', 'TEST . I', 'SAID WHAT I', 'REALLY SAW', '', '- TIG NOTARO'],
-      ['', 'YOU KNOW YOU', 'ARE GETTING', 'OLD WHEN THE', 'CANDLES COST', 'MORE THAN', 'THE CAKE', '- BOB HOPE'],
       ['', 'THE OLDER', 'YOU GET THE', 'BETTER YOU', 'REALIZE YOU', 'WERE', '', '- GEORGE CARLIN'],
     ]
   },
@@ -61,9 +59,6 @@ export const THEMES = {
       ['', 'YOU ONLY GET', 'ONE SHOT DO', 'NOT MISS YOUR', 'CHANCE TO BLOW', '', '- EMINEM', ''],
       ['', 'I GOT 99', 'PROBLEMS BUT', 'A BADUNK AINT', 'ONE', '', '- JAY-Z', ''],
       ['', 'CHECK YOURSELF', 'BEFORE YOU', 'WRECK', 'YOURSELF', '', '- ICE CUBE', ''],
-      ['', 'SOMEBODY ONCE', 'TOLD ME THE', 'WORLD IS', 'GONNA ROLL ME', '', '- SMASH MOUTH', ''],
-      ['', 'STARTED FROM', 'THE BOTTOM', 'NOW WE HERE', '', '- DRAKE', '', ''],
-      ['', 'DONT GO', 'CHASIN', 'WATERFALLS .', 'STICK TO THE', 'RIVERS AND', 'LAKES', '- TLC'],
       ['', 'THROUGH THE', 'WIRE AND EVEN', 'IF MY JAW', 'WAS WIRED', 'SHUT', '', '- KANYE WEST'],
       ['', 'LOSING MY', 'RELIGION', '', '', '- R.E.M.', '', ''],
     ]
@@ -79,10 +74,8 @@ export const THEMES = {
       ['', 'MILK WAS A', 'BAD CHOICE', '', '', '- RON', 'BURGUNDY', ''],
       ['', 'DID WE JUST', 'BECOME BEST', 'FRIENDS ?', 'YUP !', '', '- STEP', 'BROTHERS'],
       ['', 'LIFE MOVES', 'PRETTY FAST .', 'IF YOU DONT', 'STOP AND LOOK', 'AROUND YOU', 'COULD MISS IT', '- FERRIS BUELLER'],
-      ['', 'IM IN A', 'GLASS CASE', 'OF EMOTION', '', '', '- RON', 'BURGUNDY'],
       ['', 'THIS IS MY', 'NIGHTMARE .', 'BEING IN A', 'ROOM WITH', 'YOU PEOPLE', '', '- HANGOVER'],
-      ['', 'I DONT KNOW', 'HOW TO PUT', 'THIS BUT IM', 'KIND OF A', 'BIG DEAL', '', '- RON BURGUNDY'],
-      ['', 'ITS SO FLUFFY', 'IM GONNA DIE', '', '', '', '- DESPICABLE', 'ME'],
+      ['', 'IM IN A', 'GLASS CASE', 'OF EMOTION', '', '', '- RON', 'BURGUNDY'],
     ]
   },
   afterdark: {
@@ -91,29 +84,13 @@ export const THEMES = {
       ['', 'REMEMBER WHEN', 'STAYING UP', 'PAST MIDNIGHT', 'WAS FUN AND', 'NOT A MEDICAL', 'CONDITION', '- BADUNKS'],
       ['', 'MY BODY IS', 'A TEMPLE .', 'ANCIENT .', 'CRUMBLING .', 'PROBABLY', 'CURSED', '- BADUNKS'],
       ['', 'I DONT RUN .', 'IF YOU SEE ME', 'RUNNING', 'YOU SHOULD', 'RUN TOO', '', '- BADUNKS'],
-      ['', 'LIFE IS SHORT', 'SMILE WHILE', 'YOU STILL', 'HAVE TEETH', '', '', '- BADUNKS'],
       ['', 'WE DONT GROW', 'UP WE JUST', 'LEARN HOW TO', 'ACT IN PUBLIC', '', '', '- BRYAN WHITE'],
       ['', 'AT THIS AGE', 'GETTING LUCKY', 'MEANS WALKING', 'INTO A ROOM', 'AND REMEMBERING', 'WHY', '- BADUNKS'],
-      ['', 'MY WALLET IS', 'LIKE AN ONION', 'OPENING IT', 'MAKES ME CRY', '', '', '- BADUNKS'],
       ['', 'ADULTING IS', 'JUST SAYING', 'WE SHOULD', 'HANG OUT', 'UNTIL ONE OF', 'US DIES', '- BADUNKS'],
-      ['', 'SOME OF YOU', 'HAVE NEVER', 'HAD YOUR AIM', 'SCREEN NAME', 'AS A PASSWORD', 'AND IT SHOWS', '- BADUNKS'],
-      ['', 'AGE IS JUST', 'A NUMBER .', 'AND A PRETTY', 'HIGH ONE AT', 'THIS POINT', '', '- BADUNKS'],
       ['', 'NEVER TRUST', 'A FRIEND WHO', 'DOESNT DRINK', 'THEY WILL', 'REMEMBER', 'EVERYTHING', '- BADUNKS'],
-    ]
-  },
-  nostalgia: {
-    label: '90s Kids',
-    messages: [
-      ['', 'ALL THAT AND', 'A BAG OF', 'CHIPS', '', '', '- THE 90S', ''],
-      ['', 'MOM SAID BE', 'HOME WHEN THE', 'STREET LIGHTS', 'COME ON', '', '', '- THE 80S'],
-      ['', 'THE DIAL UP', 'INTERNET', 'SOUND IS OUR', 'GENERATIONS', 'VIETNAM', 'FLASHBACK', '- BADUNKS'],
-      ['', 'WE SURVIVED', 'WITHOUT', 'HELMETS', 'SEATBELTS OR', 'SCREEN TIME', 'LIMITS', '- BADUNKS'],
-      ['', 'STOP .', 'HAMMER TIME', '', '', '- MC HAMMER', '', ''],
       ['', 'BRB AFK', 'G2G MOM IS', 'USING THE', 'PHONE', '', '', '- AIM CULTURE'],
       ['', 'A/S/L ?', '', '', '', '- EVERY', 'CHATROOM', 'EVER'],
-      ['', 'YOU USED TO', 'CALL ME ON', 'MY CELL PHONE', '', '', '- DRAKE', ''],
-      ['', 'I WANT IT', 'THAT WAY', 'TELL ME WHY', '', '', '- BACKSTREET', 'BOYS'],
-      ['', 'BE KIND', 'REWIND', '', '', '- BLOCKBUSTER', 'VIDEO', ''],
+      ['', 'SOME OF YOU', 'HAVE NEVER', 'HAD YOUR AIM', 'SCREEN NAME', 'AS A PASSWORD', 'AND IT SHOWS', '- BADUNKS'],
     ]
   },
   badunks: {
@@ -122,15 +99,13 @@ export const THEMES = {
       ['', 'THE FIRST', 'RULE OF', 'BADUNKS IS', 'DONT TALK', 'ABOUT BADUNKS', '', '- THE GROUP'],
       ['', 'WE CAME', 'WE SAW', 'WE ATE ALL', 'THE SNACKS', '', '- BADUNKS', ''],
       ['', 'FRIENDS WHO', 'ROAST EACH', 'OTHER STAY', 'TOGETHER', '', '- BADUNKS', ''],
-      ['', 'WERE NOT', 'AGING WERE', 'INCREASING', 'IN VALUE', '', '- BADUNKS', ''],
-      ['', 'SOME PEOPLE', 'ARE LIKE', 'CLOUDS . WHEN', 'THEY GO AWAY', 'ITS A', 'BEAUTIFUL DAY', '- BADUNKS'],
-      ['', 'FRIENDSHIP IS', 'BORN WHEN ONE', 'PERSON SAYS', 'YOU TOO I', 'THOUGHT I WAS', 'THE ONLY ONE', '- C.S. LEWIS'],
-      ['', 'HERE TO THE', 'NIGHTS WE', 'WONT REMEMBER', 'WITH FRIENDS', 'WE WILL NEVER', 'FORGET', '- BADUNKS'],
       ['', 'GOOD FRIENDS', 'DONT LET YOU', 'DO STUPID', 'THINGS ...', 'ALONE', '', '- BADUNKS'],
       ['', 'BORN IN THE', '80S RAISED IN', 'THE 90S STILL', 'RECOVERING', '', '', '- BADUNKS'],
-      ['', 'WE WILL BE', 'FRIENDS UNTIL', 'WE ARE OLD', 'AND SENILE .', 'THEN WE WILL', 'BE NEW FRIENDS', '- BADUNKS'],
       ['', 'YOU DONT', 'HAVE TO BE', 'CRAZY TO BE', 'OUR FRIEND', 'BUT IT HELPS', '', '- BADUNKS'],
       ['', 'REAL FRIENDS', 'DONT GET', 'OFFENDED WHEN', 'YOU INSULT', 'THEM', '', '- BADUNKS'],
+      ['', 'IF YOU CAN', 'HANDLE US AT', 'OUR WORST YOU', 'DESERVE TO', 'SEE OUR WORST', 'AGAIN', '- BADUNKS'],
+      ['', 'WE PUT THE', 'FUN IN', 'DYSFUNCTIONAL', '', '', '- BADUNKS', ''],
+      ['', 'NOTHING BONDS', 'PEOPLE LIKE', 'MUTUAL', 'CONTEMPT FOR', 'EVERYONE ELSE', '', '- BADUNKS'],
     ]
   },
   realtalk: {
@@ -146,7 +121,21 @@ export const THEMES = {
       ['', 'WORRYING IS', 'LIKE PAYING', 'A DEBT YOU', 'DONT OWE', '', '- MARK TWAIN', ''],
       ['', 'STAY HUNGRY', 'STAY FOOLISH', '', '', '- STEVE JOBS', '', ''],
       ['', 'THE BEST', 'REVENGE IS', 'MASSIVE', 'SUCCESS', '', '- FRANK', 'SINATRA'],
-      ['', 'EVERYTHING IS', 'TEMPORARY .', 'EMOTIONS .', 'THOUGHTS .', 'PEOPLE .', 'SCENERY .', '- BADUNKS'],
+    ]
+  },
+  wisdom: {
+    label: 'Wisdom',
+    messages: [
+      ['', 'THIS TOO', 'SHALL PASS', '', '', '- PERSIAN', 'PROVERB', ''],
+      ['', 'THE BEST WAY', 'OUT IS ALWAYS', 'THROUGH', '', '- ROBERT FROST', '', ''],
+      ['', 'WHAT YOU SEEK', 'IS SEEKING', 'YOU', '', '- RUMI', '', ''],
+      ['', 'THE WOUND IS', 'THE PLACE', 'WHERE THE', 'LIGHT ENTERS', '', '- RUMI', ''],
+      ['', 'NOT ALL WHO', 'WANDER', 'ARE LOST', '', '- TOLKIEN', '', ''],
+      ['', 'FALL SEVEN', 'TIMES STAND', 'UP EIGHT', '', '- JAPANESE', 'PROVERB', ''],
+      ['', 'A SMOOTH SEA', 'NEVER MADE', 'A SKILLED', 'SAILOR', '', '- FRANKLIN', 'ROOSEVELT'],
+      ['', 'FORTUNE', 'FAVORS', 'THE BOLD', '', '- VIRGIL', '', ''],
+      ['', 'THE BAMBOO', 'THAT BENDS IS', 'STRONGER', 'THAN THE OAK', 'THAT RESISTS', '', '- BRUCE LEE'],
+      ['', 'STILL WATERS', 'RUN DEEP', '', '', '', '- ENGLISH', 'PROVERB'],
     ]
   },
 };
