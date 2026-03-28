@@ -83,9 +83,8 @@ export class MessageRotator {
   }
 
   _getPool() {
-    const themeMessages = [];
+    const tagged = [];
     if (this.mode === 'themes' || this.mode === 'combined') {
-      // Check for local edits stored by SettingsPanel
       let edits = {};
       try {
         const saved = localStorage.getItem('flipoff_theme_edits');
@@ -93,24 +92,35 @@ export class MessageRotator {
       } catch {}
 
       for (const key of this.enabledThemes) {
-        if (edits[key]) {
-          themeMessages.push(...edits[key]);
-        } else if (THEMES[key]) {
-          themeMessages.push(...THEMES[key].messages);
-        }
+        const msgs = edits[key] ? edits[key] : (THEMES[key] ? THEMES[key].messages : []);
+        for (const m of msgs) tagged.push({ msg: m, src: key });
       }
     }
 
-    const customMessages = [];
     if (this.mode === 'custom' || this.mode === 'combined') {
-      customMessages.push(...this.messages);
+      for (const m of this.messages) tagged.push({ msg: m, src: '_custom' });
     }
 
-    // Include shared messages from family if enabled
-    const shared = this.showShared ? [...this.sharedMessages] : [];
+    if (this.showShared) {
+      for (const m of this.sharedMessages) tagged.push({ msg: m, src: '_shared' });
+    }
 
-    const pool = [...themeMessages, ...customMessages, ...shared];
-    return pool.length > 0 ? pool : MESSAGES;
+    if (tagged.length === 0) return MESSAGES;
+
+    // Shuffle then spread themes apart so the same source never repeats back-to-back
+    const shuffled = this._shuffle(tagged);
+    for (let i = 1; i < shuffled.length; i++) {
+      if (shuffled[i].src === shuffled[i - 1].src) {
+        // Find next item from a different source and swap
+        for (let j = i + 1; j < shuffled.length; j++) {
+          if (shuffled[j].src !== shuffled[i].src) {
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            break;
+          }
+        }
+      }
+    }
+    return shuffled.map(t => t.msg);
   }
 
   _shuffle(arr) {
