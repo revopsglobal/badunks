@@ -78,21 +78,6 @@ export const THEMES = {
       ['', 'IM IN A', 'GLASS CASE', 'OF EMOTION', '', '', '- RON', 'BURGUNDY'],
     ]
   },
-  afterdark: {
-    label: 'After Dark',
-    messages: [
-      ['', 'REMEMBER WHEN', 'STAYING UP', 'PAST MIDNIGHT', 'WAS FUN AND', 'NOT A MEDICAL', 'CONDITION', '- BADUNKS'],
-      ['', 'MY BODY IS', 'A TEMPLE .', 'ANCIENT .', 'CRUMBLING .', 'PROBABLY', 'CURSED', '- BADUNKS'],
-      ['', 'I DONT RUN .', 'IF YOU SEE ME', 'RUNNING', 'YOU SHOULD', 'RUN TOO', '', '- BADUNKS'],
-      ['', 'WE DONT GROW', 'UP WE JUST', 'LEARN HOW TO', 'ACT IN PUBLIC', '', '', '- BRYAN WHITE'],
-      ['', 'AT THIS AGE', 'GETTING LUCKY', 'MEANS WALKING', 'INTO A ROOM', 'AND REMEMBERING', 'WHY', '- BADUNKS'],
-      ['', 'ADULTING IS', 'JUST SAYING', 'WE SHOULD', 'HANG OUT', 'UNTIL ONE OF', 'US DIES', '- BADUNKS'],
-      ['', 'NEVER TRUST', 'A FRIEND WHO', 'DOESNT DRINK', 'THEY WILL', 'REMEMBER', 'EVERYTHING', '- BADUNKS'],
-      ['', 'BRB AFK', 'G2G MOM IS', 'USING THE', 'PHONE', '', '', '- AIM CULTURE'],
-      ['', 'A/S/L ?', '', '', '', '- EVERY', 'CHATROOM', 'EVER'],
-      ['', 'SOME OF YOU', 'HAVE NEVER', 'HAD YOUR AIM', 'SCREEN NAME', 'AS A PASSWORD', 'AND IT SHOWS', '- BADUNKS'],
-    ]
-  },
   badunks: {
     label: 'Badunks',
     messages: [
@@ -103,9 +88,11 @@ export const THEMES = {
       ['', 'BORN IN THE', '80S RAISED IN', 'THE 90S STILL', 'RECOVERING', '', '', '- BADUNKS'],
       ['', 'YOU DONT', 'HAVE TO BE', 'CRAZY TO BE', 'OUR FRIEND', 'BUT IT HELPS', '', '- BADUNKS'],
       ['', 'REAL FRIENDS', 'DONT GET', 'OFFENDED WHEN', 'YOU INSULT', 'THEM', '', '- BADUNKS'],
-      ['', 'IF YOU CAN', 'HANDLE US AT', 'OUR WORST YOU', 'DESERVE TO', 'SEE OUR WORST', 'AGAIN', '- BADUNKS'],
+      ['', 'MY BODY IS', 'A TEMPLE .', 'ANCIENT .', 'CRUMBLING .', 'PROBABLY', 'CURSED', '- BADUNKS'],
       ['', 'WE PUT THE', 'FUN IN', 'DYSFUNCTIONAL', '', '', '- BADUNKS', ''],
       ['', 'NOTHING BONDS', 'PEOPLE LIKE', 'MUTUAL', 'CONTEMPT FOR', 'EVERYONE ELSE', '', '- BADUNKS'],
+      ['', 'BRB AFK', 'G2G MOM IS', 'USING THE', 'PHONE', '', '', '- AIM CULTURE'],
+      ['', 'A/S/L ?', '', '', '', '- EVERY', 'CHATROOM', 'EVER'],
     ]
   },
   literature: {
