@@ -108,19 +108,21 @@ export const THEMES = {
       ['', 'NOTHING BONDS', 'PEOPLE LIKE', 'MUTUAL', 'CONTEMPT FOR', 'EVERYONE ELSE', '', '- BADUNKS'],
     ]
   },
-  realtalk: {
-    label: 'Real Talk',
+  literature: {
+    label: 'Literature',
     messages: [
-      ['', 'HARD TIMES', 'CREATE STRONG', 'MEN . GOOD', 'TIMES CREATE', 'WEAK MEN', '', '- G M HOPF'],
-      ['', 'THE LION', 'DOES NOT TURN', 'AROUND WHEN A', 'SMALL DOG', 'BARKS', '', '- AFRICAN PROV'],
-      ['', 'IF YOU RUN', 'INTO AN A-HOLE', 'IN THE', 'MORNING YOU', 'RAN INTO AN', 'A-HOLE', '- RAYLAN GIVENS'],
-      ['', 'IF EVERYONE', 'YOU RUN INTO', 'IS AN A-HOLE', 'MAYBE YOURE', 'THE A-HOLE', '', '- RAYLAN GIVENS'],
-      ['', 'YOU ARE THE', 'AVERAGE OF', 'THE FIVE', 'PEOPLE YOU', 'SPEND THE', 'MOST TIME WITH', '- JIM ROHN'],
-      ['', 'TALK IS CHEAP', 'SHOW ME THE', 'CODE', '', '- LINUS', 'TORVALDS', ''],
-      ['', 'SHIPS ARE', 'SAFE IN', 'HARBOR BUT', 'THATS NOT', 'WHAT SHIPS', 'ARE FOR', '- JOHN SHEDD'],
-      ['', 'WORRYING IS', 'LIKE PAYING', 'A DEBT YOU', 'DONT OWE', '', '- MARK TWAIN', ''],
-      ['', 'STAY HUNGRY', 'STAY FOOLISH', '', '', '- STEVE JOBS', '', ''],
-      ['', 'THE BEST', 'REVENGE IS', 'MASSIVE', 'SUCCESS', '', '- FRANK', 'SINATRA'],
+      ['', 'THE REPORTS OF', 'MY DEATH ARE', 'GREATLY', 'EXAGGERATED', '', '- MARK TWAIN', ''],
+      ['', 'WHENEVER YOU', 'FIND YOURSELF', 'ON THE SIDE OF', 'THE MAJORITY', 'IT IS TIME TO', 'PAUSE', '- MARK TWAIN'],
+      ['', 'GOLF IS A GOOD', 'WALK SPOILED', '', '', '', '- MARK TWAIN', ''],
+      ['', 'TRUTH IS', 'STRANGER THAN', 'FICTION BUT', 'FICTION HAS', 'TO MAKE SENSE', '', '- MARK TWAIN'],
+      ['', 'I HAVE NEVER', 'LET SCHOOLING', 'INTERFERE WITH', 'MY EDUCATION', '', '- MARK TWAIN', ''],
+      ['', 'SO IT GOES', '', '', '', '', '- KURT', 'VONNEGUT'],
+      ['', 'SO WE BEAT ON', 'BOATS AGAINST', 'THE CURRENT', 'BORNE BACK', 'CEASELESSLY', 'INTO THE PAST', '- FITZGERALD'],
+      ['', 'ALL ANIMALS', 'ARE EQUAL BUT', 'SOME ARE MORE', 'EQUAL THAN', 'OTHERS', '', '- GEORGE ORWELL'],
+      ['', 'IT IS A FAR', 'FAR BETTER', 'THING THAT I', 'DO THAN I HAVE', 'EVER DONE', '', '- DICKENS'],
+      ['', 'THE ONLY', 'PEOPLE FOR ME', 'ARE THE MAD', 'ONES', '', '- JACK', 'KEROUAC'],
+      ['', 'BE YOURSELF .', 'EVERYONE ELSE', 'IS ALREADY', 'TAKEN', '', '- OSCAR WILDE', ''],
+      ['', 'WE ARE ALL IN', 'THE GUTTER', 'BUT SOME OF', 'US ARE LOOKING', 'AT THE STARS', '', '- OSCAR WILDE'],
     ]
   },
   wisdom: {
